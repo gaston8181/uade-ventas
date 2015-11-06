@@ -57,12 +57,17 @@
 						<li><a href="../inicio/LogExportacion">Modificar Producto</a></li>
 						<li><a href="../inicio/ExportacionesPendientes">Baja
 								Producto</a></li>
-						<li><a href="../inicio/ExportacionesPendientes">Consultar Producto</a></li>
+						<li><a href="../inicio/ExportacionesPendientes">Cargar
+								Producto</a></li>
+
+						<li><a href="../inicio/ExportacionesPendientes">Consultar
+								Producto</a></li>
 					</ul></li>
 				<!--  -->
 				<!-- VENTAS -->
 				<li class="dropdown"><a href="../" class="dropdown-toggle"
-					data-toggle="dropdown" role="button" aria-expanded="false"> Ventas<b class="caret"></b>
+					data-toggle="dropdown" role="button" aria-expanded="false">
+						Ventas<b class="caret"></b>
 				</a>
 
 					<ul class="dropdown-menu" role="menu">
@@ -73,11 +78,13 @@
 				<!--  -->
 				<!-- REPORTES -->
 				<li class="dropdown"><a href="../" class="dropdown-toggle"
-					data-toggle="dropdown" role="button" aria-expanded="false"> Reportes<b class="caret"></b>
+					data-toggle="dropdown" role="button" aria-expanded="false">
+						Reportes<b class="caret"></b>
 				</a>
 
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="../inicio/AltaExportacion">Reporte Entre dos Fechas</a></li>
+						<li><a href="../inicio/AltaExportacion">Reporte Entre dos
+								Fechas</a></li>
 						<li><a href="../inicio/AltaExportacion">Reporte Semanal</a></li>
 						<li><a href="../inicio/LogExportacion">Reporte Mensual</a></li>
 						<li><a href="../inicio/LogExportacion">Reporte Anual</a></li>
