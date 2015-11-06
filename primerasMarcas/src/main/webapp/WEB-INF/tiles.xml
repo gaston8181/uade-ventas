@@ -7,7 +7,6 @@
 <tiles-definitions>
 
 	<definition name="baseLayout" template="/paginas/tiles/baseLayout.jsp">
-<!-- 		<put-attribute name="title" value="Inicio" /> -->
 		<put-attribute name="menu" value="/paginas/tiles/menu.jsp" />
 		<put-attribute name="body" value="/paginas/tiles/body.jsp" />
 		<put-attribute name="pie" value="/paginas/tiles/pie.jsp" />
@@ -15,6 +14,82 @@
 
 	<definition name="inicio" extends="baseLayout">
 		<put-attribute name="body" value="/paginas/user.jsp" />
+	</definition>
+
+	<!-- PRODUCTOS -->
+	<definition name="altaProducto" extends="baseLayout">
+		<put-attribute name="body" value="/paginas/producto/altaProducto.jsp" />
+	</definition>
+
+	<definition name="bajaProducto" extends="baseLayout">
+		<put-attribute name="body" value="/paginas/producto/bajaProducto.jsp" />
+	</definition>
+
+	<definition name="cargarProducto" extends="baseLayout">
+		<put-attribute name="body"
+			value="/paginas/producto/cargarProducto.jsp" />
+	</definition>
+
+	<definition name="consultarProducto" extends="baseLayout">
+		<put-attribute name="body"
+			value="/paginas/producto/consultarProducto.jsp" />
+	</definition>
+
+	<definition name="modificarProducto" extends="baseLayout">
+		<put-attribute name="body"
+			value="/paginas/producto/modifProducto.jsp" />
+	</definition>
+
+	<!-- PROVEEDOR -->
+	<definition name="altaProveedor" extends="baseLayout">
+		<put-attribute name="body"
+			value="/paginas/proveedor/altaProveedor.jsp" />
+	</definition>
+	<definition name="bajaProveedor" extends="baseLayout">
+		<put-attribute name="body"
+			value="/paginas/proveedor/bajaProveedor.jsp" />
+	</definition>
+	<definition name="modificarProveedor" extends="baseLayout">
+		<put-attribute name="body"
+			value="/paginas/proveedor/modifProveedor.jsp" />
+	</definition>
+
+
+	<!-- REPORTES -->
+	<definition name="reporteAnual" extends="baseLayout">
+		<put-attribute name="body" value="/paginas/reportes/anual.jsp" />
+	</definition>
+	<definition name="reporteEntreFechas" extends="baseLayout">
+		<put-attribute name="body" value="/paginas/reportes/dosFechas.jsp" />
+	</definition>
+	<definition name="reporteMensual" extends="baseLayout">
+		<put-attribute name="body" value="/paginas/reportes/mensual.jsp" />
+	</definition>
+	<definition name="reporteSemanal" extends="baseLayout">
+		<put-attribute name="body" value="/paginas/reportes/semanal.jsp" />
+	</definition>
+
+	<!-- VENDEDOR -->
+	<definition name="altaVendedor" extends="baseLayout">
+		<put-attribute name="body" value="/paginas/vendedor/altaVendedor.jsp" />
+	</definition>
+	<definition name="bajaVendedor" extends="baseLayout">
+		<put-attribute name="body" value="/paginas/vendedor/bajaVendedor.jsp" />
+	</definition>
+	<definition name="modificarVendedor" extends="baseLayout">
+		<put-attribute name="body"
+			value="/paginas/vendedor/modificarVendedor.jsp" />
+	</definition>
+
+	<!-- VENTA -->
+	<definition name="cerrarCaja" extends="baseLayout">
+		<put-attribute name="body" value="/paginas/venta/cerrarCaja.jsp" />
+	</definition>
+	<definition name="gestionarCambio" extends="baseLayout">
+		<put-attribute name="body" value="/paginas/venta/gestionarCambio.jsp" />
+	</definition>
+	<definition name="nuevaVenta" extends="baseLayout">
+		<put-attribute name="body" value="/paginas/venta/nuevaVenta.jsp" />
 	</definition>
 
 </tiles-definitions>
