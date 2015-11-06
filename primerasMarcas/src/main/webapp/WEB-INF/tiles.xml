@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="baseLayout" template="/paginas/tiles/baseLayout.jsp">
+<!-- 		<put-attribute name="title" value="Inicio" /> -->
+		<put-attribute name="menu" value="/paginas/tiles/menu.jsp" />
+		<put-attribute name="body" value="/paginas/tiles/body.jsp" />
+		<put-attribute name="pie" value="/paginas/tiles/pie.jsp" />
+	</definition>
+
+	<definition name="inicio" extends="baseLayout">
+		<put-attribute name="body" value="/paginas/user.jsp" />
+	</definition>
+
+</tiles-definitions>
