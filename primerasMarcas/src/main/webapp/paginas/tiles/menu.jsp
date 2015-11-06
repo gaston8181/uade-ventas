@@ -26,10 +26,9 @@
 				</a>
 
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="../inicio/AltaExportacion">Alta Vendedor</a></li>
-						<li><a href="../inicio/LogExportacion">Modificar Vendedor</a></li>
-						<li><a href="../inicio/ExportacionesPendientes">Baja
-								Vendedor</a></li>
+						<li><a href="altaVendedor">Alta Vendedor</a></li>
+						<li><a href="modificarVendedor">Modificar Vendedor</a></li>
+						<li><a href="bajaVendedor">Baja Vendedor</a></li>
 					</ul></li>
 				<!--  -->
 				<!-- ABM PROVEEDOR -->
@@ -39,11 +38,9 @@
 				</a>
 
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="../inicio/AltaExportacion">Alta Proveedor</a></li>
-						<li><a href="../inicio/LogExportacion">Modificar
-								Proveedor</a></li>
-						<li><a href="../inicio/ExportacionesPendientes">Baja
-								Proveedor</a></li>
+						<li><a href="altaProveedor">Alta Proveedor</a></li>
+						<li><a href="modificarProveedor">Modificar Proveedor</a></li>
+						<li><a href="bajaProveedor">Baja Proveedor</a></li>
 					</ul></li>
 				<!--  -->
 				<!-- ABM PRODUCTO -->
@@ -53,15 +50,12 @@
 				</a>
 
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="../inicio/AltaExportacion">Alta Producto</a></li>
-						<li><a href="../inicio/LogExportacion">Modificar Producto</a></li>
-						<li><a href="../inicio/ExportacionesPendientes">Baja
-								Producto</a></li>
-						<li><a href="../inicio/ExportacionesPendientes">Cargar
-								Producto</a></li>
+						<li><a href="altaProducto">Alta Producto</a></li>
+						<li><a href="modificarProducto">Modificar Producto</a></li>
+						<li><a href="bajaProducto">Baja Producto</a></li>
+						<li><a href="cargarProducto">Cargar Producto</a></li>
 
-						<li><a href="../inicio/ExportacionesPendientes">Consultar
-								Producto</a></li>
+						<li><a href="consultarProducto">Consultar Producto</a></li>
 					</ul></li>
 				<!--  -->
 				<!-- VENTAS -->
@@ -71,9 +65,9 @@
 				</a>
 
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="../inicio/AltaExportacion">Nueva Venta</a></li>
-						<li><a href="../inicio/LogExportacion">Gestionar Cambio</a></li>
-						<li><a href="../inicio/LogExportacion">Cerrar Caja</a></li>
+						<li><a href="nuevaVenta">Nueva Venta</a></li>
+						<li><a href="gestionarCambio">Gestionar Cambio</a></li>
+						<li><a href="cerrarVenta">Cerrar Caja</a></li>
 					</ul></li>
 				<!--  -->
 				<!-- REPORTES -->
@@ -83,11 +77,10 @@
 				</a>
 
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="../inicio/AltaExportacion">Reporte Entre dos
-								Fechas</a></li>
-						<li><a href="../inicio/AltaExportacion">Reporte Semanal</a></li>
-						<li><a href="../inicio/LogExportacion">Reporte Mensual</a></li>
-						<li><a href="../inicio/LogExportacion">Reporte Anual</a></li>
+						<li><a href="reporteDosFechas">Reporte Entre dos Fechas</a></li>
+						<li><a href="reporteSemanal">Reporte Semanal</a></li>
+						<li><a href="reporteMensual">Reporte Mensual</a></li>
+						<li><a href="reporteAnual">Reporte Anual</a></li>
 					</ul></li>
 				<!--  -->
 
