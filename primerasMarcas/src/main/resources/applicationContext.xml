@@ -5,5 +5,45 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<bean id="userBo" class="ar.com.uade.dao.impl.UserBoImpl" />
 
+	<bean id="producto.action" class="ar.com.uade.action.ProductoAction">
+		<property name="producto" ref="producto.business" />
+	</bean>
 
+	<bean id="proveedor.action" class="ar.com.uade.action.ProveedorAction">
+		<property name="proveedor" ref="proveedor.business" />
+	</bean>
+
+	<bean id="reporte.action" class="ar.com.uade.action.ReporteAction">
+		<property name="reporte" ref="reporte.business" />
+	</bean>
+
+	<bean id="vendedor.action" class="ar.com.uade.action.VendedorAction">
+		<property name="vendedor" ref="vendedor.business" />
+	</bean>
+
+	<bean id="venta.action" class="ar.com.uade.action.VentaAction">
+		<property name="venta" ref="venta.business" />
+	</bean>
+
+
+	<!-- BUSINESS -->
+	<bean id="producto.business" class="ar.com.uade.business.impl.ProductoBusinessImpl">
+	
+	</bean>
+	
+	<bean id="proveedor.business" class="ar.com.uade.business.impl.ProveedorBusinessImpl">
+	
+	</bean>
+	
+	<bean id="reporte.business" class="ar.com.uade.business.impl.ReporteBusinessImpl">
+	
+	</bean>
+	
+	<bean id="vendedor.business" class="ar.com.uade.business.impl.VendedorBusinessImpl">
+	
+	</bean>
+	
+	<bean id="venta.business" class="ar.com.uade.business.impl.VentaBusinessImpl">
+	
+	</bean>
 </beans>

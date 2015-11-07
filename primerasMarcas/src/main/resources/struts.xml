@@ -18,67 +18,67 @@
 		</action>
 
 		<!-- PRODCUTOS -->
-		<action name="altaProducto" class="ar.com.uade.action.ProductoAction">
+		<action name="altaProducto" class="producto.action">
 			<result name="success" type="tiles">altaProducto</result>
 		</action>
-		<action name="bajaProducto" class="ar.com.uade.action.ProductoAction">
+		<action name="bajaProducto" class="producto.action">
 			<result name="success" type="tiles">bajaProducto</result>
 		</action>
-		<action name="cargarProducto" class="ar.com.uade.action.ProductoAction">
+		<action name="cargarProducto" class="producto.action">
 			<result name="success" type="tiles">cargarProducto</result>
 		</action>
-		<action name="consultarProducto" class="ar.com.uade.action.ProductoAction">
+		<action name="consultarProducto" class="producto.action">
 			<result name="success" type="tiles">consultarProducto</result>
 		</action>
-		<action name="modificarProducto" class="ar.com.uade.action.ProductoAction">
+		<action name="modificarProducto" class="producto.action">
 			<result name="success" type="tiles">modificarProducto</result>
 		</action>
 
 		<!-- PROVEEDORES -->
-		<action name="altaProveedor" class="ar.com.uade.action.ProveedorAction">
+		<action name="altaProveedor" class="proveedor.action">
 			<result name="success" type="tiles">altaProveedor</result>
 		</action>
-		<action name="bajaProveedor" class="ar.com.uade.action.ProveedorAction">
+		<action name="bajaProveedor" class="proveedor.action">
 			<result name="success" type="tiles">bajaProveedor</result>
 		</action>
-		<action name="modificarProveedor" class="ar.com.uade.action.ProveedorAction">
+		<action name="modificarProveedor" class="proveedor.action">
 			<result name="success" type="tiles">modificarProveedor</result>
 		</action>
 
 		<!-- REPORTES -->
-		<action name="reporteAnual" class="ar.com.uade.action.ReporteAction">
+		<action name="reporteAnual" class="reporte.action">
 			<result name="success" type="tiles">reporteAnual</result>
 		</action>
-		<action name="reporteDosFechas" class="ar.com.uade.action.ReporteAction">
+		<action name="reporteDosFechas" class="reporte.action">
 			<result name="success" type="tiles">reporteEntreFechas</result>
 		</action>
-		<action name="reporteMensual" class="ar.com.uade.action.ReporteAction">
+		<action name="reporteMensual" class="reporte.action">
 			<result name="success" type="tiles">reporteMensual</result>
 		</action>
-		<action name="reporteSemanal" class="ar.com.uade.action.ReporteAction">
+		<action name="reporteSemanal" class="reporte.action">
 			<result name="success" type="tiles">reporteSemanal</result>
 		</action>
 
 
 		<!-- VENDEDOR -->
-		<action name="altaVendedor" class="ar.com.uade.action.VendedorAction">
+		<action name="altaVendedor" class="vendedor.action">
 			<result name="success" type="tiles">altaVendedor</result>
 		</action>
-		<action name="bajaVendedor" class="ar.com.uade.action.VendedorAction">
+		<action name="bajaVendedor" class="vendedor.action">
 			<result name="success" type="tiles">bajaVendedor</result>
 		</action>
-		<action name="modificarVendedor" class="ar.com.uade.action.VendedorAction">
+		<action name="modificarVendedor" class="vendedor.action">
 			<result name="success" type="tiles">modificarVendedor</result>
 		</action>
 
 	<!-- VENTAS -->
-		<action name="cerrarVenta" class="ar.com.uade.action.VentaAction">
+		<action name="cerrarVenta" class="venta.action">
 			<result name="success" type="tiles">cerrarCaja</result>
 		</action>
-		<action name="gestionarCambio" class="ar.com.uade.action.VentaAction">
+		<action name="gestionarCambio" class="venta.action">
 			<result name="success" type="tiles">gestionarCambio</result>
 		</action>
-		<action name="nuevaVenta" class="ar.com.uade.action.VentaAction">
+		<action name="nuevaVenta" class="venta.action">
 			<result name="success" type="tiles">nuevaVenta</result>
 		</action>
 
