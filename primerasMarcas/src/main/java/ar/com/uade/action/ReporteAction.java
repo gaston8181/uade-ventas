@@ -18,6 +18,26 @@ public class ReporteAction extends ActionSupport {
 		return SUCCESS;
 	}
 
+	public String reporteSemanal() {
+		reporte.reporteSemanal();
+		return SUCCESS;
+	}
+
+	public String reporteMensual() {
+		reporte.reporteMensual();
+		return SUCCESS;
+	}
+
+	public String reporteAnual() {
+		reporte.reporteAnual();
+		return SUCCESS;
+	}
+
+	public String reporteEntreDosFechas() {
+		reporte.reporteEntreDosFechas();
+		return SUCCESS;
+	}
+
 	public ReporteBusiness getReporte() {
 		return reporte;
 	}

@@ -18,6 +18,21 @@ public class VentaAction extends ActionSupport {
 		return SUCCESS;
 	}
 
+	public String nuevaVenta() {
+		venta.nuevaVenta();
+		return SUCCESS;
+	}
+
+	public String gestionarCambio() {
+		venta.gestionarCambio();
+		return SUCCESS;
+	}
+
+	public String cerrarCaja() {
+		venta.cerrarCaja();
+		return SUCCESS;
+	}
+
 	public VentaBusiness getVenta() {
 		return venta;
 	}

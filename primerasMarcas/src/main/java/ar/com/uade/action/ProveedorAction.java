@@ -18,6 +18,21 @@ public class ProveedorAction extends ActionSupport {
 		return SUCCESS;
 	}
 
+	public String altaProveedor() {
+		proveedor.altaProveedor();
+		return SUCCESS;
+	}
+
+	public String bajaProveedor() {
+		proveedor.bajaProveedor();
+		return SUCCESS;
+	}
+
+	public String modificarProveedor() {
+		proveedor.modificarProveedor();
+		return SUCCESS;
+	}
+
 	public ProveedorBusiness getProveedor() {
 		return proveedor;
 	}

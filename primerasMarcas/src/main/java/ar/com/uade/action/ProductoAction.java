@@ -19,6 +19,26 @@ public class ProductoAction extends ActionSupport {
 		return SUCCESS;
 	}
 
+	public String altaProducto() {
+		producto.altaProducto();
+		return SUCCESS;
+	}
+
+	public String bajaProducto() {
+		producto.bajaProducto();
+		return SUCCESS;
+	}
+
+	public String cargarProducto() {
+		producto.modificarStock();
+		return SUCCESS;
+	}
+
+	public String consultarProducto() {
+		producto.consultarProducto();
+		return SUCCESS;
+	}
+
 	public ProductoBusiness getProducto() {
 		return producto;
 	}

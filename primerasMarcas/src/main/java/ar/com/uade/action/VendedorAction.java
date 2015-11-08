@@ -18,6 +18,21 @@ public class VendedorAction extends ActionSupport {
 		return SUCCESS;
 	}
 
+	public String altaVendedor() {
+		vendedor.altaVendedor();
+		return SUCCESS;
+	}
+
+	public String bajaVendedor() {
+		vendedor.bajaVendedor();
+		return SUCCESS;
+	}
+
+	public String modificarVendedor() {
+		vendedor.modificarVendedor();
+		return SUCCESS;
+	}
+
 	public VendedorBusiness getVendedor() {
 		return vendedor;
 	}
