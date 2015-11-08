@@ -28,22 +28,36 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<!-- BUSINESS -->
 	<bean id="producto.business" class="ar.com.uade.business.impl.ProductoBusinessImpl">
-	
+		<property name="productoDAO" ref="producto.dao" />
+
 	</bean>
-	
+
 	<bean id="proveedor.business" class="ar.com.uade.business.impl.ProveedorBusinessImpl">
-	
+		<property name="proveedorDAO" ref="proveedor.dao" />
 	</bean>
-	
+
 	<bean id="reporte.business" class="ar.com.uade.business.impl.ReporteBusinessImpl">
-	
+		<property name="reporteDAO" ref="reporte.dao" />
 	</bean>
-	
+
 	<bean id="vendedor.business" class="ar.com.uade.business.impl.VendedorBusinessImpl">
-	
+		<property name="vendedorDAO" ref="vendedor.dao" />
 	</bean>
-	
+
 	<bean id="venta.business" class="ar.com.uade.business.impl.VentaBusinessImpl">
-	
+		<property name="ventaDAO" ref="venta.dao" />
 	</bean>
+
+	<!-- DAO -->
+	<bean id="producto.dao" class="ar.com.uade.dao.impl.ProductoDAOImpl" />
+	
+	<bean id="proveedor.dao" class="ar.com.uade.dao.impl.ProveedorDAOImpl" />
+	
+	<bean id="reporte.dao" class="ar.com.uade.dao.impl.ReporteDAOImpl" />
+
+	<bean id="vendedor.dao" class="ar.com.uade.dao.impl.VendedorDAOImpl" />
+
+	<bean id="venta.dao" class="ar.com.uade.dao.impl.VentaDAOImpl" />
+
+
 </beans>
