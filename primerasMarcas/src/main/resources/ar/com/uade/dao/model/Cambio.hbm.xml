@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="ar.com.uade.dao.model.Cambio" table="CAMBIO">
+		<id name="idCambio">
+			<column name="IDCAMBIO" />
+		</id>
+		<property column="FECHA" name="fecha" />
+		<property column="DIFERENCIA" name="diferencia" />
+		<property column="OBSERVACIONES" name="observaciones" />
+		<many-to-one column="IDPAGO" class="ar.com.uade.dao.model.Pago"
+			name="pago" />
+		<many-to-one column="IDVENTA" class="ar.com.uade.dao.model.Venta"
+			name="venta" />
+	</class>
+</hibernate-mapping>
+
+

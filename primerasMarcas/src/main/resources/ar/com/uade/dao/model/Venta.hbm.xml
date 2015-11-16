@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="ar.com.uade.dao.model.Venta" table="VENTA">
+		<id name="id">
+			<column name="ID" />
+		</id>
+		<property column="FECHA" name="fecha" />
+		<many-to-one column="VENDEDOR" class="ar.com.uade.dao.model.Vendedor"
+			name="vendedor" />
+		<property column="TOTAL" name="total" />
+		<property column="OBSERVACIONES" name="observaciones" />
+		<many-to-one column="IDPAGO" class="ar.com.uade.dao.model.Pago"
+			name="pago" />
+
+	</class>
+</hibernate-mapping>
+
+

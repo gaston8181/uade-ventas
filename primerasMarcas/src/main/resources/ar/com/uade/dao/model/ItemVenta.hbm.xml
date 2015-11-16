@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ar.com.uade.dao.model.ItemVenta" table="ITEMVENTA">
+        <id name="id">
+        	<column name="ID"/>
+        </id>    
+        <many-to-one column="idProducto" class="ar.com.uade.dao.model.Producto" name="producto"/>
+        <property column="CANTIDAD" 	name="cantidad"/>
+     
+    </class>
+</hibernate-mapping>
+
+
