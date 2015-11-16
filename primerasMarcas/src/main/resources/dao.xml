@@ -14,15 +14,11 @@
 
 
 	<!-- CONFIGURA TU BASE -->
-	<bean id="tpdbadev" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-		destroy-method="close">
-		<property name="driverClass" value="" />
-		<property name="jdbcUrl" value="" />
-		<property name="user" value="" />
-		<property name="password" value="" />
-		<property name="minPoolSize" value="10" />
-		<property name="maxPoolSize" value="20" />
-		<property name="maxIdleTime" value="30" />
+	<bean id="tpdbadev" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/uade" />
+		<property name="username" value="root" />
+		<property name="password" value="admin" />
 	</bean>
 
 	<bean id="mySessionFactory"
@@ -30,7 +26,18 @@
 		<property name="dataSource" ref="tpdbadev" />
 		<property name="mappingResources">
 			<list>
-
+				<value>ar/com/uade/dao/model/Cambio.hbm.xml</value>
+				<value>ar/com/uade/dao/model/Color.hbm.xml</value>
+				<value>ar/com/uade/dao/model/Credito.hbm.xml</value>
+				<value>ar/com/uade/dao/model/Debito.hbm.xml</value>
+				<value>ar/com/uade/dao/model/Efectivo.hbm.xml</value>
+				<value>ar/com/uade/dao/model/ItemVenta.hbm.xml</value>
+				<value>ar/com/uade/dao/model/Pago.hbm.xml</value>
+				<value>ar/com/uade/dao/model/Producto.hbm.xml</value>
+				<value>ar/com/uade/dao/model/Proveedor.hbm.xml</value>
+				<value>ar/com/uade/dao/model/TipoProducto.hbm.xml</value>
+				<value>ar/com/uade/dao/model/Vendedor.hbm.xml</value>
+				<value>ar/com/uade/dao/model/Venta.hbm.xml</value>
 			</list>
 		</property>
 
