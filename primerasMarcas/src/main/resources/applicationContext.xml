@@ -3,6 +3,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
+
+	<import resource="dao.xml" />
+
 	<bean id="userBo" class="ar.com.uade.dao.impl.UserBoImpl" />
 
 	<bean id="producto.action" class="ar.com.uade.action.ProductoAction">
