@@ -1,11 +1,13 @@
 package ar.com.uade.dao;
 
+import ar.com.uade.dao.model.Proveedor;
+
 public interface ProveedorDAO {
 
-	void altaProveedor();
+	void altaProveedor(Proveedor proveedor);
 
-	void modificarProveedor();
+	void modificarProveedor(Proveedor proveedor);
 
-	void bajaProveedor();
+	void bajaProveedor(Proveedor proveedor);
 
 }

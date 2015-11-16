@@ -2,23 +2,27 @@ package ar.com.uade.business.impl;
 
 import ar.com.uade.business.VendedorBusiness;
 import ar.com.uade.dao.VendedorDAO;
+import ar.com.uade.dao.model.Vendedor;
 
 public class VendedorBusinessImpl implements VendedorBusiness {
 	private VendedorDAO vendedorDAO;
 
 	@Override
 	public void altaVendedor() {
-		vendedorDAO.altaVendedor();
+		Vendedor vendedor = new Vendedor();
+		vendedorDAO.altaVendedor(vendedor);
 	}
 
 	@Override
 	public void bajaVendedor() {
-		vendedorDAO.bajaVendedor();
+		Vendedor vendedor = new Vendedor();
+		vendedorDAO.bajaVendedor(vendedor);
 	}
 
 	@Override
 	public void modificarVendedor() {
-		vendedorDAO.modificarVendedor();
+		Vendedor vendedor = new Vendedor();
+		vendedorDAO.modificarVendedor(vendedor);
 	}
 
 	public VendedorDAO getVendedorDAO() {
