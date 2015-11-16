@@ -1,25 +1,27 @@
 package ar.com.uade.dao.impl;
 
+import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
+
 import ar.com.uade.dao.ProveedorDAO;
 import ar.com.uade.dao.model.Proveedor;
 
-public class ProveedorDAOImpl implements ProveedorDAO {
+public class ProveedorDAOImpl extends HibernateDaoSupport implements ProveedorDAO {
 
 	@Override
 	public void altaProveedor(Proveedor proveedor) {
-		// TODO Auto-generated method stub
+		getHibernateTemplate().saveOrUpdate(proveedor);
 
 	}
 
 	@Override
 	public void modificarProveedor(Proveedor proveedor) {
-		// TODO Auto-generated method stub
+		getHibernateTemplate().saveOrUpdate(proveedor);
 
 	}
 
 	@Override
 	public void bajaProveedor(Proveedor proveedor) {
-		// TODO Auto-generated method stub
+		getHibernateTemplate().delete(proveedor);
 
 	}
 

@@ -1,8 +1,10 @@
 package ar.com.uade.dao.impl;
 
+import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
+
 import ar.com.uade.dao.VentaDAO;
 
-public class VentaDAOImpl implements VentaDAO {
+public class VentaDAOImpl extends HibernateDaoSupport implements VentaDAO {
 
 	@Override
 	public void nuevaVenta() {
