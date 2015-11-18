@@ -35,7 +35,10 @@
 		</action>
 
 		<!-- PROVEEDORES -->
-		<action name="altaProveedor" class="proveedor.action">
+		<action name="homeAltaProveedor" class="proveedor.action">
+			<result name="success" type="tiles">altaProveedor</result>
+		</action>
+		<action name="altaProveedor" class="proveedor.action" method="altaProveedor">
 			<result name="success" type="tiles">altaProveedor</result>
 		</action>
 		<action name="bajaProveedor" class="proveedor.action">
@@ -61,7 +64,10 @@
 
 
 		<!-- VENDEDOR -->
-		<action name="altaVendedor" class="vendedor.action">
+		<action name="homeAltaVendedor" class="vendedor.action" method="execute">
+			<result name="success" type="tiles">altaVendedor</result>
+		</action>
+		<action name="altaVendedor" class="vendedor.action" method="altaVendedor">
 			<result name="success" type="tiles">altaVendedor</result>
 		</action>
 		<action name="bajaVendedor" class="vendedor.action">
@@ -71,7 +77,7 @@
 			<result name="success" type="tiles">modificarVendedor</result>
 		</action>
 
-	<!-- VENTAS -->
+		<!-- VENTAS -->
 		<action name="cerrarVenta" class="venta.action">
 			<result name="success" type="tiles">cerrarCaja</result>
 		</action>

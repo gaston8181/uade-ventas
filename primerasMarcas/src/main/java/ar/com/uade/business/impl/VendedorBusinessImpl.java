@@ -1,27 +1,31 @@
 package ar.com.uade.business.impl;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import ar.com.uade.business.VendedorBusiness;
 import ar.com.uade.dao.VendedorDAO;
 import ar.com.uade.dao.model.Vendedor;
+import ar.com.uade.form.VendedorForm;
 
 public class VendedorBusinessImpl implements VendedorBusiness {
 	private VendedorDAO vendedorDAO;
 
 	@Override
-	public void altaVendedor() {
-		Vendedor vendedor = new Vendedor();
+	@Transactional
+	public void altaVendedor(VendedorForm form) {
+		Vendedor vendedor = new Vendedor(form);
 		vendedorDAO.altaVendedor(vendedor);
 	}
 
 	@Override
-	public void bajaVendedor() {
-		Vendedor vendedor = new Vendedor();
+	public void bajaVendedor(VendedorForm form) {
+		Vendedor vendedor = new Vendedor(form);
 		vendedorDAO.bajaVendedor(vendedor);
 	}
 
 	@Override
-	public void modificarVendedor() {
-		Vendedor vendedor = new Vendedor();
+	public void modificarVendedor(VendedorForm form) {
+		Vendedor vendedor = new Vendedor(form);
 		vendedorDAO.modificarVendedor(vendedor);
 	}
 

@@ -26,7 +26,7 @@
 				</a>
 
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="altaVendedor">Alta Vendedor</a></li>
+						<li><a href="homeAltaVendedor">Alta Vendedor</a></li>
 						<li><a href="modificarVendedor">Modificar Vendedor</a></li>
 						<li><a href="bajaVendedor">Baja Vendedor</a></li>
 					</ul></li>

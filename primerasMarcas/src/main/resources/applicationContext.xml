@@ -32,7 +32,6 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<!-- BUSINESS -->
 	<bean id="producto.business" class="ar.com.uade.business.impl.ProductoBusinessImpl">
 		<property name="productoDAO" ref="producto.dao" />
-
 	</bean>
 
 	<bean id="proveedor.business" class="ar.com.uade.business.impl.ProveedorBusinessImpl">
@@ -52,15 +51,26 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	</bean>
 
 	<!-- DAO -->
-	<bean id="producto.dao" class="ar.com.uade.dao.impl.ProductoDAOImpl" />
-	
-	<bean id="proveedor.dao" class="ar.com.uade.dao.impl.ProveedorDAOImpl" />
-	
-	<bean id="reporte.dao" class="ar.com.uade.dao.impl.ReporteDAOImpl" />
+	<bean id="producto.dao" class="ar.com.uade.dao.impl.ProductoDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
 
-	<bean id="vendedor.dao" class="ar.com.uade.dao.impl.VendedorDAOImpl" />
+	<bean id="proveedor.dao" class="ar.com.uade.dao.impl.ProveedorDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
 
-	<bean id="venta.dao" class="ar.com.uade.dao.impl.VentaDAOImpl" />
+	<bean id="reporte.dao" class="ar.com.uade.dao.impl.ReporteDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="vendedor.dao" class="ar.com.uade.dao.impl.VendedorDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="venta.dao" class="ar.com.uade.dao.impl.VentaDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
 
 
+	<import resource="transaction.xml" />
 </beans>

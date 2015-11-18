@@ -4,6 +4,7 @@
 	<class name="ar.com.uade.dao.model.Vendedor" table="VENDEDOR">
 		<id name="legajo">
 			<column name="LEGAJO" />
+			<generator class="increment"/>
 		</id>
 		<property column="NOMBRE" name="nombre" />
 		<property column="APELLIDO" name="apellido" />

@@ -1,9 +1,11 @@
 package ar.com.uade.business;
 
+import ar.com.uade.form.VendedorForm;
+
 public interface VendedorBusiness {
-	void altaVendedor();
+	void altaVendedor(VendedorForm form);
 
-	void bajaVendedor();
+	void bajaVendedor(VendedorForm form);
 
-	void modificarVendedor();
+	void modificarVendedor(VendedorForm form);
 }

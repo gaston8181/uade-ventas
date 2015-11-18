@@ -1,17 +1,9 @@
-package ar.com.uade.dao.model;
+package ar.com.uade.form;
 
-import java.io.Serializable;
 import java.util.Date;
 
-import ar.com.uade.form.VendedorForm;
+public class VendedorForm {
 
-public class Vendedor implements Serializable {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -4930982618199740882L;
-	private Long legajo;
 	private String nombre;
 	private String apellido;
 	private Long dni;
@@ -19,28 +11,6 @@ public class Vendedor implements Serializable {
 	private String telefono;
 	private String domicilio;
 	private Date fechaIngreso;
-	private Date fechaBaja;
-
-	public Vendedor() {
-		
-	}
-	public Vendedor(VendedorForm form) {
-		this.nombre = form.getNombre();
-		this.apellido = form.getApellido();
-		this.dni = form.getDni();
-		this.fechaNac = form.getFechaNac();
-		this.telefono = form.getTelefono();
-		this.domicilio = form.getDomicilio();
-		this.fechaIngreso = form.getFechaIngreso();
-	}
-
-	public Long getLegajo() {
-		return legajo;
-	}
-
-	public void setLegajo(Long legajo) {
-		this.legajo = legajo;
-	}
 
 	public String getNombre() {
 		return nombre;
@@ -96,14 +66,6 @@ public class Vendedor implements Serializable {
 
 	public void setFechaIngreso(Date fechaIngreso) {
 		this.fechaIngreso = fechaIngreso;
-	}
-
-	public Date getFechaBaja() {
-		return fechaBaja;
-	}
-
-	public void setFechaBaja(Date fechaBaja) {
-		this.fechaBaja = fechaBaja;
 	}
 
 }
