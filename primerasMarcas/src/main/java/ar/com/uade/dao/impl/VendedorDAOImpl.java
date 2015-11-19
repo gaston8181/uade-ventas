@@ -28,6 +28,7 @@ public class VendedorDAOImpl extends HibernateDaoSupport implements VendedorDAO{
 		
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Vendedor> listarVendedores() {
 		DetachedCriteria criteria = DetachedCriteria.forClass(Vendedor.class);
