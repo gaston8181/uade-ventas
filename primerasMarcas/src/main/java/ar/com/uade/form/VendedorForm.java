@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class VendedorForm {
 
+	private Long legajo;
 	private String nombre;
 	private String apellido;
 	private Long dni;
@@ -11,6 +12,15 @@ public class VendedorForm {
 	private String telefono;
 	private String domicilio;
 	private Date fechaIngreso;
+	private Date fechaBaja;
+
+	public Long getLegajo() {
+		return legajo;
+	}
+
+	public void setLegajo(Long legajo) {
+		this.legajo = legajo;
+	}
 
 	public String getNombre() {
 		return nombre;
@@ -66,6 +76,14 @@ public class VendedorForm {
 
 	public void setFechaIngreso(Date fechaIngreso) {
 		this.fechaIngreso = fechaIngreso;
+	}
+
+	public Date getFechaBaja() {
+		return fechaBaja;
+	}
+
+	public void setFechaBaja(Date fechaBaja) {
+		this.fechaBaja = fechaBaja;
 	}
 
 }

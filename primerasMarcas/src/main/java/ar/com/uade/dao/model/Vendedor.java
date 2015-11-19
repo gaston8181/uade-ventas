@@ -24,6 +24,10 @@ public class Vendedor implements Serializable {
 	public Vendedor() {
 		
 	}
+	
+	public Vendedor(Long legajo) {
+		this.legajo = legajo;
+	}
 	public Vendedor(VendedorForm form) {
 		this.nombre = form.getNombre();
 		this.apellido = form.getApellido();
