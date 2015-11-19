@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <div class="row">
 	<div class="col-xs-12 col-md-12 col-lg-12">
 
@@ -43,34 +43,34 @@
 						<table class="table table-condensed table-hover">
 
 							<tbody>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1">46335596</td>
-									<td class="col-md-1">Independencia 1634</td>
-									<td class="col-md-1">18/5/2015</td>
-									<td class="col-md-1"></td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Modificar" class="detail-row"><i
-											class="fa fa-angle-right"></i> Modificar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1">46335596</td>
-									<td class="col-md-1">Independencia 1634</td>
-									<td class="col-md-1">18/5/2015</td>
-									<td class="col-md-1 text-danger"><i
-										class="fa fa-exclamation"></i>18/8/2015</td>
-									<td class="col-md-1 text-center"></td>
-								</tr>
+								<s:iterator value="vendedoresExistentes">
 
+									<tr>
+										<td class="col-md-1"><s:property value="legajo" /></td>
+										<td class="col-md-1"><s:property value="nombre" /></td>
+										<td class="col-md-1"><s:property value="apellido" /></td>
+										<td class="col-md-1"><s:property value="dni" /></td>
+										<td class="col-md-1"><s:date name="fechaNac"
+												format="dd/MM/yyyy" /></td>
+										<td class="col-md-1"><s:property value="telefono" /></td>
+										<td class="col-md-1"><s:property value="domicilio" /></td>
+										<td class="col-md-1"><s:date name="fechaIngreso"
+												format="dd/MM/yyyy" /></td>
+
+										<s:if test="fechaBaja == null">
+											<td class="col-md-1"></td>
+											<td class="col-md-1 text-center"><a href="#"
+												title="Modificar" class="detail-row"><i
+													class="fa fa-angle-right"></i> Modificar</a></td>
+										</s:if>
+
+										<s:else>
+											<td class="col-md-1 text-danger"><i class="fa fa-exclamation"></i> <s:date
+													name="fechaBaja" format="dd/MM/yyyy" /></td>
+											<td class="col-md-1 text-center"></td>
+										</s:else>
+									</tr>
+								</s:iterator>
 							</tbody>
 
 						</table>

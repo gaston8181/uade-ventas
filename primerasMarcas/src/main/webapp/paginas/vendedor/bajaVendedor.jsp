@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <div class="row">
 	<div class="col-xs-12 col-md-12 col-lg-12">
 
@@ -39,137 +39,22 @@
 						<table class="table table-condensed table-hover">
 
 							<tbody>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">ApelledioAlgo</td>
-									<td class="col-md-1">31232323</td>
-									<td class="col-md-1">18/5/1998</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-
+								<s:iterator value="vendedoresExistentes">
+									<s:if test="fechaBaja == null">
+										<tr>
+											<td class="col-md-1"><s:property value="legajo" /></td>
+											<td class="col-md-1"><s:property value="nombre" /></td>
+											<td class="col-md-1"><s:property value="apellido" /></td>
+											<td class="col-md-1"><s:property value="dni" /></td>
+											<td class="col-md-1"><s:date name="fechaNac"
+													format="dd/MM/yyyy" /></td>
+											<td class="col-md-1 text-center"><a
+												href="bajaVendedor?form.legajo=<s:property value="legajo" />"
+												title="Eliminar Registro" class="delete-row"><i
+													class="fa fa-trash-o"></i> Eliminar</a></td>
+										</tr>
+									</s:if>
+								</s:iterator>
 							</tbody>
 
 						</table>

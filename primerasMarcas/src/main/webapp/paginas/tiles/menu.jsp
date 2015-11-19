@@ -27,8 +27,8 @@
 
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="homeAltaVendedor">Alta Vendedor</a></li>
-						<li><a href="modificarVendedor">Modificar Vendedor</a></li>
-						<li><a href="bajaVendedor">Baja Vendedor</a></li>
+						<li><a href="homeModificarVendedor">Modificar Vendedor</a></li>
+						<li><a href="homeBajaVendedor">Baja Vendedor</a></li>
 					</ul></li>
 				<!--  -->
 				<!-- ABM PROVEEDOR -->

@@ -70,9 +70,16 @@
 		<action name="altaVendedor" class="vendedor.action" method="altaVendedor">
 			<result name="success" type="tiles">altaVendedor</result>
 		</action>
-		<action name="bajaVendedor" class="vendedor.action">
+		<action name="homeBajaVendedor" class="vendedor.action" method="cargarListaVendedores">
 			<result name="success" type="tiles">bajaVendedor</result>
 		</action>
+		<action name="bajaVendedor" class="vendedor.action" method="bajaVendedor">
+			<result name="success" type="tiles">bajaVendedor</result>
+		</action>
+		<action name="homeModificarVendedor" class="vendedor.action" method="cargarListaVendedores">
+			<result name="success" type="tiles">modificarVendedor</result>
+		</action>
+		
 		<action name="modificarVendedor" class="vendedor.action">
 			<result name="success" type="tiles">modificarVendedor</result>
 		</action>
