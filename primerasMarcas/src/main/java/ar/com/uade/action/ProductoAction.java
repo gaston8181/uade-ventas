@@ -20,12 +20,22 @@ public class ProductoAction extends ActionSupport {
 	}
 
 	public String altaProducto() {
-		producto.altaProducto();
+		try {
+			producto.altaProducto();
+			addActionMessage("Alta Exitosa!");
+		} catch (Exception e) {
+			addActionError("Ocurrio un error inesperado, intente nuevamente!");
+		}
 		return SUCCESS;
 	}
 
 	public String bajaProducto() {
+		try {
 		producto.bajaProducto();
+		addActionMessage("Baja Exitosa!");
+		} catch (Exception e) {
+			addActionError("Ocurrio un error inesperado, intente nuevamente!");
+		}
 		return SUCCESS;
 	}
 

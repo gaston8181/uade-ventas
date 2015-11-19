@@ -20,25 +20,45 @@ public class VendedorAction extends ActionSupport {
 	@Override
 	public String execute() throws Exception {
 		System.out.println("Esto en vendedor");
+		clearErrorsAndMessages();
 		return SUCCESS;
 	}
 
 	public String cargarListaVendedores() {
 		vendedoresExistentes = vendedor.listarVendedores();
+		clearErrorsAndMessages();
 		return SUCCESS;
 	}
+
 	public String altaVendedor() {
-		vendedor.altaVendedor(form);
+		try {
+			vendedor.altaVendedor(form);
+			addActionMessage("Alta Exitosa!");
+		} catch (Exception e) {
+			addActionError("Ocurrio un error inesperado, intente nuevamente!");
+		}
 		return SUCCESS;
 	}
 
 	public String bajaVendedor() {
-		vendedor.bajaVendedor(form);
+		try {
+			vendedor.bajaVendedor(form);
+			vendedoresExistentes = vendedor.listarVendedores();
+			addActionMessage("Baja Exitosa!");
+		} catch (Exception e) {
+			addActionError("Ocurrio un error inesperado, intente nuevamente!");
+		}
 		return SUCCESS;
 	}
 
 	public String modificarVendedor() {
-		vendedor.modificarVendedor(form);
+		try {
+			addActionMessage("Modificacion Exitosa!");
+			vendedor.modificarVendedor(form);
+			vendedoresExistentes = vendedor.listarVendedores();
+		} catch (Exception e) {
+			addActionError("Ocurrio un error inesperado, intente nuevamente!");
+		}
 		return SUCCESS;
 	}
 
