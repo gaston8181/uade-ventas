@@ -1,5 +1,7 @@
 package ar.com.uade.action;
 
+import java.util.List;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 import ar.com.uade.business.VendedorBusiness;
@@ -12,6 +14,7 @@ public class VendedorAction extends ActionSupport {
 	 */
 	private static final long serialVersionUID = 7133807641107600555L;
 	private VendedorBusiness vendedor;
+	private List<VendedorForm> vendedoresExistentes;
 	private VendedorForm form;
 
 	@Override
@@ -20,6 +23,10 @@ public class VendedorAction extends ActionSupport {
 		return SUCCESS;
 	}
 
+	public String cargarListaVendedores() {
+		vendedoresExistentes = vendedor.listarVendedores();
+		return SUCCESS;
+	}
 	public String altaVendedor() {
 		vendedor.altaVendedor(form);
 		return SUCCESS;
@@ -45,5 +52,13 @@ public class VendedorAction extends ActionSupport {
 
 	public void setForm(VendedorForm form) {
 		this.form = form;
+	}
+
+	public List<VendedorForm> getVendedoresExistentes() {
+		return vendedoresExistentes;
+	}
+
+	public void setVendedoresExistentes(List<VendedorForm> vendedoresExistentes) {
+		this.vendedoresExistentes = vendedoresExistentes;
 	}
 }

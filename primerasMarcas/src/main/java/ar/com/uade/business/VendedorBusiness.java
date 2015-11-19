@@ -1,5 +1,7 @@
 package ar.com.uade.business;
 
+import java.util.List;
+
 import ar.com.uade.form.VendedorForm;
 
 public interface VendedorBusiness {
@@ -8,4 +10,6 @@ public interface VendedorBusiness {
 	void bajaVendedor(VendedorForm form);
 
 	void modificarVendedor(VendedorForm form);
+
+	List<VendedorForm> listarVendedores();
 }
