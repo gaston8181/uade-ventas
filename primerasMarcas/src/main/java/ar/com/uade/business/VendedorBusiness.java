@@ -12,4 +12,6 @@ public interface VendedorBusiness {
 	void modificarVendedor(VendedorForm form);
 
 	List<VendedorForm> listarVendedores();
+
+	VendedorForm obtenerVendedor(Long legajo);
 }

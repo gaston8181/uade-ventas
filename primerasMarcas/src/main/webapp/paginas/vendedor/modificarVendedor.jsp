@@ -59,7 +59,7 @@
 
 										<s:if test="fechaBaja == null">
 											<td class="col-md-1"></td>
-											<td class="col-md-1 text-center"><a href="#"
+											<td class="col-md-1 text-center"><a href="cargarVendedor?form.legajo=${legajo}"
 												title="Modificar" class="detail-row"><i
 													class="fa fa-angle-right"></i> Modificar</a></td>
 										</s:if>

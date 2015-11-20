@@ -51,11 +51,16 @@ public class VendedorAction extends ActionSupport {
 		return SUCCESS;
 	}
 
+	public String cargarVendedor() {
+		form = vendedor.obtenerVendedor(form.getLegajo());
+		return SUCCESS;
+	}
+
 	public String modificarVendedor() {
 		try {
-			addActionMessage("Modificacion Exitosa!");
 			vendedor.modificarVendedor(form);
 			vendedoresExistentes = vendedor.listarVendedores();
+			addActionMessage("Modificacion Exitosa!");
 		} catch (Exception e) {
 			addActionError("Ocurrio un error inesperado, intente nuevamente!");
 		}

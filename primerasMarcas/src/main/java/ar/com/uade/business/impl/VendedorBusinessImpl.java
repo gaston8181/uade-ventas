@@ -30,6 +30,14 @@ public class VendedorBusinessImpl implements VendedorBusiness {
 	}
 
 	@Override
+	@Transactional
+	public VendedorForm obtenerVendedor(Long legajo) {
+		Vendedor vendedor = vendedorDAO.loadVendedor(legajo);
+		return crearView(vendedor);
+	}
+
+	@Override
+	@Transactional
 	public void modificarVendedor(VendedorForm form) {
 		Vendedor vendedor = new Vendedor(form);
 		vendedorDAO.modificarVendedor(vendedor);
@@ -39,21 +47,25 @@ public class VendedorBusinessImpl implements VendedorBusiness {
 	public List<VendedorForm> listarVendedores() {
 		List<Vendedor> vendedores = vendedorDAO.listarVendedores();
 		List<VendedorForm> vendedoresForm = new ArrayList<VendedorForm>();
-		for(Vendedor vendedor:vendedores) {
-			VendedorForm vf = new VendedorForm();
-			vf.setLegajo(vendedor.getLegajo());
-			vf.setApellido(vendedor.getApellido());
-			vf.setDni(vendedor.getDni());
-			vf.setDomicilio(vendedor.getDomicilio());
-			vf.setFechaIngreso(vendedor.getFechaIngreso());
-			vf.setFechaNac(vendedor.getFechaNac());
-			vf.setNombre(vendedor.getNombre());
-			vf.setTelefono(vendedor.getTelefono());
-			vf.setFechaBaja(vendedor.getFechaBaja());
-			
-			vendedoresForm.add(vf);
+		for (Vendedor vendedor : vendedores) {
+			vendedoresForm.add(crearView(vendedor));
 		}
 		return vendedoresForm;
+	}
+
+	private VendedorForm crearView(Vendedor vendedor) {
+		VendedorForm vf = new VendedorForm();
+		vf.setLegajo(vendedor.getLegajo());
+		vf.setApellido(vendedor.getApellido());
+		vf.setDni(vendedor.getDni());
+		vf.setDomicilio(vendedor.getDomicilio());
+		vf.setFechaIngreso(vendedor.getFechaIngreso());
+		vf.setFechaNac(vendedor.getFechaNac());
+		vf.setNombre(vendedor.getNombre());
+		vf.setTelefono(vendedor.getTelefono());
+		vf.setFechaBaja(vendedor.getFechaBaja());
+
+		return vf;
 	}
 
 	public VendedorDAO getVendedorDAO() {

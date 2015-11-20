@@ -79,8 +79,10 @@
 		<action name="homeModificarVendedor" class="vendedor.action" method="cargarListaVendedores">
 			<result name="success" type="tiles">modificarVendedor</result>
 		</action>
-		
-		<action name="modificarVendedor" class="vendedor.action">
+		<action name="cargarVendedor" class="vendedor.action" method="cargarVendedor">
+			<result name="success" type="tiles">cargarVendedor</result>
+		</action>
+		<action name="modificarVendedor" class="vendedor.action" method="modificarVendedor">
 			<result name="success" type="tiles">modificarVendedor</result>
 		</action>
 
