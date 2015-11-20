@@ -1,10 +1,18 @@
 package ar.com.uade.business;
 
+import java.util.List;
+
+import ar.com.uade.form.ProveedorForm;
+
 public interface ProveedorBusiness {
-	void altaProveedor();
+	void altaProveedor(ProveedorForm form);
 	
-	void modificarProveedor();
+	void modificarProveedor(ProveedorForm form);
 	
-	void bajaProveedor();
+	void bajaProveedor(ProveedorForm form);
+
+	ProveedorForm obtenerProveedor();
+
+	List<ProveedorForm> listarProveedores();
 
 }

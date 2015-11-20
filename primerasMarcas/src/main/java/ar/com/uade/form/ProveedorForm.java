@@ -1,39 +1,12 @@
-package ar.com.uade.dao.model;
+package ar.com.uade.form;
 
-import java.io.Serializable;
-
-import ar.com.uade.form.ProveedorForm;
-
-public class Proveedor implements Serializable {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 6700518550788030641L;
-	private static final String ACTIVO = "activo";
-	private static final String INACTIVO = "inactivo";
+public class ProveedorForm {
 	private Long id;
 	private String nombre;
 	private String direccion;
 	private String telefono;
 	private String estado;
 
-	public Proveedor() {
-		this.estado = ACTIVO;
-	}
-
-	public Proveedor(ProveedorForm form) {
-		this.id = form.getId();
-		this.nombre = form.getNombre();
-		this.direccion = form.getDireccion();
-		this.telefono = form.getTelefono();
-		this.estado = ACTIVO;
-	}
-
-	public void inactivar() {
-		this.estado = INACTIVO;
-	}
-	
 	public Long getId() {
 		return id;
 	}

@@ -25,7 +25,7 @@ public class ProveedorTest {
 
 	@Test
 	public void test() {
-		proveedorBusiness.altaProveedor();
+//		proveedorBusiness.altaProveedor();
 		fail("Not yet implemented");
 	}
 

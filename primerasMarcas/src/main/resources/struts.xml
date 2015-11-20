@@ -38,6 +38,9 @@
 		<action name="homeAltaProveedor" class="proveedor.action">
 			<result name="success" type="tiles">altaProveedor</result>
 		</action>
+		<action name="homeModificarProveedor" class="proveedor.action" method="cargarListaProveedores">
+			<result name="success" type="tiles">modificarProveedor</result>
+		</action>
 		<action name="altaProveedor" class="proveedor.action" method="altaProveedor">
 			<result name="success" type="tiles">altaProveedor</result>
 		</action>

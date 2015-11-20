@@ -1,5 +1,7 @@
 package ar.com.uade.dao;
 
+import java.util.List;
+
 import ar.com.uade.dao.model.Proveedor;
 
 public interface ProveedorDAO {
@@ -9,5 +11,7 @@ public interface ProveedorDAO {
 	void modificarProveedor(Proveedor proveedor);
 
 	void bajaProveedor(Proveedor proveedor);
+
+	List<Proveedor> listarProveedores();
 
 }

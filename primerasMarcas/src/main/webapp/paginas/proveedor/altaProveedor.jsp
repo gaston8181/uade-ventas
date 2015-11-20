@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <div class="row">
 	<div class="col-xs-12 col-md-12 col-lg-12">
 
@@ -13,23 +13,29 @@
 				<div class="panel panel-default panel-form">
 					<div class="panel-body">
 						<!-- formulario -->
-						<form>
+						<s:form action="altaProveedor" theme="simple">
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Nombre</label>
 								<div class="col-sm-4">
-									<input type="text" class="form-control" />
+									<s:textfield type="text" cssClass="form-control" cssErrorClass="has-error" name="form.nombre"/>
+									<s:fielderror fieldName="form.nombre"
+										cssClass="help-block has-error" />
 								</div>
 							</div>
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Direccion</label>
 								<div class="col-sm-4">
-									<input type="text" class="form-control" />
+									<s:textfield type="text" cssClass="form-control" cssErrorClass="has-error" name="form.direccion"/>
+									<s:fielderror fieldName="form.direccion"
+										cssClass="help-block has-error" />
 								</div>
 							</div>
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Telefono</label>
 								<div class="col-sm-4">
-									<input type="text" class="form-control" />
+									<s:textfield type="text" cssClass="form-control" cssErrorClass="has-error" name="form.telefono"/>
+									<s:fielderror fieldName="form.telefono"
+										cssClass="help-block has-error" />
 								</div>
 							</div>
 
@@ -40,7 +46,7 @@
 								</div>
 							</div>
 
-						</form>
+						</s:form>
 						<!--! -->
 					</div>
 				</div>

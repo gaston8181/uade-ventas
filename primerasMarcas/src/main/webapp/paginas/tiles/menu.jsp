@@ -38,8 +38,8 @@
 				</a>
 
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="altaProveedor">Alta Proveedor</a></li>
-						<li><a href="modificarProveedor">Modificar Proveedor</a></li>
+						<li><a href="homeAltaProveedor">Alta Proveedor</a></li>
+						<li><a href="homeModificarProveedor">Modificar Proveedor</a></li>
 						<li><a href="bajaProveedor">Baja Proveedor</a></li>
 					</ul></li>
 				<!--  -->
