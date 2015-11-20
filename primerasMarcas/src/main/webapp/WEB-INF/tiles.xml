@@ -76,6 +76,10 @@
 	<definition name="bajaVendedor" extends="baseLayout">
 		<put-attribute name="body" value="/paginas/vendedor/bajaVendedor.jsp" />
 	</definition>
+	<definition name="cargarVendedor" extends="baseLayout">
+		<put-attribute name="body"
+			value="/paginas/vendedor/actualizarVendedor.jsp" />
+	</definition>
 	<definition name="modificarVendedor" extends="baseLayout">
 		<put-attribute name="body"
 			value="/paginas/vendedor/modificarVendedor.jsp" />
