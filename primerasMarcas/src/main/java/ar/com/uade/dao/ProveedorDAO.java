@@ -14,4 +14,6 @@ public interface ProveedorDAO {
 
 	List<Proveedor> listarProveedores();
 
+	Proveedor loadProveedor(Long id);
+
 }

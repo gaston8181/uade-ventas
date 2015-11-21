@@ -36,6 +36,9 @@ public class ProveedorAction extends ActionSupport {
 
 	public String bajaProveedor() {
 		proveedor.bajaProveedor(form);
+		proveedoresExistentes = proveedor.listarProveedores();
+		addActionMessage("Baja Exitosa!");
+		
 		return SUCCESS;
 	}
 

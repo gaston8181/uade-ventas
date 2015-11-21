@@ -30,6 +30,7 @@ public class ProveedorBusinessImpl implements ProveedorBusiness {
 		pf.setId(proveedor.getId());
 		pf.setNombre(proveedor.getNombre());
 		pf.setTelefono(proveedor.getTelefono());
+		pf.setActivo(!proveedor.eliminado());
 		return pf;
 	}
 
@@ -50,7 +51,8 @@ public class ProveedorBusinessImpl implements ProveedorBusiness {
 	@Override
 	@Transactional
 	public void bajaProveedor(ProveedorForm form) {
-		Proveedor proveedor = new Proveedor();
+		Proveedor proveedor = proveedorDAO.loadProveedor(form.getId());
+		proveedor.inactivar();
 		proveedorDAO.bajaProveedor(proveedor);
 	}
 
