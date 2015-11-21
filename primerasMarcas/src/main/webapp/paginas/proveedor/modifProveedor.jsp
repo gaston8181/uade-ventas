@@ -45,22 +45,20 @@
 										<td class="col-md-1"><s:property value="nombre" /></td>
 										<td class="col-md-1"><s:property value="direccion" /></td>
 										<td class="col-md-1"><s:property value="telefono" /></td>
-										<td class="col-md-1"><s:property value="estado" /></td>
-										<td class="col-md-1 text-center"><a href="#"
-											title="Modificar" class="detail-row"><i
-												class="fa fa-angle-right"></i> Modificar</a></td>
+										<s:if test="activo">
+											<td class="col-md-1"><s:property value="estado" /></td>
+											<td class="col-md-1 text-center"><a href="#"
+												title="Modificar" class="detail-row"><i
+													class="fa fa-angle-right"></i> Modificar</a></td>
+										</s:if>
+
+										<s:else>
+											<td class="col-md-1 text-danger"><i
+												class="fa fa-exclamation"></i><s:property value="estado" /></td>
+											<td class="col-md-1 text-center"></td>
+										</s:else>
 									</tr>
 								</s:iterator>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">Independencia 1711</td>
-									<td class="col-md-1">15-3232-2323</td>
-									<td class="col-md-1 text-danger"><i
-										class="fa fa-exclamation"></i>Inactivo</td>
-									<td class="col-md-1 text-center"></td>
-								</tr>
-
 							</tbody>
 
 						</table>

@@ -24,7 +24,7 @@ public class ProveedorDAOImpl extends HibernateDaoSupport implements ProveedorDA
 
 	@Override
 	public void bajaProveedor(Proveedor proveedor) {
-		getHibernateTemplate().delete(proveedor);
+		getHibernateTemplate().update(proveedor);
 
 	}
 
@@ -33,6 +33,11 @@ public class ProveedorDAOImpl extends HibernateDaoSupport implements ProveedorDA
 		DetachedCriteria criteria = DetachedCriteria.forClass(Proveedor.class);
 		
 		return (List<Proveedor>) getHibernateTemplate().findByCriteria(criteria);
+	}
+
+	@Override
+	public Proveedor loadProveedor(Long id) {
+		return getHibernateTemplate().load(Proveedor.class, id);
 	}
 
 }

@@ -40,7 +40,7 @@
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="homeAltaProveedor">Alta Proveedor</a></li>
 						<li><a href="homeModificarProveedor">Modificar Proveedor</a></li>
-						<li><a href="bajaProveedor">Baja Proveedor</a></li>
+						<li><a href="homeBajaProveedor">Baja Proveedor</a></li>
 					</ul></li>
 				<!--  -->
 				<!-- ABM PRODUCTO -->

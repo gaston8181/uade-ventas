@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <div class="row">
 	<div class="col-xs-12 col-md-12 col-lg-12">
 
@@ -38,80 +38,20 @@
 						<table class="table table-condensed table-hover">
 
 							<tbody>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">Independencia 1711</td>
-									<td class="col-md-1">15-3232-2323</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">Independencia 1711</td>
-									<td class="col-md-1">15-3232-2323</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">Independencia 1711</td>
-									<td class="col-md-1">15-3232-2323</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">Independencia 1711</td>
-									<td class="col-md-1">15-3232-2323</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">Independencia 1711</td>
-									<td class="col-md-1">15-3232-2323</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">Independencia 1711</td>
-									<td class="col-md-1">15-3232-2323</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">Independencia 1711</td>
-									<td class="col-md-1">15-3232-2323</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-								<tr>
-									<td class="col-md-1">3292</td>
-									<td class="col-md-1">Martin</td>
-									<td class="col-md-1">Independencia 1711</td>
-									<td class="col-md-1">15-3232-2323</td>
-									<td class="col-md-1 text-center"><a href="#"
-										title="Eliminar Registro" class="delete-row"><i
-											class="fa fa-trash-o"></i> Eliminar</a></td>
-								</tr>
-
-
+								<s:iterator value="proveedoresExistentes">
+									<s:if test="activo">
+										<tr>
+											<td class="col-md-1"><s:property value="id" /></td>
+											<td class="col-md-1"><s:property value="nombre" /></td>
+											<td class="col-md-1"><s:property value="direccion" /></td>
+											<td class="col-md-1"><s:property value="telefono" /></td>
+											<td class="col-md-1 text-center"><a
+												href="bajaProveedor?form.id=<s:property value="id" />"
+												title="Eliminar Registro" class="delete-row"><i
+													class="fa fa-trash-o"></i> Eliminar</a></td>
+										</tr>
+									</s:if>
+								</s:iterator>
 							</tbody>
 
 						</table>

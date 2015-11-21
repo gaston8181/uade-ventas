@@ -6,6 +6,7 @@ public class ProveedorForm {
 	private String direccion;
 	private String telefono;
 	private String estado;
+	private boolean activo;
 
 	public Long getId() {
 		return id;
@@ -47,4 +48,11 @@ public class ProveedorForm {
 		this.estado = estado;
 	}
 
+	public boolean isActivo() {
+		return activo;
+	}
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
+	}
 }

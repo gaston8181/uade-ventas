@@ -34,6 +34,10 @@ public class Proveedor implements Serializable {
 		this.estado = INACTIVO;
 	}
 	
+	public boolean eliminado() {
+		return INACTIVO.equals(this.estado);
+	}
+	
 	public Long getId() {
 		return id;
 	}
