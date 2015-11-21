@@ -47,7 +47,7 @@
 										<td class="col-md-1"><s:property value="telefono" /></td>
 										<s:if test="activo">
 											<td class="col-md-1"><s:property value="estado" /></td>
-											<td class="col-md-1 text-center"><a href="#"
+											<td class="col-md-1 text-center"><a href="cargarProveedor?form.id=${id}"
 												title="Modificar" class="detail-row"><i
 													class="fa fa-angle-right"></i> Modificar</a></td>
 										</s:if>

@@ -58,9 +58,10 @@ public class ProveedorBusinessImpl implements ProveedorBusiness {
 
 	@Override
 	@Transactional
-	public ProveedorForm obtenerProveedor() {
-		// TODO Auto-generated method stub
-		return null;
+	public ProveedorForm obtenerProveedor(Long id) {
+		Proveedor proveedor = proveedorDAO.loadProveedor(id);
+		return crearView(proveedor);
+		
 	}
 
 	public ProveedorDAO getProveedorDAO() {

@@ -50,7 +50,10 @@
 		<action name="bajaProveedor" class="proveedor.action" method="bajaProveedor">
 			<result name="success" type="tiles">bajaProveedor</result>
 		</action>
-		<action name="modificarProveedor" class="proveedor.action">
+		<action name="cargarProveedor" class="proveedor.action" method="cargarProveedor">
+			<result name="success" type="tiles">cargarProveedor</result>
+		</action>
+		<action name="modificarProveedor" class="proveedor.action" method="modificarProveedor">
 			<result name="success" type="tiles">modificarProveedor</result>
 		</action>
 

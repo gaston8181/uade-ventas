@@ -43,12 +43,14 @@ public class ProveedorAction extends ActionSupport {
 	}
 
 	public String cargarProveedor() {
-		form = proveedor.obtenerProveedor();
+		form = proveedor.obtenerProveedor(form.getId());
 		return SUCCESS;
 	}
 
 	public String modificarProveedor() {
 		proveedor.modificarProveedor(form);
+		proveedoresExistentes = proveedor.listarProveedores();
+
 		return SUCCESS;
 	}
 

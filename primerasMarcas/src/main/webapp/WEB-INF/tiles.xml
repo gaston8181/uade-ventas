@@ -53,7 +53,10 @@
 		<put-attribute name="body"
 			value="/paginas/proveedor/modifProveedor.jsp" />
 	</definition>
-
+	<definition name="cargarProveedor" extends="baseLayout">
+		<put-attribute name="body"
+			value="/paginas/proveedor/actualizarProveedor.jsp" />
+	</definition>
 
 	<!-- REPORTES -->
 	<definition name="reporteAnual" extends="baseLayout">

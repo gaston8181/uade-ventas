@@ -11,7 +11,7 @@ public interface ProveedorBusiness {
 	
 	void bajaProveedor(ProveedorForm form);
 
-	ProveedorForm obtenerProveedor();
+	ProveedorForm obtenerProveedor(Long id);
 
 	List<ProveedorForm> listarProveedores();
 
