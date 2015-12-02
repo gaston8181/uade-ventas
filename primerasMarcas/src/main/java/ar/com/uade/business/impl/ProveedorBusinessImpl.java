@@ -22,6 +22,16 @@ public class ProveedorBusinessImpl implements ProveedorBusiness {
 		}
 		return proveedorForm;
 	}
+	
+	@Override
+	public List<ProveedorForm> listarProveedoresActivos() {
+		List<Proveedor> proveedores = proveedorDAO.listarProveedoresActivos();
+		List<ProveedorForm> proveedorForm = new ArrayList<ProveedorForm>();
+		for (Proveedor proveedor : proveedores) {
+			proveedorForm.add(crearView(proveedor));
+		}
+		return proveedorForm;
+	}
 
 	private ProveedorForm crearView(Proveedor proveedor) {
 		ProveedorForm pf = new ProveedorForm();

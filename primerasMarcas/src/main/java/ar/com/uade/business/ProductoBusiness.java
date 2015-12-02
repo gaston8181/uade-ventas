@@ -1,5 +1,11 @@
 package ar.com.uade.business;
 
+import java.util.List;
+
+import ar.com.uade.form.ColorForm;
+import ar.com.uade.form.ProveedorForm;
+import ar.com.uade.form.TipoProductoForm;
+
 public interface ProductoBusiness {
 	void altaProducto();
 
@@ -10,5 +16,11 @@ public interface ProductoBusiness {
 	void modificarStock();
 
 	void consultarProducto();
+	
+	List<ColorForm> getColores();
+	
+	List<TipoProductoForm> getTiposProd();
+	
+	List<ProveedorForm> getProveedores();
 
 }
