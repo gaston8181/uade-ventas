@@ -70,13 +70,6 @@
 							</div>
 
 							<div class="row form-group">
-								<label class="col-sm-4 control-label">Decripcion</label>
-								<div class="col-sm-4">
-									<textarea class="form-control" rows="3"></textarea>
-								</div>
-							</div>
-
-							<div class="row form-group">
 								<label class="col-sm-4 control-label">Stock</label>
 								<div class="col-sm-4">
 									<input type="number" pattern="([0-9]|[0-9]|[0-9])"

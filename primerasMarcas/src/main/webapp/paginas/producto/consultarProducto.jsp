@@ -95,7 +95,6 @@
 							<thead>
 								<tr>
 									<th class="col-md-2">Cod Barras</th>
-									<th class="col-md-1 ">Proveedor</th>
 									<th class="col-md-1">Marca</th>
 									<th class="col-md-1">Tipo Producto</th>
 									<th class="col-md-1">Color</th>
@@ -117,7 +116,6 @@
 							<tbody>
 								<tr>
 									<td class="col-md-2">156485456</td>
-									<td class="col-md-1">La Plata</td>
 									<td class="col-md-1">Tucci</td>
 									<td class="col-md-1">Remera</td>
 									<td class="col-md-1">Blanca</td>
@@ -128,7 +126,6 @@
 								</tr>
 								<tr>
 									<td class="col-md-2">156485456</td>
-									<td class="col-md-1">La Plata</td>
 									<td class="col-md-1">Tucci</td>
 									<td class="col-md-1">Remera</td>
 									<td class="col-md-1">Blanca</td>
@@ -139,7 +136,7 @@
 								</tr>
 								<tr>
 									<td class="col-md-2">156485456</td>
-									<td class="col-md-1">La Plata</td>
+									
 									<td class="col-md-1">Tucci</td>
 									<td class="col-md-1">Remera</td>
 									<td class="col-md-1">Blanca</td>
@@ -150,7 +147,7 @@
 								</tr>
 								<tr>
 									<td class="col-md-2">156485456</td>
-									<td class="col-md-1">La Plata</td>
+									
 									<td class="col-md-1">Tucci</td>
 									<td class="col-md-1">Remera</td>
 									<td class="col-md-1">Blanca</td>
@@ -159,62 +156,7 @@
 									<td class="col-md-1">100</td>
 									<td class="col-md-1">10</td>
 								</tr>
-								<tr>
-									<td class="col-md-2">156485456</td>
-									<td class="col-md-1">La Plata</td>
-									<td class="col-md-1">Tucci</td>
-									<td class="col-md-1">Remera</td>
-									<td class="col-md-1">Blanca</td>
-									<td class="col-md-1">L</td>
-									<td class="col-md-1">50</td>
-									<td class="col-md-1">100</td>
-									<td class="col-md-1">10</td>
-								</tr>
-								<tr>
-									<td class="col-md-2">156485456</td>
-									<td class="col-md-1">La Plata</td>
-									<td class="col-md-1">Tucci</td>
-									<td class="col-md-1">Remera</td>
-									<td class="col-md-1">Blanca</td>
-									<td class="col-md-1">L</td>
-									<td class="col-md-1">50</td>
-									<td class="col-md-1">100</td>
-									<td class="col-md-1">10</td>
-								</tr>
-								<tr>
-									<td class="col-md-2">156485456</td>
-									<td class="col-md-1">La Plata</td>
-									<td class="col-md-1">Tucci</td>
-									<td class="col-md-1">Remera</td>
-									<td class="col-md-1">Blanca</td>
-									<td class="col-md-1">L</td>
-									<td class="col-md-1">50</td>
-									<td class="col-md-1">100</td>
-									<td class="col-md-1">10</td>
-								</tr>
-								<tr>
-									<td class="col-md-2">156485456</td>
-									<td class="col-md-1">La Plata</td>
-									<td class="col-md-1">Tucci</td>
-									<td class="col-md-1">Remera</td>
-									<td class="col-md-1">Blanca</td>
-									<td class="col-md-1">L</td>
-									<td class="col-md-1">50</td>
-									<td class="col-md-1">100</td>
-									<td class="col-md-1">10</td>
-								</tr>
-								<tr>
-									<td class="col-md-2">156485456</td>
-									<td class="col-md-1">La Plata</td>
-									<td class="col-md-1">Tucci</td>
-									<td class="col-md-1">Remera</td>
-									<td class="col-md-1">Blanca</td>
-									<td class="col-md-1">L</td>
-									<td class="col-md-1">50</td>
-									<td class="col-md-1">100</td>
-									<td class="col-md-1">10</td>
-								</tr>
-
+								
 							</tbody>
 
 						</table>
