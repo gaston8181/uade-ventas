@@ -10,7 +10,7 @@ public class Proveedor implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 6700518550788030641L;
-	private static final String ACTIVO = "activo";
+	public static final String ACTIVO = "activo";
 	private static final String INACTIVO = "inactivo";
 	private Long id;
 	private String nombre;

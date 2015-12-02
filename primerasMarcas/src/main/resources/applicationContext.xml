@@ -29,7 +29,18 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<!-- BUSINESS -->
 	<bean id="producto.business" class="ar.com.uade.business.impl.ProductoBusinessImpl">
+		<property name="proveedorBusiness" ref="proveedor.business" />
+		<property name="colorBusiness" ref="color.business" />
+		<property name="tipoProductoBusiness" ref="tipoProducto.business" />
 		<property name="productoDAO" ref="producto.dao" />
+	</bean>
+
+	<bean id="tipoProducto.business" class="ar.com.uade.business.impl.TipoProductoBusinessImpl">
+		<property name="tipoProductoDAO" ref="tipoProducto.dao" />
+	</bean>
+
+	<bean id="color.business" class="ar.com.uade.business.impl.ColorBusinessImpl">
+		<property name="colorDAO" ref="color.dao" />
 	</bean>
 
 	<bean id="proveedor.business" class="ar.com.uade.business.impl.ProveedorBusinessImpl">
@@ -69,6 +80,13 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 
+	<bean id="color.dao" class="ar.com.uade.dao.impl.ColorDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="tipoProducto.dao" class="ar.com.uade.dao.impl.TipoProductoDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
 
 	<import resource="transaction.xml" />
 </beans>
