@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags"%>
 
 <div class="row">
 	<div class="col-xs-12 col-md-12 col-lg-12">
@@ -12,80 +13,87 @@
 
 				<div class="panel panel-default panel-form">
 					<div class="panel-body">
+
+						<s:actionmessage cssClass="alert alert-success" />
+						<s:actionerror cssClass="alert alert-danger" />
 						<!-- formulario -->
-						<form>
+						<s:form action="altaProducto" theme="simple">
+							<div class="row form-group">
+								<label class="col-sm-4 control-label">Codigo Barras</label>
+								<div class="col-sm-4">
+									<s:textfield id="idCodigoBarras" type="text" cssClass="form-control"
+										name="form.id" cssErrorClass="has-error" disabled="true"
+										/>
+								</div>
+							</div>
+
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Marca</label>
 								<div class="col-sm-4">
-									<input type="text" class="form-control" />
+									<s:select id="idMarca" cssClass="form-control" list="combos.marcas"
+										listValue="descripcion" listKey="id" onchange="generarCodigo()">
+										
+									</s:select>
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label for="inputPassword" class="col-sm-4 control-label">Color</label>
 								<div class="col-sm-4">
-									<select class="form-control">
-										<option>BLANCO</option>
-										<option>NEGRO</option>
-										<option>ROJO</option>
-										<option>AZUL</option>
-										<option>GRIS</option>
-									</select>
+									<s:select id="idColor" cssClass="form-control" list="combos.colores"
+										listValue="descripcion" listKey="id" onchange="generarCodigo()"/>
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Precio Venta</label>
 								<div class="col-sm-4">
-									<input type="number" pattern="([0-9]|[0-9]|[0-9])"
-										class="form-control" onkeypress="return isNumberKey(event)">
+									<s:textfield type="text" cssClass="form-control"
+										name="form.precioVenta" cssErrorClass="has-error"
+										onkeypress="return isNumberKey(event)" />
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Precio Compra</label>
 								<div class="col-sm-4">
-									<input type="number" pattern="([0-9]|[0-9]|[0-9])"
-										class="form-control" onkeypress="return isNumberKey(event)">
+									<s:textfield type="text" cssClass="form-control"
+										name="form.precioCompra" cssErrorClass="has-error"
+										onkeypress="return isNumberKey(event)" />
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label for="inputPassword" class="col-sm-4 control-label">Proveedor</label>
 								<div class="col-sm-4">
-									<select class="form-control">
-										<option>RAPSODIA</option>
-										<option>PINGUIN</option>
-										<option>GOLA</option>
-										<option>TUCCI</option>
-									</select>
+									<s:select cssClass="form-control" list="combos.proveedores"
+										listValue="nombre" listKey="id" />
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Dato Adicional</label>
 								<div class="col-sm-4">
-									<input type="text" class="form-control" />
+									<s:textfield type="text" cssClass="form-control"
+										name="form.datoAdicional" cssErrorClass="has-error" />
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Stock</label>
 								<div class="col-sm-4">
-									<input type="number" pattern="([0-9]|[0-9]|[0-9])"
-										class="form-control" onkeypress="return isNumberKey(event)">
+									<s:textfield type="text" cssClass="form-control"
+										name="form.stock" cssErrorClass="has-error"
+										onkeypress="return isNumberKey(event)" />
 								</div>
 							</div>
 
 							<div class="row form-group">
-								<label for="inputPassword" class="col-sm-4 control-label">Tipo Producto</label>
+								<label for="inputPassword" class="col-sm-4 control-label">Tipo
+									Producto</label>
 								<div class="col-sm-4">
-									<select class="form-control">
-										<option>tipo1</option>
-										<option>tipo2</option>
-										<option>tipo3</option>
-										<option>tipo4</option>
-									</select>
+									<s:select id="idTipoProducto" cssClass="form-control" list="combos.tiposProductos"
+										listValue="descripcion" listKey="id" onchange="generarCodigo()"/>
 								</div>
 							</div>
 
@@ -96,7 +104,7 @@
 								</div>
 							</div>
 
-						</form>
+						</s:form>
 						<!--! -->
 					</div>
 				</div>
