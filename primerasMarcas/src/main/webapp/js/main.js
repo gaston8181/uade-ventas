@@ -91,3 +91,8 @@ function isNumberKey(evt){
         return false;
     return true;
 }
+
+function generarCodigo() {
+	var codigo = $('#idMarca').val() + $('#idColor').val() + $('#idTipoProducto').val();
+	$('#idCodigoBarras').val(codigo);
+}

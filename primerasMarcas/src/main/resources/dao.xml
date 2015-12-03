@@ -28,6 +28,7 @@
 			<list>
 				<value>ar/com/uade/dao/model/Cambio.hbm.xml</value>
 				<value>ar/com/uade/dao/model/Color.hbm.xml</value>
+				<value>ar/com/uade/dao/model/Marca.hbm.xml</value>
 				<value>ar/com/uade/dao/model/Credito.hbm.xml</value>
 				<value>ar/com/uade/dao/model/Debito.hbm.xml</value>
 				<value>ar/com/uade/dao/model/Efectivo.hbm.xml</value>

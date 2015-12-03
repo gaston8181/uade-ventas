@@ -32,6 +32,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 		<property name="proveedorBusiness" ref="proveedor.business" />
 		<property name="colorBusiness" ref="color.business" />
 		<property name="tipoProductoBusiness" ref="tipoProducto.business" />
+		<property name="marcaBusiness" ref="marca.business" />
 		<property name="productoDAO" ref="producto.dao" />
 	</bean>
 
@@ -41,6 +42,10 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<bean id="color.business" class="ar.com.uade.business.impl.ColorBusinessImpl">
 		<property name="colorDAO" ref="color.dao" />
+	</bean>
+
+	<bean id="marca.business" class="ar.com.uade.business.impl.MarcaBusinessImpl">
+		<property name="marcaDAO" ref="marca.dao" />
 	</bean>
 
 	<bean id="proveedor.business" class="ar.com.uade.business.impl.ProveedorBusinessImpl">
@@ -81,6 +86,10 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	</bean>
 
 	<bean id="color.dao" class="ar.com.uade.dao.impl.ColorDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="marca.dao" class="ar.com.uade.dao.impl.MarcaDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 

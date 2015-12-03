@@ -5,7 +5,7 @@
 		<id name="id">
 			<column name="ID" />
 		</id>
-		<property column="MARCA" name="marca" />
+		<many-to-one column="ID_MARCA" class="ar.com.uade.dao.model.Marca" name="marca" />
 		<property column="COLOR" name="color" />
 		<property column="FECHAINGRESO" name="fechaIngreso" />
 		<property column="PRECIOVENTA" name="precioVenta" />

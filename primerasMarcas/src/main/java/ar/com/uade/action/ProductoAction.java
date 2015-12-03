@@ -26,7 +26,7 @@ public class ProductoAction extends ActionSupport implements Preparable {
 
 	public String altaProducto() {
 		try {
-			producto.altaProducto();
+			producto.altaProducto(form);
 			addActionMessage("Alta Exitosa!");
 		} catch (Exception e) {
 			addActionError("Ocurrio un error inesperado, intente nuevamente!");
@@ -60,6 +60,7 @@ public class ProductoAction extends ActionSupport implements Preparable {
 		combos.setColores(producto.getColores());
 		combos.setProveedores(producto.getProveedores());
 		combos.setTiposProductos(producto.getTiposProd());
+		combos.setMarcas(producto.getMarcas());
 	}
 
 	public ProductoBusiness getProducto() {

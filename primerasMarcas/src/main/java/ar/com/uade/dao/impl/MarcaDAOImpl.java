@@ -6,18 +6,18 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Order;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
-import ar.com.uade.dao.ColorDAO;
-import ar.com.uade.dao.model.Color;
+import ar.com.uade.dao.MarcaDAO;
+import ar.com.uade.dao.model.Marca;
 
-public class ColorDAOImpl extends HibernateDaoSupport implements ColorDAO {
+public class MarcaDAOImpl extends HibernateDaoSupport implements MarcaDAO {
 
 	private static final String DESCRIPCION = "descripcion";
 
 	@Override
-	public List<Color> listarColores() {
-		DetachedCriteria criteria = DetachedCriteria.forClass(Color.class);
+	public List<Marca> listarMarcas() {
+		DetachedCriteria criteria = DetachedCriteria.forClass(Marca.class);
 		criteria.addOrder(Order.asc(DESCRIPCION));
-		return (List<Color>) getHibernateTemplate().findByCriteria(criteria);
+		return (List<Marca>) getHibernateTemplate().findByCriteria(criteria);
 	}
 
 }

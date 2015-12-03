@@ -4,13 +4,12 @@ import java.math.BigDecimal;
 
 public class ProductoForm {
 	private Long id;
-	private String marca;
+	private String idMarca;
 	private Long idColor;
 	private BigDecimal precioVenta;
 	private BigDecimal precioCompra;
 	private Long idProveedor;
 	private String datoAdicional;
-	private String descripcion;
 	private int stock;
 	private Long idTipoProducto;
 
@@ -22,12 +21,12 @@ public class ProductoForm {
 		this.id = id;
 	}
 
-	public String getMarca() {
-		return marca;
+	public String getIdMarca() {
+		return idMarca;
 	}
 
-	public void setMarca(String marca) {
-		this.marca = marca;
+	public void setIdMarca(String idMarca) {
+		this.idMarca = idMarca;
 	}
 
 	public Long getIdColor() {
@@ -68,14 +67,6 @@ public class ProductoForm {
 
 	public void setDatoAdicional(String datoAdicional) {
 		this.datoAdicional = datoAdicional;
-	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
 	}
 
 	public int getStock() {

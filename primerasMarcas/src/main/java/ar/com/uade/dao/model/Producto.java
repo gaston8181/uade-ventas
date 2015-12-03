@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import ar.com.uade.form.ProductoForm;
+
 public class Producto implements Serializable {
 
 	/**
@@ -11,7 +13,7 @@ public class Producto implements Serializable {
 	 */
 	private static final long serialVersionUID = -6965383958732823521L;
 	private Long id;
-	private String marca;
+	private Marca marca;
 	private Color color;
 	private Date fechaIngreso;
 	private BigDecimal precioVenta;
@@ -22,6 +24,22 @@ public class Producto implements Serializable {
 	private TipoProducto tipoProducto;
 	private int stock;
 
+	public Producto() {
+	}
+
+	public Producto(ProductoForm pf) {
+		this.id = pf.getId();
+		this.marca = new Marca();
+		this.color = new Color();
+		this.fechaIngreso = new Date();
+		this.precioVenta = pf.getPrecioVenta();
+		this.precioCompra = pf.getPrecioCompra();
+		this.proveedor = new Proveedor();
+		this.datoAdicional = pf.getDatoAdicional();
+		this.tipoProducto = new TipoProducto();
+		this.stock = pf.getStock();
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -30,11 +48,11 @@ public class Producto implements Serializable {
 		this.id = id;
 	}
 
-	public String getMarca() {
+	public Marca getMarca() {
 		return marca;
 	}
 
-	public void setMarca(String marca) {
+	public void setMarca(Marca marca) {
 		this.marca = marca;
 	}
 

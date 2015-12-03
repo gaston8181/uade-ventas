@@ -1,6 +1,6 @@
 package ar.com.uade.form;
 
-public class TipoProductoForm {
+public class MarcaForm {
 	private Long id;
 	private String descripcion;
 
@@ -19,4 +19,5 @@ public class TipoProductoForm {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+
 }

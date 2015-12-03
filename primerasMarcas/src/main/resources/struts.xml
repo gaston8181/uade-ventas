@@ -18,7 +18,10 @@
 		</action>
 
 		<!-- PRODCUTOS -->
-		<action name="altaProducto" class="producto.action">
+		<action name="homeAltaProducto" class="producto.action">
+			<result name="success" type="tiles">altaProducto</result>
+		</action>
+		<action name="altaProducto" class="producto.action" method="altaProducto">
 			<result name="success" type="tiles">altaProducto</result>
 		</action>
 		<action name="bajaProducto" class="producto.action">

@@ -1,6 +1,13 @@
-package ar.com.uade.form;
+package ar.com.uade.dao.model;
 
-public class TipoProductoForm {
+import java.io.Serializable;
+
+public class Marca implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 83386290037228752L;
 	private Long id;
 	private String descripcion;
 
@@ -19,4 +26,5 @@ public class TipoProductoForm {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+
 }

@@ -25,8 +25,7 @@ public class TipoProductoBusinessImpl implements TipoProductoBusiness {
 	private TipoProductoForm crearView(TipoProducto tipoProducto) {
 		TipoProductoForm view = new TipoProductoForm();
 		view.setId(tipoProducto.getId());
-		view.setDescripcion(tipoProducto.getDescripcion());
-		view.setTalle(tipoProducto.getTalle());
+		view.setDescripcion(tipoProducto.getDescripcion() + " - " + tipoProducto.getTalle());
 		return view;
 	}
 
