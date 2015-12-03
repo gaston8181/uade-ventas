@@ -51,7 +51,7 @@
 
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="homeAltaProducto">Alta Producto</a></li>
-						<li><a href="modificarProducto">Modificar Producto</a></li>
+						<li><a href="homeModificarProducto">Modificar Producto</a></li>
 						<li><a href="bajaProducto">Baja Producto</a></li>
 						<li><a href="cargarProducto">Cargar Producto</a></li>
 

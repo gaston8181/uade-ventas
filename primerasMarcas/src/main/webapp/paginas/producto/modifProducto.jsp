@@ -1,3 +1,5 @@
+<%@ taglib prefix="s" uri="/struts-tags"%>
+
 
 <div class="row">
 	<div class="col-xs-12 col-md-12 col-lg-12">
@@ -13,11 +15,12 @@
 				<div class="panel panel-default panel-form">
 					<div class="panel-body">
 						<!-- formulario -->
-						<form>
+						<s:form action="buscarProducto" theme="simple">
 							<div class="row form-group">
 								<label class="col-sm-3 control-label">Codigo Barras</label>
 								<div class="col-sm-4">
-									<input type="text" class="form-control" />
+									<s:textfield type="text" cssClass="form-control" name="form.id"
+										cssErrorClass="has-error" />
 
 								</div>
 
@@ -26,65 +29,68 @@
 										class="btn btn-default btn-primary btn-block">Buscar</button>
 								</div>
 							</div>
-
+						</s:form>
+						<s:form action="modificarProducto" theme="simple">
 							<div class="row form-group">
 								<label class="col-sm-3 control-label">Marca</label>
 								<div class="col-sm-4">
-									<input type="text" class="form-control"  disabled="disabled" />
+									<s:select id="idMarca" cssClass="form-control"
+										list="combos.marcas" listValue="descripcion" listKey="id"
+										name="form.idMarca" onchange="generarCodigo()">
+									</s:select>
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label for="inputPassword" class="col-sm-3 control-label">Color</label>
 								<div class="col-sm-4">
-									<select class="form-control"  disabled="disabled" >
-									</select>
+									<s:select id="idColor" cssClass="form-control"
+										list="combos.colores" name="form.idColor"
+										listValue="descripcion" listKey="id"
+										onchange="generarCodigo()" />
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-sm-3 control-label">Precio Venta</label>
 								<div class="col-sm-4">
-									<input type="number" pattern="([0-9]|[0-9]|[0-9])"  disabled="disabled" 
-										class="form-control" onkeypress="return isNumberKey(event)">
+									<s:textfield type="text" cssClass="form-control"
+										name="form.precioVenta" cssErrorClass="has-error"
+										onkeypress="return isNumberKey(event)" />
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-sm-3 control-label">Precio Compra</label>
 								<div class="col-sm-4">
-									<input type="number" pattern="([0-9]|[0-9]|[0-9])"  disabled="disabled" 
-										class="form-control" onkeypress="return isNumberKey(event)">
+									<s:textfield type="text" cssClass="form-control"
+										name="form.precioCompra" cssErrorClass="has-error"
+										onkeypress="return isNumberKey(event)" />
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label for="inputPassword" class="col-sm-3 control-label">Proveedor</label>
 								<div class="col-sm-4">
-									<select class="form-control"  disabled="disabled" >
-									</select>
+									<s:select cssClass="form-control" list="combos.proveedores"
+										listValue="nombre" listKey="id" name="form.idProveedor" />
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-sm-3 control-label">Dato Adicional</label>
 								<div class="col-sm-4">
-									<input type="text" class="form-control"  disabled="disabled" />
-								</div>
-							</div>
-
-							<div class="row form-group">
-								<label class="col-sm-3 control-label">Decripcion</label>
-								<div class="col-sm-4">
-									<textarea class="form-control" rows="3"  disabled="disabled" ></textarea>
+									<s:textfield type="text" cssClass="form-control"
+										name="form.datoAdicional" cssErrorClass="has-error" />
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-sm-3 control-label">Stock</label>
 								<div class="col-sm-4">
-									<input type="number" pattern="([0-9]|[0-9]|[0-9])"  disabled="disabled" 
-										class="form-control" onkeypress="return isNumberKey(event)">
+									<s:textfield type="text" cssClass="form-control"
+										name="form.stock" cssErrorClass="has-error"
+										onkeypress="return isNumberKey(event)" />
 								</div>
 							</div>
 
@@ -92,20 +98,22 @@
 								<label for="inputPassword" class="col-sm-3 control-label">Tipo
 									Producto</label>
 								<div class="col-sm-4">
-									<select class="form-control"  disabled="disabled" >
-
-									</select>
+									<s:select id="idTipoProducto" cssClass="form-control"
+										list="combos.tiposProductos" listValue="descripcion"
+										listKey="id" onchange="generarCodigo()"
+										name="form.idTipoProducto" />
 								</div>
 							</div>
 
 							<div class="row form-group action-row">
 								<div class="col-sm-offset-10 col-sm-2">
 									<button type="submit"
-										class="btn btn-default btn-primary btn-block"  disabled="disabled" >Actualizar</button>
+										class="btn btn-default btn-primary btn-block"
+										disabled="disabled">Actualizar</button>
 								</div>
 							</div>
 
-						</form>
+						</s:form>
 						<!--! -->
 					</div>
 				</div>

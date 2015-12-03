@@ -37,4 +37,9 @@ public class ProductoDAOImpl extends HibernateDaoSupport implements ProductoDAO{
 		
 	}
 
+	@Override
+	public Producto loadProducto(Long id) {
+		return getHibernateTemplate().load(Producto.class, id);
+	}
+
 }

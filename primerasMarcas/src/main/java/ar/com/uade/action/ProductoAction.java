@@ -1,13 +1,12 @@
 package ar.com.uade.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.Preparable;
 
 import ar.com.uade.business.ProductoBusiness;
 import ar.com.uade.form.CombosForm;
 import ar.com.uade.form.ProductoForm;
 
-public class ProductoAction extends ActionSupport implements Preparable {
+public class ProductoAction extends ActionSupport{
 
 	/**
 	 * 
@@ -20,7 +19,14 @@ public class ProductoAction extends ActionSupport implements Preparable {
 
 	@Override
 	public String execute() throws Exception {
+		form = new ProductoForm();
+		cargarCombos();
 		System.out.println("Esto en producto");
+		return SUCCESS;
+	}
+	
+	public String executeSinPrecarga() {
+		form = new ProductoForm();
 		return SUCCESS;
 	}
 
@@ -28,6 +34,7 @@ public class ProductoAction extends ActionSupport implements Preparable {
 		try {
 			producto.altaProducto(form);
 			addActionMessage("Alta Exitosa!");
+			form = new ProductoForm();
 		} catch (Exception e) {
 			addActionError("Ocurrio un error inesperado, intente nuevamente!");
 		}
@@ -44,8 +51,9 @@ public class ProductoAction extends ActionSupport implements Preparable {
 		return SUCCESS;
 	}
 
-	public String cargarProducto() {
-		producto.modificarStock();
+	public String buscarProducto() throws Exception {
+		form = producto.obtenerProducto(form.getId());
+		cargarCombos();
 		return SUCCESS;
 	}
 
@@ -54,8 +62,8 @@ public class ProductoAction extends ActionSupport implements Preparable {
 		return SUCCESS;
 	}
 
-	@Override
-	public void prepare() throws Exception {
+
+	public void cargarCombos() throws Exception {
 		combos = new CombosForm();
 		combos.setColores(producto.getColores());
 		combos.setProveedores(producto.getProveedores());

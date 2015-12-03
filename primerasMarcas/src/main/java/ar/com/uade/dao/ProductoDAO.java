@@ -14,4 +14,6 @@ public interface ProductoDAO {
 
 	void consultarProducto();
 
+	Producto loadProducto(Long id);
+
 }

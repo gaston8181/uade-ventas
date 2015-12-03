@@ -102,7 +102,28 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 		lista.addAll(marcaBusiness.listarMarcas());
 		return lista;
 	}
+
+
+	@Transactional
+	public ProductoForm obtenerProducto(Long id) {
+		Producto producto = productoDAO.loadProducto(id);
+		return crearView(producto);
+	}
 	
+	private ProductoForm crearView(Producto producto) {
+		ProductoForm view = new ProductoForm();
+		view.setDatoAdicional(producto.getDatoAdicional());
+		view.setId(producto.getId());
+		view.setIdColor(producto.getColor().getId());
+		view.setIdMarca(producto.getMarca().getId());
+		view.setIdProveedor(producto.getProveedor().getId());
+		view.setIdTipoProducto(producto.getTipoProducto().getId());
+		view.setPrecioCompra(producto.getPrecioCompra());
+		view.setPrecioVenta(producto.getPrecioVenta());
+		view.setStock(producto.getStock());
+		return view;
+	}
+
 	public void setProductoDAO(ProductoDAO productoDAO) {
 		this.productoDAO = productoDAO;
 	}
@@ -122,4 +143,5 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 	public void setMarcaBusiness(MarcaBusiness marcaBusiness) {
 		this.marcaBusiness = marcaBusiness;
 	}
+
 }

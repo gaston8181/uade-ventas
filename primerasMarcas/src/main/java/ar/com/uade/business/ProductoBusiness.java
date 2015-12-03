@@ -26,5 +26,7 @@ public interface ProductoBusiness {
 	List<ProveedorForm> getProveedores();
 	
 	List<MarcaForm> getMarcas();
+	
+	ProductoForm obtenerProducto(Long id);
 
 }
