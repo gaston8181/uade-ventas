@@ -6,14 +6,13 @@
 			<column name="ID" />
 		</id>
 		<many-to-one column="ID_MARCA" class="ar.com.uade.dao.model.Marca" name="marca" />
-		<property column="COLOR" name="color" />
+		<many-to-one column="IDCOLOR" class="ar.com.uade.dao.model.Color" name="color" />
 		<property column="FECHAINGRESO" name="fechaIngreso" />
 		<property column="PRECIOVENTA" name="precioVenta" />
 		<property column="PRECIOCOMPRA" name="precioCompra" />
 		<many-to-one column="IDPROVEEDOR" class="ar.com.uade.dao.model.Proveedor" name="proveedor" />
 		<property column="DATOADICIONAL" name="datoAdicional" />
-		<property column="DESCRIPCION" name="descripcion" />
-		<many-to-one column="IDTIPOPRODUCTO" class="ar.com.uade.dao.model.Producto" name="tipoProducto" />
+		<many-to-one column="IDTIPOPRODUCTO" class="ar.com.uade.dao.model.TipoProducto" name="tipoProducto" />
 		<property column="STOCK" name="stock" />
 
 	</class>

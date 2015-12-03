@@ -21,9 +21,9 @@
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Codigo Barras</label>
 								<div class="col-sm-4">
-									<s:textfield id="idCodigoBarras" type="text" cssClass="form-control"
-										name="form.id" cssErrorClass="has-error" disabled="true"
-										/>
+									<input id="idCodigoBarras" type="text" class="form-control"
+										disabled />
+									<s:hidden id="codigoBarrasHidden" key="form.id"/>
 								</div>
 							</div>
 
@@ -31,7 +31,8 @@
 								<label class="col-sm-4 control-label">Marca</label>
 								<div class="col-sm-4">
 									<s:select id="idMarca" cssClass="form-control" list="combos.marcas"
-										listValue="descripcion" listKey="id" onchange="generarCodigo()">
+										listValue="descripcion" listKey="id" 
+										name="form.idMarca" onchange="generarCodigo()">
 										
 									</s:select>
 								</div>
@@ -41,7 +42,7 @@
 								<label for="inputPassword" class="col-sm-4 control-label">Color</label>
 								<div class="col-sm-4">
 									<s:select id="idColor" cssClass="form-control" list="combos.colores"
-										listValue="descripcion" listKey="id" onchange="generarCodigo()"/>
+										name="form.idColor" listValue="descripcion" listKey="id" onchange="generarCodigo()"/>
 								</div>
 							</div>
 
@@ -67,7 +68,8 @@
 								<label for="inputPassword" class="col-sm-4 control-label">Proveedor</label>
 								<div class="col-sm-4">
 									<s:select cssClass="form-control" list="combos.proveedores"
-										listValue="nombre" listKey="id" />
+										listValue="nombre" listKey="id" 
+										name="form.idProveedor"/>
 								</div>
 							</div>
 
@@ -93,7 +95,8 @@
 									Producto</label>
 								<div class="col-sm-4">
 									<s:select id="idTipoProducto" cssClass="form-control" list="combos.tiposProductos"
-										listValue="descripcion" listKey="id" onchange="generarCodigo()"/>
+										listValue="descripcion" listKey="id" onchange="generarCodigo()"
+										name="form.idTipoProducto"/>
 								</div>
 							</div>
 

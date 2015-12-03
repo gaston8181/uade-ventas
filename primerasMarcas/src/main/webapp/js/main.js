@@ -95,4 +95,5 @@ function isNumberKey(evt){
 function generarCodigo() {
 	var codigo = $('#idMarca').val() + $('#idColor').val() + $('#idTipoProducto').val();
 	$('#idCodigoBarras').val(codigo);
+	$('#codigoBarrasHidden').val(codigo);
 }

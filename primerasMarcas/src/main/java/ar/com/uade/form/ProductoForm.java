@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class ProductoForm {
 	private Long id;
-	private String idMarca;
+	private Long idMarca;
 	private Long idColor;
 	private BigDecimal precioVenta;
 	private BigDecimal precioCompra;
@@ -21,11 +21,11 @@ public class ProductoForm {
 		this.id = id;
 	}
 
-	public String getIdMarca() {
+	public Long getIdMarca() {
 		return idMarca;
 	}
 
-	public void setIdMarca(String idMarca) {
+	public void setIdMarca(Long idMarca) {
 		this.idMarca = idMarca;
 	}
 

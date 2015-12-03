@@ -29,14 +29,14 @@ public class Producto implements Serializable {
 
 	public Producto(ProductoForm pf) {
 		this.id = pf.getId();
-		this.marca = new Marca();
-		this.color = new Color();
+		this.marca = new Marca(pf.getIdMarca());
+		this.color = new Color(pf.getIdColor());
 		this.fechaIngreso = new Date();
 		this.precioVenta = pf.getPrecioVenta();
 		this.precioCompra = pf.getPrecioCompra();
-		this.proveedor = new Proveedor();
+		this.proveedor = new Proveedor(pf.getIdProveedor());
 		this.datoAdicional = pf.getDatoAdicional();
-		this.tipoProducto = new TipoProducto();
+		this.tipoProducto = new TipoProducto(pf.getIdTipoProducto());
 		this.stock = pf.getStock();
 	}
 

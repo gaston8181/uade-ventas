@@ -12,6 +12,14 @@ public class TipoProducto implements Serializable {
 	private String descripcion;
 	private String talle;
 
+	public TipoProducto() {
+
+	}
+
+	public TipoProducto(Long id) {
+		this.id = id;
+	}
+
 	public Long getId() {
 		return id;
 	}

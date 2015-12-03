@@ -11,6 +11,14 @@ public class Color implements Serializable {
 	private Long id;
 	private String descripcion;
 
+	public Color() {
+
+	}
+
+	public Color(Long id) {
+		this.id = id;
+	}
+
 	public Long getId() {
 		return id;
 	}

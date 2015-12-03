@@ -11,6 +11,14 @@ public class Marca implements Serializable {
 	private Long id;
 	private String descripcion;
 
+	public Marca() {
+
+	}
+
+	public Marca(Long id) {
+		this.id = id;
+	}
+
 	public Long getId() {
 		return id;
 	}

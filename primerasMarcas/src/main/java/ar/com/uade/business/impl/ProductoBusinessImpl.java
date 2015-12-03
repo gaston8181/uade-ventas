@@ -3,6 +3,8 @@ package ar.com.uade.business.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import ar.com.uade.business.ColorBusiness;
 import ar.com.uade.business.MarcaBusiness;
 import ar.com.uade.business.ProductoBusiness;
@@ -25,28 +27,28 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 	private MarcaBusiness marcaBusiness;
 	private ProductoDAO productoDAO;
 
-	@Override
+	@Transactional
 	public void altaProducto(ProductoForm producto) {
-		Producto p = new Producto();
+		Producto p = new Producto(producto);
 		productoDAO.altaProducto(p);
 
 	}
 
-	@Override
+	@Transactional
 	public void bajaProducto() {
 		Producto producto = new Producto();
 		productoDAO.bajaProducto(producto);
 
 	}
 
-	@Override
+	@Transactional
 	public void modificarProducto() {
 		Producto producto = new Producto();
 		productoDAO.modificarProducto(producto);
 
 	}
 
-	@Override
+	@Transactional
 	public void modificarStock() {
 		productoDAO.modificarStock();
 	}

@@ -21,6 +21,10 @@ public class Proveedor implements Serializable {
 	public Proveedor() {
 		this.estado = ACTIVO;
 	}
+	
+	public Proveedor(Long id) {
+		this.id = id;
+	}
 
 	public Proveedor(ProveedorForm form) {
 		this.id = form.getId();
