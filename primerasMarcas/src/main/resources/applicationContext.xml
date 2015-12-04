@@ -6,23 +6,23 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<import resource="dao.xml" />
 
-	<bean id="producto.action" class="ar.com.uade.action.ProductoAction">
+	<bean id="producto.action" class="ar.com.uade.action.ProductoAction" scope="prototype">
 		<property name="producto" ref="producto.business" />
 	</bean>
 
-	<bean id="proveedor.action" class="ar.com.uade.action.ProveedorAction">
+	<bean id="proveedor.action" class="ar.com.uade.action.ProveedorAction" scope="prototype">
 		<property name="proveedor" ref="proveedor.business" />
 	</bean>
 
-	<bean id="reporte.action" class="ar.com.uade.action.ReporteAction">
+	<bean id="reporte.action" class="ar.com.uade.action.ReporteAction" scope="prototype">
 		<property name="reporte" ref="reporte.business" />
 	</bean>
 
-	<bean id="vendedor.action" class="ar.com.uade.action.VendedorAction">
+	<bean id="vendedor.action" class="ar.com.uade.action.VendedorAction" scope="prototype">
 		<property name="vendedor" ref="vendedor.business" />
 	</bean>
 
-	<bean id="venta.action" class="ar.com.uade.action.VentaAction">
+	<bean id="venta.action" class="ar.com.uade.action.VentaAction" scope="prototype">
 		<property name="venta" ref="venta.business" />
 	</bean>
 
