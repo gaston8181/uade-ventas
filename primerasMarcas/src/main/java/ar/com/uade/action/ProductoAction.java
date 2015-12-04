@@ -1,12 +1,13 @@
 package ar.com.uade.action;
 
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.Preparable;
 
 import ar.com.uade.business.ProductoBusiness;
 import ar.com.uade.form.CombosForm;
 import ar.com.uade.form.ProductoForm;
 
-public class ProductoAction extends ActionSupport{
+public class ProductoAction extends ActionSupport implements Preparable {
 
 	/**
 	 * 
@@ -14,19 +15,13 @@ public class ProductoAction extends ActionSupport{
 	private static final long serialVersionUID = 2659635650070882565L;
 
 	private ProductoBusiness producto;
-	private ProductoForm form; 
+	private ProductoForm form;
 	private CombosForm combos;
 
 	@Override
 	public String execute() throws Exception {
 		form = new ProductoForm();
-		cargarCombos();
 		System.out.println("Esto en producto");
-		return SUCCESS;
-	}
-	
-	public String executeSinPrecarga() {
-		form = new ProductoForm();
 		return SUCCESS;
 	}
 
@@ -38,6 +33,12 @@ public class ProductoAction extends ActionSupport{
 		} catch (Exception e) {
 			addActionError("Ocurrio un error inesperado, intente nuevamente!");
 		}
+		return SUCCESS;
+	}
+
+	public String modificarProducto() throws Exception {
+		producto.modificarProducto(form);
+		form = new ProductoForm();
 		return SUCCESS;
 	}
 
@@ -53,17 +54,22 @@ public class ProductoAction extends ActionSupport{
 
 	public String buscarProducto() throws Exception {
 		form = producto.obtenerProducto(form.getId());
-		cargarCombos();
 		return SUCCESS;
 	}
 
-	public String consultarProducto() {
-		producto.consultarProducto();
+	public String cargarProducto() throws Exception {
+		producto.modificarStock(form);
+		form = new ProductoForm();
 		return SUCCESS;
 	}
 
+	// public String consultarProducto() {
+	// producto.consultarProducto();
+	// return SUCCESS;
+	// }
 
-	public void cargarCombos() throws Exception {
+	@Override
+	public void prepare() throws Exception {
 		combos = new CombosForm();
 		combos.setColores(producto.getColores());
 		combos.setProveedores(producto.getProveedores());

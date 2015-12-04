@@ -13,6 +13,8 @@ public class ProductoForm {
 	private int stock;
 	private Long idTipoProducto;
 
+	private int agregarStock;
+
 	public Long getId() {
 		return id;
 	}
@@ -85,4 +87,11 @@ public class ProductoForm {
 		this.idTipoProducto = idTipoProducto;
 	}
 
+	public int getAgregarStock() {
+		return agregarStock;
+	}
+
+	public void setAgregarStock(int agregarStock) {
+		this.agregarStock = agregarStock;
+	}
 }

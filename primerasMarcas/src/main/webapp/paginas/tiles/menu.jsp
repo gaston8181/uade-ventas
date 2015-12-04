@@ -53,7 +53,7 @@
 						<li><a href="homeAltaProducto">Alta Producto</a></li>
 						<li><a href="homeModificarProducto">Modificar Producto</a></li>
 						<li><a href="bajaProducto">Baja Producto</a></li>
-						<li><a href="cargarProducto">Cargar Producto</a></li>
+						<li><a href="homeCargarProducto">Cargar Producto</a></li>
 
 						<li><a href="consultarProducto">Consultar Producto</a></li>
 					</ul></li>

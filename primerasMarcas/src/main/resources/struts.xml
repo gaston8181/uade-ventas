@@ -27,7 +27,8 @@
 		<action name="altaProducto" class="producto.action" method="altaProducto">
 			<result name="success" type="tiles">altaProducto</result>
 		</action>
-		<action name="modificarProducto" class="producto.action" method="modificarProducto">
+		<action name="modificarProducto" class="producto.action"
+			method="modificarProducto">
 			<result name="success" type="tiles">modificarProducto</result>
 		</action>
 		<action name="buscarProducto" class="producto.action" method="buscarProducto">
@@ -36,9 +37,18 @@
 		<action name="bajaProducto" class="producto.action">
 			<result name="success" type="tiles">bajaProducto</result>
 		</action>
-		<action name="cargarProducto" class="producto.action">
+		<action name="homeCargarProducto" class="producto.action">
 			<result name="success" type="tiles">cargarProducto</result>
 		</action>
+		<action name="buscarProductoCargaProducto" class="producto.action"
+			method="buscarProducto">
+			<result name="success" type="tiles">cargarProducto</result>
+		</action>
+		<action name="cargarProducto" class="producto.action"
+			method="cargarProducto">
+			<result name="success" type="tiles">cargarProducto</result>
+		</action>
+		
 		<action name="consultarProducto" class="producto.action">
 			<result name="success" type="tiles">consultarProducto</result>
 		</action>
@@ -48,10 +58,12 @@
 		<action name="homeAltaProveedor" class="proveedor.action">
 			<result name="success" type="tiles">altaProveedor</result>
 		</action>
-		<action name="homeModificarProveedor" class="proveedor.action" method="cargarListaProveedores">
+		<action name="homeModificarProveedor" class="proveedor.action"
+			method="cargarListaProveedores">
 			<result name="success" type="tiles">modificarProveedor</result>
 		</action>
-		<action name="homeBajaProveedor" class="proveedor.action" method="cargarListaProveedores">
+		<action name="homeBajaProveedor" class="proveedor.action"
+			method="cargarListaProveedores">
 			<result name="success" type="tiles">bajaProveedor</result>
 		</action>
 		<action name="altaProveedor" class="proveedor.action" method="altaProveedor">
@@ -63,7 +75,8 @@
 		<action name="cargarProveedor" class="proveedor.action" method="cargarProveedor">
 			<result name="success" type="tiles">cargarProveedor</result>
 		</action>
-		<action name="modificarProveedor" class="proveedor.action" method="modificarProveedor">
+		<action name="modificarProveedor" class="proveedor.action"
+			method="modificarProveedor">
 			<result name="success" type="tiles">modificarProveedor</result>
 		</action>
 
@@ -95,13 +108,15 @@
 		<action name="bajaVendedor" class="vendedor.action" method="bajaVendedor">
 			<result name="success" type="tiles">bajaVendedor</result>
 		</action>
-		<action name="homeModificarVendedor" class="vendedor.action" method="cargarListaVendedores">
+		<action name="homeModificarVendedor" class="vendedor.action"
+			method="cargarListaVendedores">
 			<result name="success" type="tiles">modificarVendedor</result>
 		</action>
 		<action name="cargarVendedor" class="vendedor.action" method="cargarVendedor">
 			<result name="success" type="tiles">cargarVendedor</result>
 		</action>
-		<action name="modificarVendedor" class="vendedor.action" method="modificarVendedor">
+		<action name="modificarVendedor" class="vendedor.action"
+			method="modificarVendedor">
 			<result name="success" type="tiles">modificarVendedor</result>
 		</action>
 

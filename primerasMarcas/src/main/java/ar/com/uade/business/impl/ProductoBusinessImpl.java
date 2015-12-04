@@ -42,15 +42,17 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 	}
 
 	@Transactional
-	public void modificarProducto() {
-		Producto producto = new Producto();
+	public void modificarProducto(ProductoForm form) {
+		Producto producto = new Producto(form);
 		productoDAO.modificarProducto(producto);
 
 	}
 
 	@Transactional
-	public void modificarStock() {
-		productoDAO.modificarStock();
+	public void modificarStock(ProductoForm form) {
+		Producto producto = productoDAO.loadProducto(form.getId());
+		producto.agregarStock(form.getAgregarStock());
+		productoDAO.modificarProducto(producto);
 	}
 
 	@Override

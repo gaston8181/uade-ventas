@@ -10,8 +10,6 @@ public interface ProductoDAO {
 
 	void modificarProducto(Producto producto);
 
-	void modificarStock();
-
 	void consultarProducto();
 
 	Producto loadProducto(Long id);

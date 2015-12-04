@@ -13,9 +13,9 @@ public interface ProductoBusiness {
 
 	void bajaProducto();
 
-	void modificarProducto();
+	void modificarProducto(ProductoForm form);
 
-	void modificarStock();
+	void modificarStock(ProductoForm form);
 
 	void consultarProducto();
 	

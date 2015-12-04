@@ -40,6 +40,10 @@ public class Producto implements Serializable {
 		this.stock = pf.getStock();
 	}
 
+	public void agregarStock(int cantidad) {
+		this.stock += cantidad;
+	}
+
 	public Long getId() {
 		return id;
 	}
