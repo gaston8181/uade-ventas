@@ -34,7 +34,10 @@
 		<action name="buscarProducto" class="producto.action" method="buscarProducto">
 			<result name="success" type="tiles">modificarProducto</result>
 		</action>
-		<action name="bajaProducto" class="producto.action">
+		<action name="homeBajaProducto" class="producto.action">
+			<result name="success" type="tiles">bajaProducto</result>
+		</action>
+		<action name="bajaProducto" class="producto.action" method="bajaProducto">
 			<result name="success" type="tiles">bajaProducto</result>
 		</action>
 		<action name="homeCargarProducto" class="producto.action">
@@ -44,15 +47,19 @@
 			method="buscarProducto">
 			<result name="success" type="tiles">cargarProducto</result>
 		</action>
-		<action name="cargarProducto" class="producto.action"
-			method="cargarProducto">
+		<action name="cargarProducto" class="producto.action" method="cargarProducto">
 			<result name="success" type="tiles">cargarProducto</result>
 		</action>
-		
-		<action name="consultarProducto" class="producto.action">
+
+		<action name="homeConsultarProducto" class="producto.action"
+			method="cargarProductos">
 			<result name="success" type="tiles">consultarProducto</result>
 		</action>
 
+		<action name="consultarProductos" class="producto.action"
+			method="consultarProductos">
+			<result name="success" type="tiles">consultarProducto</result>
+		</action>
 
 		<!-- PROVEEDORES -->
 		<action name="homeAltaProveedor" class="proveedor.action">

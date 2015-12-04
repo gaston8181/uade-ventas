@@ -19,7 +19,7 @@ import ar.com.uade.form.ProveedorForm;
 import ar.com.uade.form.TipoProductoForm;
 
 public class ProductoBusinessImpl implements ProductoBusiness {
-	
+
 	private static final String SELECCIONAR = "--SELECCIONAR--";
 	private ProveedorBusiness proveedorBusiness;
 	private ColorBusiness colorBusiness;
@@ -35,8 +35,8 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 	}
 
 	@Transactional
-	public void bajaProducto() {
-		Producto producto = new Producto();
+	public void bajaProducto(Long idBaja) {
+		Producto producto = new Producto(idBaja);
 		productoDAO.bajaProducto(producto);
 
 	}
@@ -55,10 +55,19 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 		productoDAO.modificarProducto(producto);
 	}
 
-	@Override
-	public void consultarProducto() {
-		productoDAO.consultarProducto();
-
+	@Transactional
+	public List<ProductoForm> consultarProductos(ProductoForm form) {
+		List<Producto> productos = productoDAO.listarProductos(form);
+		List<ProductoForm> productosForm = new ArrayList<ProductoForm>();
+		for (Producto producto : productos) {
+			ProductoForm aux = crearView(producto);
+			aux.setDescColor(producto.getColor().getDescripcion());
+			aux.setDescMarca(producto.getMarca().getDescripcion());
+			aux.setDescProducto(producto.getTipoProducto().getDescripcion());
+			aux.setDescTalle(producto.getTipoProducto().getTalle());
+			productosForm.add(aux);
+		}
+		return productosForm;
 	}
 
 	@Override
@@ -105,13 +114,27 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 		return lista;
 	}
 
-
 	@Transactional
 	public ProductoForm obtenerProducto(Long id) {
 		Producto producto = productoDAO.loadProducto(id);
 		return crearView(producto);
 	}
-	
+
+	@Transactional
+	public List<ProductoForm> listarProductos() {
+		List<Producto> productos = productoDAO.listarProductos();
+		List<ProductoForm> productosForm = new ArrayList<ProductoForm>();
+		for (Producto producto : productos) {
+			ProductoForm aux = crearView(producto);
+			aux.setDescColor(producto.getColor().getDescripcion());
+			aux.setDescMarca(producto.getMarca().getDescripcion());
+			aux.setDescProducto(producto.getTipoProducto().getDescripcion());
+			aux.setDescTalle(producto.getTipoProducto().getTalle());
+			productosForm.add(aux);
+		}
+		return productosForm;
+	}
+
 	private ProductoForm crearView(Producto producto) {
 		ProductoForm view = new ProductoForm();
 		view.setDatoAdicional(producto.getDatoAdicional());
@@ -141,7 +164,7 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 	public void setTipoProductoBusiness(TipoProductoBusiness tipoProductoBusiness) {
 		this.tipoProductoBusiness = tipoProductoBusiness;
 	}
-	
+
 	public void setMarcaBusiness(MarcaBusiness marcaBusiness) {
 		this.marcaBusiness = marcaBusiness;
 	}

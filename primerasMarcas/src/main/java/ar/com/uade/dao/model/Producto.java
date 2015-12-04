@@ -27,6 +27,10 @@ public class Producto implements Serializable {
 	public Producto() {
 	}
 
+	public Producto(Long id) {
+		this.id = id;
+	}
+
 	public Producto(ProductoForm pf) {
 		this.id = pf.getId();
 		this.marca = new Marca(pf.getIdMarca());

@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <div class="row">
 	<div class="col-xs-12 col-md-12 col-lg-12">
 
@@ -13,11 +13,12 @@
 				<div class="panel panel-default panel-form">
 					<div class="panel-body">
 						<!-- formulario -->
-						<form>
+						<s:form action="bajaProducto" theme="simple">
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Codigo Producto</label>
 								<div class="col-sm-4">
-									<input type="text" class="form-control" />
+									<s:textfield type="text" cssClass="form-control" name="form.id"
+										cssErrorClass="has-error" />
 								</div>
 							</div>
 
@@ -28,7 +29,7 @@
 								</div>
 							</div>
 
-						</form>
+						</s:form>
 						<!--! -->
 					</div>
 				</div>

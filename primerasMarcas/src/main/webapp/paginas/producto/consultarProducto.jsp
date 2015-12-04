@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <div class="row">
 	<div class="col-xs-12 col-md-12 col-lg-12">
 
@@ -9,76 +9,63 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-md-12 col-lg-12">
+				<s:form action="consultarProductos" theme="simple">
+					<div class="row filters">
 
-				<div class="row filters">
+						<div class="col-xs-12 col-md-2 form-group">
+							<div class="row">
+								<label for="inputPassword" class="col-sm-3 control-label">Marca</label>
+								<div class="col-sm-9">
+									<s:select id="idMarca" cssClass="form-control"
+										list="combos.marcas" listValue="descripcion" listKey="id"
+										name="form.idMarca">
 
-					<div class="col-xs-12 col-md-2 form-group">
-						<div class="row">
-							<label for="inputPassword" class="col-sm-3 control-label">Marca</label>
-							<div class="col-sm-9">
-								<select class="form-control">
-									<option>Todos</option>
-									<option>Rapsodia</option>
-									<option>Tucci</option>
-									<option>Levis</option>
-									<option>Gola</option>
-								</select>
+									</s:select>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-xs-12 col-md-2 form-group">
-						<div class="row">
-							<label for="inputPassword" class="col-sm-4 control-label">Producto</label>
-							<div class="col-sm-8">
-								<select class="form-control">
-									<option>Todos</option>
-									<option>Jeans</option>
-									<option>Remera</option>
-									<option>Arito</option>
-								</select>
+						<div class="col-xs-12 col-md-2 form-group">
+							<div class="row">
+								<label for="inputPassword" class="col-sm-4 control-label">Producto</label>
+								<div class="col-sm-8">
+									<s:select id="idTipoProducto" cssClass="form-control"
+										list="combos.tiposProductos" listValue="descripcion"
+										listKey="id" name="form.idTipoProducto" />
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-xs-12 col-md-2 form-group">
-						<div class="row">
-							<label for="inputPassword" class="col-sm-4 control-label">Color</label>
-							<div class="col-sm-8">
-								<select class="form-control">
-									<option>Todos</option>
-									<option>Blanco</option>
-									<option>Rojo</option>
-									<option>Negro</option>
-									<option>Azul</option>
-								</select>
+						<div class="col-xs-12 col-md-2 form-group">
+							<div class="row">
+								<label for="inputPassword" class="col-sm-4 control-label">Color</label>
+								<div class="col-sm-8">
+									<s:select id="idColor" cssClass="form-control"
+										list="combos.colores" name="form.idColor"
+										listValue="descripcion" listKey="id" />
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<div class="col-xs-12 col-md-2 form-group">
-						<div class="row">
-							<label for="inputPassword" class="col-sm-4 control-label">Talle</label>
-							<div class="col-sm-8">
-								<select class="form-control">
-									<option>Todos</option>
-									<option>S</option>
-									<option>M</option>
-									<option>L</option>
-									<option>XL</option>
-								</select>
+						<div class="col-xs-12 col-md-2 form-group">
+							<div class="row">
+								<label class="col-sm-4 control-label">Codigo</label>
+								<div class="col-sm-8">
+									<s:textfield type="text" cssClass="form-control" name="form.id"
+										cssErrorClass="has-error" />
+								</div>
 							</div>
 						</div>
+
+						<div class="col-xs-12 col-md-4 form-group">
+
+							<button type="submit" class="btn btn-default pull-right"><i
+								class="fa fa-filter"></i> Aplicar</button>
+
+						</div>
+
 					</div>
-
-					<div class="col-xs-12 col-md-4 form-group">
-
-						<a href="#" class="btn btn-default pull-right"><i
-							class="fa fa-filter"></i> Aplicar</a>
-
-					</div>
-
-				</div>
+				</s:form>
 				<!-- ./ filters -->
 
 			</div>
@@ -114,49 +101,18 @@
 						<table class="table table-condensed table-hover">
 
 							<tbody>
-								<tr>
-									<td class="col-md-2">156485456</td>
-									<td class="col-md-1">Tucci</td>
-									<td class="col-md-1">Remera</td>
-									<td class="col-md-1">Blanca</td>
-									<td class="col-md-1">L</td>
-									<td class="col-md-1">50</td>
-									<td class="col-md-1">100</td>
-									<td class="col-md-1">10</td>
-								</tr>
-								<tr>
-									<td class="col-md-2">156485456</td>
-									<td class="col-md-1">Tucci</td>
-									<td class="col-md-1">Remera</td>
-									<td class="col-md-1">Blanca</td>
-									<td class="col-md-1">L</td>
-									<td class="col-md-1">50</td>
-									<td class="col-md-1">100</td>
-									<td class="col-md-1">10</td>
-								</tr>
-								<tr>
-									<td class="col-md-2">156485456</td>
-									
-									<td class="col-md-1">Tucci</td>
-									<td class="col-md-1">Remera</td>
-									<td class="col-md-1">Blanca</td>
-									<td class="col-md-1">L</td>
-									<td class="col-md-1">50</td>
-									<td class="col-md-1">100</td>
-									<td class="col-md-1">10</td>
-								</tr>
-								<tr>
-									<td class="col-md-2">156485456</td>
-									
-									<td class="col-md-1">Tucci</td>
-									<td class="col-md-1">Remera</td>
-									<td class="col-md-1">Blanca</td>
-									<td class="col-md-1">L</td>
-									<td class="col-md-1">50</td>
-									<td class="col-md-1">100</td>
-									<td class="col-md-1">10</td>
-								</tr>
-								
+								<s:iterator value="productosExistentes">
+									<tr>
+										<td class="col-md-2"><s:property value="id" /></td>
+										<td class="col-md-1"><s:property value="descMarca" /></td>
+										<td class="col-md-1"><s:property value="descProducto" /></td>
+										<td class="col-md-1"><s:property value="descColor" /></td>
+										<td class="col-md-1"><s:property value="descTalle" /></td>
+										<td class="col-md-1"><s:property value="precioCompra" /></td>
+										<td class="col-md-1"><s:property value="precioVenta" /></td>
+										<td class="col-md-1"><s:property value="stock" /></td>
+									</tr>
+								</s:iterator>
 							</tbody>
 
 						</table>

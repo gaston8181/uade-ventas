@@ -13,6 +13,11 @@ public class ProductoForm {
 	private int stock;
 	private Long idTipoProducto;
 
+	private String descMarca;
+	private String descColor;
+	private String descProducto;
+	private String descTalle;
+
 	private int agregarStock;
 
 	public Long getId() {
@@ -87,6 +92,38 @@ public class ProductoForm {
 		this.idTipoProducto = idTipoProducto;
 	}
 
+	public String getDescMarca() {
+		return descMarca;
+	}
+
+	public void setDescMarca(String descMarca) {
+		this.descMarca = descMarca;
+	}
+
+	public String getDescColor() {
+		return descColor;
+	}
+
+	public void setDescColor(String descColor) {
+		this.descColor = descColor;
+	}
+
+	public String getDescProducto() {
+		return descProducto;
+	}
+
+	public void setDescProducto(String descProducto) {
+		this.descProducto = descProducto;
+	}
+
+	public String getDescTalle() {
+		return descTalle;
+	}
+
+	public void setDescTalle(String descTalle) {
+		this.descTalle = descTalle;
+	}
+
 	public int getAgregarStock() {
 		return agregarStock;
 	}
@@ -94,4 +131,5 @@ public class ProductoForm {
 	public void setAgregarStock(int agregarStock) {
 		this.agregarStock = agregarStock;
 	}
+
 }

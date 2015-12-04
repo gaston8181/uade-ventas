@@ -1,5 +1,7 @@
 package ar.com.uade.action;
 
+import java.util.List;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.Preparable;
 
@@ -17,6 +19,7 @@ public class ProductoAction extends ActionSupport implements Preparable {
 	private ProductoBusiness producto;
 	private ProductoForm form;
 	private CombosForm combos;
+	private List<ProductoForm> productosExistentes;
 
 	@Override
 	public String execute() throws Exception {
@@ -25,6 +28,11 @@ public class ProductoAction extends ActionSupport implements Preparable {
 		return SUCCESS;
 	}
 
+	public String cargarProductos() {
+		productosExistentes = producto.listarProductos();
+		return SUCCESS;
+	}
+	
 	public String altaProducto() {
 		try {
 			producto.altaProducto(form);
@@ -44,7 +52,7 @@ public class ProductoAction extends ActionSupport implements Preparable {
 
 	public String bajaProducto() {
 		try {
-			producto.bajaProducto();
+			producto.bajaProducto(form.getId());
 			addActionMessage("Baja Exitosa!");
 		} catch (Exception e) {
 			addActionError("Ocurrio un error inesperado, intente nuevamente!");
@@ -63,10 +71,10 @@ public class ProductoAction extends ActionSupport implements Preparable {
 		return SUCCESS;
 	}
 
-	// public String consultarProducto() {
-	// producto.consultarProducto();
-	// return SUCCESS;
-	// }
+	public String consultarProductos() {
+		productosExistentes = producto.consultarProductos(form);
+		return SUCCESS;
+	}
 
 	@Override
 	public void prepare() throws Exception {
@@ -99,5 +107,13 @@ public class ProductoAction extends ActionSupport implements Preparable {
 
 	public void setCombos(CombosForm combos) {
 		this.combos = combos;
+	}
+
+	public List<ProductoForm> getProductosExistentes() {
+		return productosExistentes;
+	}
+
+	public void setProductosExistentes(List<ProductoForm> productosExistentes) {
+		this.productosExistentes = productosExistentes;
 	}
 }

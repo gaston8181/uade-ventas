@@ -11,13 +11,13 @@ import ar.com.uade.form.TipoProductoForm;
 public interface ProductoBusiness {
 	void altaProducto(ProductoForm form);
 
-	void bajaProducto();
+	void bajaProducto(Long id);
 
 	void modificarProducto(ProductoForm form);
 
 	void modificarStock(ProductoForm form);
 
-	void consultarProducto();
+	List<ProductoForm> consultarProductos(ProductoForm form);
 	
 	List<ColorForm> getColores();
 	
@@ -28,5 +28,7 @@ public interface ProductoBusiness {
 	List<MarcaForm> getMarcas();
 	
 	ProductoForm obtenerProducto(Long id);
+
+	List<ProductoForm> listarProductos();
 
 }

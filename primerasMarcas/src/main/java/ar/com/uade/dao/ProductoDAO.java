@@ -1,6 +1,9 @@
 package ar.com.uade.dao;
 
+import java.util.List;
+
 import ar.com.uade.dao.model.Producto;
+import ar.com.uade.form.ProductoForm;
 
 public interface ProductoDAO {
 
@@ -10,8 +13,10 @@ public interface ProductoDAO {
 
 	void modificarProducto(Producto producto);
 
-	void consultarProducto();
-
 	Producto loadProducto(Long id);
+
+	List<Producto> listarProductos();
+
+	List<Producto> listarProductos(ProductoForm form);
 
 }
