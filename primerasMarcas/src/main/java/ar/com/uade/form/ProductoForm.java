@@ -6,6 +6,7 @@ public class ProductoForm {
 	private Long id;
 	private Long idMarca;
 	private Long idColor;
+	private Long idTalle;
 	private BigDecimal precioVenta;
 	private BigDecimal precioCompra;
 	private Long idProveedor;
@@ -42,6 +43,14 @@ public class ProductoForm {
 
 	public void setIdColor(Long idColor) {
 		this.idColor = idColor;
+	}
+
+	public Long getIdTalle() {
+		return idTalle;
+	}
+
+	public void setIdTalle(Long idTalle) {
+		this.idTalle = idTalle;
 	}
 
 	public BigDecimal getPrecioVenta() {

@@ -49,6 +49,17 @@
 
 						<div class="col-xs-12 col-md-2 form-group">
 							<div class="row">
+								<label for="inputPassword" class="col-sm-4 control-label">Talle</label>
+								<div class="col-sm-8">
+									<s:select cssClass="form-control"
+										list="combos.talles" name="form.idTalle"
+										listValue="descripcion" listKey="id" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-xs-12 col-md-2 form-group">
+							<div class="row">
 								<label class="col-sm-4 control-label">Codigo</label>
 								<div class="col-sm-8">
 									<s:textfield type="text" cssClass="form-control" name="form.id"
@@ -57,10 +68,11 @@
 							</div>
 						</div>
 
-						<div class="col-xs-12 col-md-4 form-group">
+						<div class="col-xs-10 col-md-2 form-group">
 
-							<button type="submit" class="btn btn-default pull-right"><i
-								class="fa fa-filter"></i> Aplicar</button>
+							<button type="submit" class="btn btn-default pull-right">
+								<i class="fa fa-filter"></i> Aplicar
+							</button>
 
 						</div>
 

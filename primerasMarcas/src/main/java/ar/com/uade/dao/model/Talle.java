@@ -2,20 +2,20 @@ package ar.com.uade.dao.model;
 
 import java.io.Serializable;
 
-public class TipoProducto implements Serializable {
+public class Talle implements Serializable {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -7472357014119721438L;
+	private static final long serialVersionUID = 256568523159612723L;
 	private Long id;
 	private String descripcion;
 
-	public TipoProducto() {
+	public Talle() {
 
 	}
 
-	public TipoProducto(Long id) {
+	public Talle(Long id) {
 		this.id = id;
 	}
 

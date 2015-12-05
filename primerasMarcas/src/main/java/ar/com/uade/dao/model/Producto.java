@@ -15,6 +15,7 @@ public class Producto implements Serializable {
 	private Long id;
 	private Marca marca;
 	private Color color;
+	private Talle talle;
 	private Date fechaIngreso;
 	private BigDecimal precioVenta;
 	private BigDecimal precioCompra;
@@ -35,6 +36,7 @@ public class Producto implements Serializable {
 		this.id = pf.getId();
 		this.marca = new Marca(pf.getIdMarca());
 		this.color = new Color(pf.getIdColor());
+		this.talle = new Talle(pf.getIdTalle());
 		this.fechaIngreso = new Date();
 		this.precioVenta = pf.getPrecioVenta();
 		this.precioCompra = pf.getPrecioCompra();
@@ -136,4 +138,11 @@ public class Producto implements Serializable {
 		this.stock = stock;
 	}
 
+	public Talle getTalle() {
+		return talle;
+	}
+
+	public void setTalle(Talle talle) {
+		this.talle = talle;
+	}
 }

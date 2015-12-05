@@ -53,6 +53,25 @@
 							</div>
 
 							<div class="row form-group">
+								<label class="col-sm-3 control-label">Color</label>
+								<div class="col-sm-4">
+									<s:select id="idColor" cssClass="form-control"
+										list="combos.colores" name="form.idColor"
+										listValue="descripcion" listKey="id"
+										disabled="true" />
+								</div>
+							</div>
+
+							<div class="row form-group">
+								<label class="col-sm-3 control-label">Talle</label>
+								<div class="col-sm-4">
+									<s:select id="idTalle" cssClass="form-control"
+										list="combos.talles" listValue="descripcion" listKey="id"
+										disabled="true" name="form.idTalle" />
+								</div>
+							</div>
+
+							<div class="row form-group">
 								<label class="col-sm-3 control-label">Stock</label>
 								<div class="col-sm-2">
 									<s:textfield type="text" cssClass="form-control"

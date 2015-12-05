@@ -83,6 +83,7 @@ public class ProductoAction extends ActionSupport implements Preparable {
 		combos.setProveedores(producto.getProveedores());
 		combos.setTiposProductos(producto.getTiposProd());
 		combos.setMarcas(producto.getMarcas());
+		combos.setTalles(producto.getTalles());
 	}
 
 	public ProductoBusiness getProducto() {

@@ -23,17 +23,17 @@
 								<div class="col-sm-4">
 									<input id="idCodigoBarras" type="text" class="form-control"
 										disabled />
-									<s:hidden id="codigoBarrasHidden" key="form.id"/>
+									<s:hidden id="codigoBarrasHidden" key="form.id" />
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Marca</label>
 								<div class="col-sm-4">
-									<s:select id="idMarca" cssClass="form-control" list="combos.marcas"
-										listValue="descripcion" listKey="id" 
+									<s:select id="idMarca" cssClass="form-control"
+										list="combos.marcas" listValue="descripcion" listKey="id"
 										name="form.idMarca" onchange="generarCodigo()">
-										
+
 									</s:select>
 								</div>
 							</div>
@@ -41,8 +41,10 @@
 							<div class="row form-group">
 								<label for="inputPassword" class="col-sm-4 control-label">Color</label>
 								<div class="col-sm-4">
-									<s:select id="idColor" cssClass="form-control" list="combos.colores"
-										name="form.idColor" listValue="descripcion" listKey="id" onchange="generarCodigo()"/>
+									<s:select id="idColor" cssClass="form-control"
+										list="combos.colores" name="form.idColor"
+										listValue="descripcion" listKey="id"
+										onchange="generarCodigo()" />
 								</div>
 							</div>
 
@@ -68,8 +70,7 @@
 								<label for="inputPassword" class="col-sm-4 control-label">Proveedor</label>
 								<div class="col-sm-4">
 									<s:select cssClass="form-control" list="combos.proveedores"
-										listValue="nombre" listKey="id" 
-										name="form.idProveedor"/>
+										listValue="nombre" listKey="id" name="form.idProveedor" />
 								</div>
 							</div>
 
@@ -94,9 +95,20 @@
 								<label for="inputPassword" class="col-sm-4 control-label">Tipo
 									Producto</label>
 								<div class="col-sm-4">
-									<s:select id="idTipoProducto" cssClass="form-control" list="combos.tiposProductos"
-										listValue="descripcion" listKey="id" onchange="generarCodigo()"
-										name="form.idTipoProducto"/>
+									<s:select id="idTipoProducto" cssClass="form-control"
+										list="combos.tiposProductos" listValue="descripcion"
+										listKey="id" onchange="generarCodigo()"
+										name="form.idTipoProducto" />
+								</div>
+							</div>
+
+							<div class="row form-group">
+								<label for="inputPassword" class="col-sm-4 control-label">Talle</label>
+								<div class="col-sm-4">
+									<s:select id="idTalle" cssClass="form-control"
+										list="combos.talles" listValue="descripcion"
+										listKey="id" onchange="generarCodigo()"
+										name="form.idTalle" />
 								</div>
 							</div>
 

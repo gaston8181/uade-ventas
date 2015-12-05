@@ -2,7 +2,6 @@ package ar.com.uade.dao.impl;
 
 import java.util.List;
 
-import org.hibernate.Criteria;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
@@ -16,6 +15,7 @@ public class ProductoDAOImpl extends HibernateDaoSupport implements ProductoDAO 
 	private static final String COLOR = "color.id";
 	private static final String MARCA = "marca.id";
 	private static final String TIPO_PRODUCTO = "tipoProducto.id";
+	private static final String TALLE = "talle.id";
 	private static final String ID = "id";
 
 	@Override
@@ -53,6 +53,7 @@ public class ProductoDAOImpl extends HibernateDaoSupport implements ProductoDAO 
 		agregarRestrictions(criteria, COLOR, form.getIdColor());
 		agregarRestrictions(criteria, MARCA, form.getIdMarca());
 		agregarRestrictions(criteria, TIPO_PRODUCTO, form.getIdTipoProducto());
+		agregarRestrictions(criteria, TALLE, form.getIdTalle());
 		agregarRestrictions(criteria, ID, form.getId());
 		return (List<Producto>) getHibernateTemplate().findByCriteria(criteria);
 	}

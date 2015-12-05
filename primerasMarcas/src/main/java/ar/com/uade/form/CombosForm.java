@@ -7,6 +7,7 @@ public class CombosForm {
 	private List<ColorForm> colores;
 	private List<ProveedorForm> proveedores;
 	private List<MarcaForm> marcas;
+	private List<TalleForm> talles;
 
 	public List<TipoProductoForm> getTiposProductos() {
 		return tiposProductos;
@@ -38,5 +39,13 @@ public class CombosForm {
 
 	public void setMarcas(List<MarcaForm> marcas) {
 		this.marcas = marcas;
+	}
+
+	public List<TalleForm> getTalles() {
+		return talles;
+	}
+
+	public void setTalles(List<TalleForm> talles) {
+		this.talles = talles;
 	}
 }

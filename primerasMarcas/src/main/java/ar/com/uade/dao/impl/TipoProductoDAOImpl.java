@@ -12,13 +12,11 @@ import ar.com.uade.dao.model.TipoProducto;
 public class TipoProductoDAOImpl extends HibernateDaoSupport implements TipoProductoDAO{
 
 	private static final String DESCRIPCION = "descripcion";
-	private static final String TALLE = "talle";
 	
 	@Override
 	public List<TipoProducto> listarTipoProductos() {
 		DetachedCriteria criteria = DetachedCriteria.forClass(TipoProducto.class);
 		criteria.addOrder(Order.asc(DESCRIPCION));
-		criteria.addOrder(Order.asc(TALLE));
 		return (List<TipoProducto>) getHibernateTemplate().findByCriteria(criteria);
 	}
 

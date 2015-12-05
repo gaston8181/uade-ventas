@@ -1,23 +1,8 @@
-package ar.com.uade.dao.model;
+package ar.com.uade.form;
 
-import java.io.Serializable;
-
-public class TipoProducto implements Serializable {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -7472357014119721438L;
+public class TalleForm {
 	private Long id;
 	private String descripcion;
-
-	public TipoProducto() {
-
-	}
-
-	public TipoProducto(Long id) {
-		this.id = id;
-	}
 
 	public Long getId() {
 		return id;

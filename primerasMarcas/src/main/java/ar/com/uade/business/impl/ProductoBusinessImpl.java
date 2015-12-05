@@ -9,6 +9,7 @@ import ar.com.uade.business.ColorBusiness;
 import ar.com.uade.business.MarcaBusiness;
 import ar.com.uade.business.ProductoBusiness;
 import ar.com.uade.business.ProveedorBusiness;
+import ar.com.uade.business.TalleBusiness;
 import ar.com.uade.business.TipoProductoBusiness;
 import ar.com.uade.dao.ProductoDAO;
 import ar.com.uade.dao.model.Producto;
@@ -16,6 +17,7 @@ import ar.com.uade.form.ColorForm;
 import ar.com.uade.form.MarcaForm;
 import ar.com.uade.form.ProductoForm;
 import ar.com.uade.form.ProveedorForm;
+import ar.com.uade.form.TalleForm;
 import ar.com.uade.form.TipoProductoForm;
 
 public class ProductoBusinessImpl implements ProductoBusiness {
@@ -25,6 +27,7 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 	private ColorBusiness colorBusiness;
 	private TipoProductoBusiness tipoProductoBusiness;
 	private MarcaBusiness marcaBusiness;
+	private TalleBusiness talleBusiness;
 	private ProductoDAO productoDAO;
 
 	@Transactional
@@ -64,7 +67,7 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 			aux.setDescColor(producto.getColor().getDescripcion());
 			aux.setDescMarca(producto.getMarca().getDescripcion());
 			aux.setDescProducto(producto.getTipoProducto().getDescripcion());
-			aux.setDescTalle(producto.getTipoProducto().getTalle());
+			aux.setDescTalle(producto.getTalle().getDescripcion());
 			productosForm.add(aux);
 		}
 		return productosForm;
@@ -78,6 +81,17 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 		seleccionar.setDescripcion(SELECCIONAR);
 		lista.add(seleccionar);
 		lista.addAll(colorBusiness.listarColores());
+		return lista;
+	}
+
+	@Override
+	public List<TalleForm> getTalles() {
+		List<TalleForm> lista = new ArrayList<TalleForm>();
+		TalleForm seleccionar = new TalleForm();
+		seleccionar.setId(0L);
+		seleccionar.setDescripcion(SELECCIONAR);
+		lista.add(seleccionar);
+		lista.addAll(talleBusiness.listarTalles());
 		return lista;
 	}
 
@@ -129,7 +143,7 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 			aux.setDescColor(producto.getColor().getDescripcion());
 			aux.setDescMarca(producto.getMarca().getDescripcion());
 			aux.setDescProducto(producto.getTipoProducto().getDescripcion());
-			aux.setDescTalle(producto.getTipoProducto().getTalle());
+			aux.setDescTalle(producto.getTalle().getDescripcion());
 			productosForm.add(aux);
 		}
 		return productosForm;
@@ -142,6 +156,7 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 		view.setIdColor(producto.getColor().getId());
 		view.setIdMarca(producto.getMarca().getId());
 		view.setIdProveedor(producto.getProveedor().getId());
+		view.setIdTalle(producto.getTalle().getId());
 		view.setIdTipoProducto(producto.getTipoProducto().getId());
 		view.setPrecioCompra(producto.getPrecioCompra());
 		view.setPrecioVenta(producto.getPrecioVenta());
@@ -167,6 +182,10 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 
 	public void setMarcaBusiness(MarcaBusiness marcaBusiness) {
 		this.marcaBusiness = marcaBusiness;
+	}
+
+	public void setTalleBusiness(TalleBusiness talleBusiness) {
+		this.talleBusiness = talleBusiness;
 	}
 
 }
