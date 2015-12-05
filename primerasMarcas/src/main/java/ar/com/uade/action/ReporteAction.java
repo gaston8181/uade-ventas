@@ -1,16 +1,21 @@
 package ar.com.uade.action;
 
-import ar.com.uade.business.ReporteBusiness;
-
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.Preparable;
 
-public class ReporteAction extends ActionSupport {
+import ar.com.uade.business.ReporteBusiness;
+import ar.com.uade.form.CombosForm;
+import ar.com.uade.form.ReporteForm;
+
+public class ReporteAction extends ActionSupport implements Preparable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1829922474780098910L;
 	private ReporteBusiness reporte;
+	private ReporteForm form;
+	private CombosForm combos;
 
 	@Override
 	public String execute() throws Exception {
@@ -38,12 +43,32 @@ public class ReporteAction extends ActionSupport {
 		return SUCCESS;
 	}
 
-	public ReporteBusiness getReporte() {
-		return reporte;
+	@Override
+	public void prepare() throws Exception {
+		combos = new CombosForm();
+		combos.setColores(reporte.getColores());
+		combos.setTiposProductos(reporte.getTiposProd());
+		combos.setMarcas(reporte.getMarcas());
+		combos.setTalles(reporte.getTalles());
 	}
 
 	public void setReporte(ReporteBusiness reporte) {
 		this.reporte = reporte;
 	}
 
+	public ReporteForm getForm() {
+		return form;
+	}
+
+	public void setForm(ReporteForm form) {
+		this.form = form;
+	}
+
+	public CombosForm getCombos() {
+		return combos;
+	}
+
+	public void setCombos(CombosForm combos) {
+		this.combos = combos;
+	}
 }

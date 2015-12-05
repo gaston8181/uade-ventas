@@ -2,7 +2,7 @@ package ar.com.uade.form;
 
 import java.util.Date;
 
-public class ReporteEntreFechasForm {
+public class ReporteForm {
 	private Date fechaInicio;
 	private Date fechaFin;
 	private Long id;
