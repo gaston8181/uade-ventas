@@ -88,17 +88,20 @@
 		</action>
 
 		<!-- REPORTES -->
+		<action name="homeReporteGeneral" class="reporte.action">
+			<result name="success" type="tiles">reporteGeneral</result>
+		</action>
 		<action name="reporteAnual" class="reporte.action">
-			<result name="success" type="tiles">reporteAnual</result>
+			<result name="success" type="tiles">reporteGeneral</result>
 		</action>
 		<action name="reporteDosFechas" class="reporte.action">
 			<result name="success" type="tiles">reporteEntreFechas</result>
 		</action>
 		<action name="reporteMensual" class="reporte.action">
-			<result name="success" type="tiles">reporteMensual</result>
+			<result name="success" type="tiles">reporteGeneral</result>
 		</action>
 		<action name="reporteSemanal" class="reporte.action">
-			<result name="success" type="tiles">reporteSemanal</result>
+			<result name="success" type="tiles">reporteGeneral</result>
 		</action>
 
 

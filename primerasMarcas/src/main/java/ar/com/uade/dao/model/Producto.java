@@ -21,7 +21,6 @@ public class Producto implements Serializable {
 	private BigDecimal precioCompra;
 	private Proveedor proveedor;
 	private String datoAdicional;
-	private String descripcion;
 	private TipoProducto tipoProducto;
 	private int stock;
 
@@ -112,14 +111,6 @@ public class Producto implements Serializable {
 
 	public void setDatoAdicional(String datoAdicional) {
 		this.datoAdicional = datoAdicional;
-	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
 	}
 
 	public TipoProducto getTipoProducto() {

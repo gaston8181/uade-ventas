@@ -78,9 +78,7 @@
 
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="reporteDosFechas">Reporte Entre dos Fechas</a></li>
-						<li><a href="reporteSemanal">Reporte Semanal</a></li>
-						<li><a href="reporteMensual">Reporte Mensual</a></li>
-						<li><a href="reporteAnual">Reporte Anual</a></li>
+						<li><a href="homeReporteGeneral">Reporte General</a></li>
 					</ul></li>
 				<!--  -->
 

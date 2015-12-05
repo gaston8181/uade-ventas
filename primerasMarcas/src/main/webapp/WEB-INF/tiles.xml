@@ -59,17 +59,11 @@
 	</definition>
 
 	<!-- REPORTES -->
-	<definition name="reporteAnual" extends="baseLayout">
-		<put-attribute name="body" value="/paginas/reportes/anual.jsp" />
-	</definition>
 	<definition name="reporteEntreFechas" extends="baseLayout">
 		<put-attribute name="body" value="/paginas/reportes/dosFechas.jsp" />
 	</definition>
-	<definition name="reporteMensual" extends="baseLayout">
-		<put-attribute name="body" value="/paginas/reportes/mensual.jsp" />
-	</definition>
-	<definition name="reporteSemanal" extends="baseLayout">
-		<put-attribute name="body" value="/paginas/reportes/semanal.jsp" />
+	<definition name="reporteGeneral" extends="baseLayout">
+		<put-attribute name="body" value="/paginas/reportes/general.jsp" />
 	</definition>
 
 	<!-- VENDEDOR -->
