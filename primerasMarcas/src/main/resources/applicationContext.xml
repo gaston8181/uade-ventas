@@ -67,6 +67,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	</bean>
 
 	<bean id="reporte.business" class="ar.com.uade.business.impl.ReporteBusinessImpl">
+		<property name="comboBusiness" ref="combos.business" />
 		<property name="reporteDAO" ref="reporte.dao" />
 	</bean>
 

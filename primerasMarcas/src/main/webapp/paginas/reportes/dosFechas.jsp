@@ -12,6 +12,32 @@
 				<s:form action="consultarProductos" theme="simple">
 					<div class="row filters">
 
+						<div class="col-xs-12 col-md-3 form-group">
+							<div class="row">
+								<label class="col-sm-4 control-label">Fecha Inicio</label>
+								<div class="col-sm-5">
+									<s:textfield type="text" cssClass="form-control"
+										name="form.fechaInicio" cssErrorClass="has-error" />
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-xs-12 col-md-3 form-group">
+							<div class="row">
+								<label class="col-sm-4 control-label">Fecha Fin</label>
+								<div class="col-sm-5">
+									<s:textfield type="text" cssClass="form-control"
+										name="form.fechaFin" cssErrorClass="has-error" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row filters">
+						<br>
+
 						<div class="col-xs-12 col-md-2 form-group">
 							<div class="row">
 								<label for="inputPassword" class="col-sm-3 control-label">Marca</label>
@@ -32,6 +58,7 @@
 									<s:select id="idTipoProducto" cssClass="form-control"
 										list="combos.tiposProductos" listValue="descripcion"
 										listKey="id" name="form.idTipoProducto" />
+
 								</div>
 							</div>
 						</div>
@@ -43,6 +70,7 @@
 									<s:select id="idColor" cssClass="form-control"
 										list="combos.colores" name="form.idColor"
 										listValue="descripcion" listKey="id" />
+
 								</div>
 							</div>
 						</div>
