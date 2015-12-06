@@ -1,11 +1,14 @@
 package ar.com.uade.action;
 
+import java.util.List;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.Preparable;
 
 import ar.com.uade.business.ReporteBusiness;
 import ar.com.uade.form.CombosForm;
 import ar.com.uade.form.ReporteForm;
+import ar.com.uade.form.ReporteVentaProductoForm;
 
 public class ReporteAction extends ActionSupport implements Preparable {
 
@@ -16,6 +19,7 @@ public class ReporteAction extends ActionSupport implements Preparable {
 	private ReporteBusiness reporte;
 	private ReporteForm form;
 	private CombosForm combos;
+	private List<ReporteVentaProductoForm> productosVentas;
 
 	@Override
 	public String execute() throws Exception {
@@ -24,22 +28,22 @@ public class ReporteAction extends ActionSupport implements Preparable {
 	}
 
 	public String reporteSemanal() {
-		reporte.reporteSemanal();
+		productosVentas = reporte.reporteSemanal(form);
 		return SUCCESS;
 	}
 
 	public String reporteMensual() {
-		reporte.reporteMensual();
+		productosVentas = reporte.reporteMensual(form);
 		return SUCCESS;
 	}
 
 	public String reporteAnual() {
-		reporte.reporteAnual();
+		productosVentas = reporte.reporteAnual(form);
 		return SUCCESS;
 	}
 
 	public String reporteEntreDosFechas() {
-		reporte.reporteEntreDosFechas();
+		productosVentas = reporte.reporteEntreDosFechas(form);
 		return SUCCESS;
 	}
 
@@ -70,5 +74,13 @@ public class ReporteAction extends ActionSupport implements Preparable {
 
 	public void setCombos(CombosForm combos) {
 		this.combos = combos;
+	}
+
+	public List<ReporteVentaProductoForm> getProductosVentas() {
+		return productosVentas;
+	}
+
+	public void setProductosVentas(List<ReporteVentaProductoForm> productosVentas) {
+		this.productosVentas = productosVentas;
 	}
 }

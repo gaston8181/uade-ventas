@@ -68,7 +68,8 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<bean id="reporte.business" class="ar.com.uade.business.impl.ReporteBusinessImpl">
 		<property name="comboBusiness" ref="combos.business" />
-		<property name="reporteDAO" ref="reporte.dao" />
+		<property name="ventaBusiness" ref="venta.business" />
+		<property name="cambioBusiness" ref="cambio.business" />
 	</bean>
 
 	<bean id="vendedor.business" class="ar.com.uade.business.impl.VendedorBusinessImpl">
@@ -77,6 +78,10 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<bean id="venta.business" class="ar.com.uade.business.impl.VentaBusinessImpl">
 		<property name="ventaDAO" ref="venta.dao" />
+	</bean>
+
+	<bean id="cambio.business" class="ar.com.uade.business.impl.CambioBusinessImpl">
+		<property name="cambioDAO" ref="cambio.dao" />
 	</bean>
 
 	<!-- DAO -->
@@ -88,15 +93,15 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 
-	<bean id="reporte.dao" class="ar.com.uade.dao.impl.ReporteDAOImpl">
-		<property name="sessionFactory" ref="mySessionFactory" />
-	</bean>
-
 	<bean id="vendedor.dao" class="ar.com.uade.dao.impl.VendedorDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 
 	<bean id="venta.dao" class="ar.com.uade.dao.impl.VentaDAOImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+
+	<bean id="cambio.dao" class="ar.com.uade.dao.impl.CambioDAOImpl">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 

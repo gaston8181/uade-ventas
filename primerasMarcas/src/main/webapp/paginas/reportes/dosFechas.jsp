@@ -9,7 +9,7 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-md-12 col-lg-12">
-				<s:form action="consultarProductos" theme="simple">
+				<s:form action="reporteDosFechas" theme="simple">
 
 					<div class="row filters">
 						<br>
@@ -104,65 +104,68 @@
 		</div>
 
 
-		<div class="row">
-			<div class="col-xs-12 col-md-12 col-lg-12">
+		<s:if test="productosVentas != null">
+			<div class="row">
+				<div class="col-xs-12 col-md-12 col-lg-12">
 
-				<div class="panel panel-default panel-table">
+					<div class="panel panel-default panel-table">
 
-					<div class="panel-heading">
+						<div class="panel-heading">
 
-						<table class="table table-condensed table-hover">
-							<thead>
-								<tr>
-									<th class="col-md-2">Nro Venta</th>
-									<th class="col-md-1">Fecha Venta</th>
-									<th class="col-md-1">Cod Barras</th>
-									<th class="col-md-1">Marca</th>
-									<th class="col-md-1">Color</th>
-									<th class="col-md-1">Talle</th>
-									<th class="col-md-1">Tipo</th>
-									<th class="col-md-1">Precio Venta</th>
-									<th class="col-md-1">Stock</th>
-								</tr>
-							</thead>
-						</table>
+							<table class="table table-condensed table-hover">
+								<thead>
+									<tr>
+										<th class="col-md-2">Nro Venta</th>
+										<th class="col-md-1">Fecha Venta</th>
+										<th class="col-md-1">Cod Barras</th>
+										<th class="col-md-1">Marca</th>
+										<th class="col-md-1">Color</th>
+										<th class="col-md-1">Talle</th>
+										<th class="col-md-1">Tipo</th>
+										<th class="col-md-1">Precio Venta</th>
+										<th class="col-md-1">Stock</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+
+						<div class="panel-body">
+
+							<!-- Grilla de resultados -->
+
+							<table class="table table-condensed table-hover">
+
+								<tbody>
+									<s:iterator value="productosVentas">
+										<tr>
+											<td class="col-md-2"><s:property value="idVentaCambio" /></td>
+											<td class="col-md-1"><s:property
+													value="fechaVentaCambio" /></td>
+											<td class="col-md-1"><s:property value="codigoBarras" /></td>
+											<td class="col-md-1"><s:property value="descMarca" /></td>
+											<td class="col-md-1"><s:property value="descColor" /></td>
+											<td class="col-md-1"><s:property value="descTalle" /></td>
+											<td class="col-md-1"><s:property value="descProducto" /></td>
+											<td class="col-md-1"><s:property value="precioVenta" /></td>
+											<td class="col-md-1"><s:property value="stock" /></td>
+										</tr>
+									</s:iterator>
+								</tbody>
+
+							</table>
+
+							<!--! -->
+
+						</div>
+
 					</div>
-
-					<div class="panel-body">
-
-						<!-- Grilla de resultados -->
-
-						<table class="table table-condensed table-hover">
-
-							<tbody>
-								<%-- 								<s:iterator value="productosExistentes"> --%>
-								<tr>
-									<td class="col-md-2">1213</td>
-									<td class="col-md-1">1213</td>
-									<td class="col-md-1">2312</td>
-									<td class="col-md-1">3423</td>
-									<td class="col-md-1">23423</td>
-									<td class="col-md-1">23432</td>
-									<td class="col-md-1">23432</td>
-									<td class="col-md-1">234</td>
-									<td class="col-md-1">3243</td>
-								</tr>
-								<%-- 								</s:iterator> --%>
-							</tbody>
-
-						</table>
-
-						<!--! -->
-
-					</div>
+					<!-- ./panel -->
 
 				</div>
-				<!-- ./panel -->
-
 			</div>
-		</div>
-
+		</s:if>
 		<!--! -->
+
 
 	</div>
 </div>

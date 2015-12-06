@@ -91,16 +91,19 @@
 		<action name="homeReporteGeneral" class="reporte.action">
 			<result name="success" type="tiles">reporteGeneral</result>
 		</action>
-		<action name="reporteAnual" class="reporte.action">
-			<result name="success" type="tiles">reporteGeneral</result>
-		</action>
-		<action name="reporteDosFechas" class="reporte.action">
+		<action name="homeReporteDosFechas" class="reporte.action">
 			<result name="success" type="tiles">reporteEntreFechas</result>
 		</action>
-		<action name="reporteMensual" class="reporte.action">
+		<action name="reporteAnual" class="reporte.action" method="reporteAnual">
 			<result name="success" type="tiles">reporteGeneral</result>
 		</action>
-		<action name="reporteSemanal" class="reporte.action">
+		<action name="reporteDosFechas" class="reporte.action" method="reporteEntreDosFechas">
+			<result name="success" type="tiles">reporteEntreFechas</result>
+		</action>
+		<action name="reporteMensual" class="reporte.action" method="reporteMensual">
+			<result name="success" type="tiles">reporteGeneral</result>
+		</action>
+		<action name="reporteSemanal" class="reporte.action" method="reporteSemanal">
 			<result name="success" type="tiles">reporteGeneral</result>
 		</action>
 

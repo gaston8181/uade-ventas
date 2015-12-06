@@ -1,99 +1,132 @@
-
 $(window).on("load", function() {
-     
-      $("body").removeClass("preload").addClass("loaded");
+
+	$("body").removeClass("preload").addClass("loaded");
 
 });
 
 var retina = (window.retina || window.devicePixelRatio > 1);
 if (retina) {
-    $('body').addClass('retina');
+	$('body').addClass('retina');
 }
 
-$(document).ready(function(){
-		
-		    /*$(function(){
-		    	$(".dropdown").hover(            
-		            function() {
-		                $('.dropdown-menu', this).stop( true, true ).fadeIn(100);
-		                $(this).toggleClass('open');
-		                $('b', this).toggleClass("caret caret-up");                
-		            },
-		            function() {
-		                $('.dropdown-menu', this).stop( true, true ).fadeOut(1);
-		                $(this).toggleClass('open');
-		                $('b', this).toggleClass("caret caret-up");                
-		        });
-		    });*/
-	$(function() {
-		$('.action-row .counter').text(' ');
-		
-		var generallen = $(".table input[name='pp[]']:checked").length;
-		if(generallen>0){$(".action-row .counter").text('('+generallen+')');}else{$(".action-row .counter").text(' ');}
-	});
+$(document)
+		.ready(
+				function() {
 
-	function updateCounter() {
-	    var len = $(".table input[name='pp[]']:checked").length;
-		if(len>0){$(".action-row .counter").text('('+len+') Registro/s seleccionado/s para procesar...');}else{$(".action-row .counter").text(' ');}
-	}
+					/*
+					 * $(function(){ $(".dropdown").hover( function() {
+					 * $('.dropdown-menu', this).stop( true, true ).fadeIn(100);
+					 * $(this).toggleClass('open'); $('b',
+					 * this).toggleClass("caret caret-up"); }, function() {
+					 * $('.dropdown-menu', this).stop( true, true ).fadeOut(1);
+					 * $(this).toggleClass('open'); $('b',
+					 * this).toggleClass("caret caret-up"); }); });
+					 */
+					$(function() {
+						$('.action-row .counter').text(' ');
 
-	$(".table input:checkbox").on("change", function() {
-		updateCounter();
-	});
+						var generallen = $(".table input[name='pp[]']:checked").length;
+						if (generallen > 0) {
+							$(".action-row .counter").text(
+									'(' + generallen + ')');
+						} else {
+							$(".action-row .counter").text(' ');
+						}
+					});
 
-	$(".panel-body .table tr").click(function(event) {
-        if (event.target.type !== 'checkbox') {
-            $(':checkbox', this).trigger('click');
-        }
-    });
+					function updateCounter() {
+						var len = $(".table input[name='pp[]']:checked").length;
+						if (len > 0) {
+							$(".action-row .counter")
+									.text(
+											'('
+													+ len
+													+ ') Registro/s seleccionado/s para procesar...');
+						} else {
+							$(".action-row .counter").text(' ');
+						}
+					}
 
-	//Funcion para seleccionar todos en una tabla
+					$(".table input:checkbox").on("change", function() {
+						updateCounter();
+					});
 
-	$(function() {
-		$('.select_all').change(function() {
-			var checkthis = $(this);
-			var checkboxes = $('.table td').find(":checkbox");
+					$(".panel-body .table tr").click(function(event) {
+						if (event.target.type !== 'checkbox') {
+							$(':checkbox', this).trigger('click');
+						}
+					});
 
-			if(checkthis.is(':checked')) {
-				checkboxes.prop('checked', true);
-			} else {
-				checkboxes.prop('checked', false);
-			}
-	        updateCounter();
-		});
-	    
-	});
+					// Funcion para seleccionar todos en una tabla
 
-	//Button busy function
-	$(".btn-process").click(function() {
+					$(function() {
+						$('.select_all').change(function() {
+							var checkthis = $(this);
+							var checkboxes = $('.table td').find(":checkbox");
 
-	    var $btn = $(this);
-	    var $btnrefresh = $('.action-row .btn-refresh');
-	    var $process = $('.process-indicator');
+							if (checkthis.is(':checked')) {
+								checkboxes.prop('checked', true);
+							} else {
+								checkboxes.prop('checked', false);
+							}
+							updateCounter();
+						});
 
-	    $btn.button('loading');
-	    $btnrefresh.prop('disabled', true);
-	    $process.fadeIn();
+					});
 
-	    setTimeout(function () {
-	        $btn.button('reset');
-	        $btnrefresh.prop('disabled', false);
-	        $process.fadeOut();
-	    }, 5000);
+					// Button busy function
+					$(".btn-process").click(function() {
 
-	});
-    
-});
+						var $btn = $(this);
+						var $btnrefresh = $('.action-row .btn-refresh');
+						var $process = $('.process-indicator');
 
-function isNumberKey(evt){
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-    if (charCode > 31 && (charCode < 48 || charCode > 57))
-        return false;
-    return true;
+						$btn.button('loading');
+						$btnrefresh.prop('disabled', true);
+						$process.fadeIn();
+
+						setTimeout(function() {
+							$btn.button('reset');
+							$btnrefresh.prop('disabled', false);
+							$process.fadeOut();
+						}, 5000);
+
+					});
+
+				});
+
+function isNumberKey(evt) {
+	var charCode = (evt.which) ? evt.which : evt.keyCode;
+	if (charCode > 31 && (charCode < 48 || charCode > 57))
+		return false;
+	return true;
 }
 
 function generarCodigo() {
-	var codigo = $('#idMarca').val() + $('#idColor').val() + $('#idTipoProducto').val() + $('#idTalle').val();
+	var codigo = $('#idMarca').val() + $('#idColor').val()
+			+ $('#idTipoProducto').val() + $('#idTalle').val();
 	$('#idCodigoBarras').val(codigo);
 	$('#codigoBarrasHidden').val(codigo);
+}
+
+function mostrarReporteAnual() {
+	$('#idFormSemanal').hide();
+	$('#idFormMensual').hide();
+	$('#idFormAnual').show();
+}
+
+function mostrarReporteMensual() {
+	$('#idFormSemanal').hide();
+	$('#idFormMensual').show();
+	$('#idFormAnual').hide();
+}
+
+function mostrarReporteSemanal() {
+	$('#idFormSemanal').show();
+	$('#idFormMensual').hide();
+	$('#idFormAnual').hide();
+}
+
+function marcarRadio() {
+	$('input[name="form.reporte"]').val(0);	
 }

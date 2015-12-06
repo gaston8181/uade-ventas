@@ -19,17 +19,17 @@ public class VentaAction extends ActionSupport {
 	}
 
 	public String nuevaVenta() {
-		venta.nuevaVenta();
+		//TODO Desarrollar NICO
 		return SUCCESS;
 	}
 
 	public String gestionarCambio() {
-		venta.gestionarCambio();
+		//TODO Desarrollar NICO
 		return SUCCESS;
 	}
 
 	public String cerrarCaja() {
-		venta.cerrarCaja();
+		//TODO Desarrollar GASTON
 		return SUCCESS;
 	}
 

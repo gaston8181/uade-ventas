@@ -1,32 +1,31 @@
 package ar.com.uade.business.impl;
 
+import java.util.List;
+
 import ar.com.uade.business.VentaBusiness;
 import ar.com.uade.dao.VentaDAO;
+import ar.com.uade.dao.model.Venta;
+import ar.com.uade.form.ReporteForm;
 
 public class VentaBusinessImpl implements VentaBusiness {
 	private VentaDAO ventaDAO;
 
 	@Override
-	public void nuevaVenta() {
-		ventaDAO.nuevaVenta();
+	public List<Venta> reporteVentaSemanal(ReporteForm form) {
+		return ventaDAO.reporteVentaSemanal(form);
 	}
 
 	@Override
-	public void gestionarCambio() {
-		ventaDAO.gestionarCambio();
+	public List<Venta> reporteVentaMensual(ReporteForm form) {
+		return ventaDAO.reporteVentaMensual(form);
 	}
 
 	@Override
-	public void cerrarCaja() {
-		ventaDAO.cerrarCaja();
-	}
-
-	public VentaDAO getVentaDAO() {
-		return ventaDAO;
+	public List<Venta> reporteVentaAnual(ReporteForm form) {
+		return ventaDAO.reporteVentaAnual(form);
 	}
 
 	public void setVentaDAO(VentaDAO ventaDAO) {
 		this.ventaDAO = ventaDAO;
 	}
-
 }
