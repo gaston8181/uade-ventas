@@ -11,100 +11,107 @@
 			<div class="col-xs-12 col-md-6 col-lg-8">
 				<div class="panel panel-default panel-form">
 					<div class="panel-body">
-						<label class="radio-inline"> <input type="radio"
-							name="inlineRadioOptions" id="inlineRadio1" value="option1">
-							Semanal
-						</label> <label class="radio-inline"> <input type="radio"
-							name="inlineRadioOptions" id="inlineRadio2" value="option2">
-							Mensual
-						</label> <label class="radio-inline"> <input type="radio"
-							name="inlineRadioOptions" id="inlineRadio3" value="option3">
-							Anual
-						</label>
+						<form>
+							<div class="row filters">
+								<div class="col-xs-12 col-md-6 form-group">
+
+									<label class="radio-inline"> <input type="radio"
+										name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										Semanal
+									</label> <label class="radio-inline"> <input type="radio"
+										name="inlineRadioOptions" id="inlineRadio2" value="option2">
+										Mensual
+									</label> <label class="radio-inline"> <input type="radio"
+										name="inlineRadioOptions" id="inlineRadio3" value="option3">
+										Anual
+									</label>
+								</div>
+							</div>
+							<div class="row filters">
+
+								<div class="col-xs-12 col-md-3 form-group">
+									<div class="row">
+										<label class="col-sm-4 control-label">Semana</label>
+										<div class="col-sm-5">
+											<s:textfield type="text" cssClass="form-control"
+												name="form.fechaInicio" cssErrorClass="has-error" />
+										</div>
+									</div>
+
+								</div>
+
+								<div class="col-xs-12 col-md-3 form-group">
+									<div class="row">
+										<label class="col-sm-4 control-label">Mes</label>
+										<div class="col-sm-5">
+											<s:textfield type="text" cssClass="form-control"
+												name="form.fechaFin" cssErrorClass="has-error" />
+										</div>
+									</div>
+								</div>
+
+								<div class="col-xs-12 col-md-3 form-group">
+									<div class="row">
+										<label class="col-sm-4 control-label">A&ntilde;o</label>
+										<div class="col-sm-5">
+											<s:textfield type="text" cssClass="form-control"
+												name="form.fechaFin" cssErrorClass="has-error" />
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+
+							<div class="row filters">
+								<div class="col-xs-12 col-md-3 form-group">
+									<div class="row">
+										<label class="col-sm-4 control-label">Semana</label>
+										<div class="col-sm-5">
+											<s:textfield type="text" cssClass="form-control"
+												name="form.fechaInicio" cssErrorClass="has-error" />
+										</div>
+									</div>
+								</div>
+
+								<div class="col-xs-12 col-md-3 form-group">
+									<div class="row">
+										<label class="col-sm-4 control-label">A&ntilde;o</label>
+										<div class="col-sm-5">
+											<s:textfield type="text" cssClass="form-control"
+												name="form.fechaFin" cssErrorClass="has-error" />
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row filters">
+								<div class="col-xs-12 col-md-3 form-group">
+									<div class="row">
+										<label class="col-sm-4 control-label">A&ntilde;o</label>
+										<div class="col-sm-5">
+											<s:textfield type="text" cssClass="form-control"
+												name="form.fechaInicio" cssErrorClass="has-error" />
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row filters">
+								<div class="col-xs-12 col-md-3 form-group">
+									<div class="row">
+										<div class="col-sm-5">
+											<button type="submit" class="btn btn-primary">Aplicar</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="row filters">
-
-			<div class="col-xs-12 col-md-3 form-group">
-				<div class="row">
-					<label class="col-sm-4 control-label">Semana</label>
-					<div class="col-sm-5">
-						<s:textfield type="text" cssClass="form-control"
-							name="form.fechaInicio" cssErrorClass="has-error" />
-					</div>
-				</div>
-
-			</div>
-
-			<div class="col-xs-12 col-md-3 form-group">
-				<div class="row">
-					<label class="col-sm-4 control-label">Mes</label>
-					<div class="col-sm-5">
-						<s:textfield type="text" cssClass="form-control"
-							name="form.fechaFin" cssErrorClass="has-error" />
-					</div>
-				</div>
-			</div>
-
-			<div class="col-xs-12 col-md-3 form-group">
-				<div class="row">
-					<label class="col-sm-4 control-label">Año</label>
-					<div class="col-sm-5">
-						<s:textfield type="text" cssClass="form-control"
-							name="form.fechaFin" cssErrorClass="has-error" />
-					</div>
-				</div>
-			</div>
-
-
-		</div>
-
-		<div class="row filters">
-			<div class="col-xs-12 col-md-3 form-group">
-				<div class="row">
-					<label class="col-sm-4 control-label">Semana</label>
-					<div class="col-sm-5">
-						<s:textfield type="text" cssClass="form-control"
-							name="form.fechaInicio" cssErrorClass="has-error" />
-					</div>
-				</div>
-			</div>
-
-			<div class="col-xs-12 col-md-3 form-group">
-				<div class="row">
-					<label class="col-sm-4 control-label">Año</label>
-					<div class="col-sm-5">
-						<s:textfield type="text" cssClass="form-control"
-							name="form.fechaFin" cssErrorClass="has-error" />
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row filters">
-			<div class="col-xs-12 col-md-3 form-group">
-				<div class="row">
-					<label class="col-sm-4 control-label">Año</label>
-					<div class="col-sm-5">
-						<s:textfield type="text" cssClass="form-control"
-							name="form.fechaInicio" cssErrorClass="has-error" />
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row filters">
-			<div class="col-xs-12 col-md-3 form-group">
-				<div class="row">
-					<button type="submit" class="btn btn-default">
-						<i class="fa fa-filter"></i> Aplicar
-					</button>
-				</div>
-			</div>
-		</div>
 
 		<div class="row">
 			<div class="col-xs-12 col-md-12 col-lg-12">
