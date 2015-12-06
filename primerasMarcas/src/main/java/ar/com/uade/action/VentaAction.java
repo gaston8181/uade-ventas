@@ -6,8 +6,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import ar.com.uade.business.CambioBusiness;
 import ar.com.uade.business.VentaBusiness;
-import ar.com.uade.form.CambioForm;
-import ar.com.uade.form.VentaForm;
+import ar.com.uade.form.CierreListaForm;
 
 public class VentaAction extends ActionSupport {
 
@@ -18,8 +17,10 @@ public class VentaAction extends ActionSupport {
 	private VentaBusiness venta;
 	private CambioBusiness cambio;
 
-	private List<VentaForm> ventasDelDia;
-	private List<CambioForm> cambiosDelDia;
+	// PARA CIERRE CAJA
+	private List<CierreListaForm> operaciones;
+	private int totalEfectivo;
+	private int totalTarjeta;
 
 	@Override
 	public String execute() throws Exception {
@@ -38,9 +39,12 @@ public class VentaAction extends ActionSupport {
 	}
 
 	public String cerrarCaja() {
-		ventasDelDia = venta.ventasDelDia();
-		cambiosDelDia = cambio.cambiosDelDia();
-		
+		operaciones = venta.ventasDelDia();
+		operaciones.addAll(cambio.cambiosDelDia());
+
+		totalEfectivo = venta.totalEfectivo() + cambio.totalEfectivo();
+		totalTarjeta = venta.totalTarjeta() + cambio.totalTarjeta();
+
 		return SUCCESS;
 	}
 
@@ -52,20 +56,28 @@ public class VentaAction extends ActionSupport {
 		this.cambio = cambio;
 	}
 
-	public List<VentaForm> getVentasDelDia() {
-		return ventasDelDia;
+	public void setOperaciones(List<CierreListaForm> operaciones) {
+		this.operaciones = operaciones;
 	}
 
-	public void setVentasDelDia(List<VentaForm> ventasDelDia) {
-		this.ventasDelDia = ventasDelDia;
+	public List<CierreListaForm> getOperaciones() {
+		return operaciones;
 	}
 
-	public List<CambioForm> getCambiosDelDia() {
-		return cambiosDelDia;
+	public int getTotalEfectivo() {
+		return totalEfectivo;
 	}
 
-	public void setCambiosDelDia(List<CambioForm> cambiosDelDia) {
-		this.cambiosDelDia = cambiosDelDia;
+	public void setTotalEfectivo(int totalEfectivo) {
+		this.totalEfectivo = totalEfectivo;
+	}
+
+	public int getTotalTarjeta() {
+		return totalTarjeta;
+	}
+
+	public void setTotalTarjeta(int totalTarjeta) {
+		this.totalTarjeta = totalTarjeta;
 	}
 
 }
