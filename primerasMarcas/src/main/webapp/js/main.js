@@ -127,6 +127,3 @@ function mostrarReporteSemanal() {
 	$('#idFormAnual').hide();
 }
 
-function marcarRadio() {
-	$('input[name="form.reporte"]').val(0);	
-}

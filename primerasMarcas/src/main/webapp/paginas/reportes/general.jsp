@@ -18,7 +18,7 @@
 
 								<label class="radio-inline"> <input type="radio"
 									name="form.reporte" value="0" id="radioSemanal"
-									onclick="mostrarReporteSemanal()"> Semanal
+									onclick="mostrarReporteSemanal()" checked> Semanal
 								</label> <label class="radio-inline"> <input type="radio"
 									name="form.reporte" value="1" id="radioMensual"
 									onclick="mostrarReporteMensual()"> Mensual
@@ -30,7 +30,7 @@
 						</div>
 
 						<s:form id="idFormSemanal" action="reporteSemanal" theme="simple"
-							cssStyle="display: none;">
+							>
 							<div class="row filters">
 
 								<div class="col-xs-12 col-md-3 form-group">
