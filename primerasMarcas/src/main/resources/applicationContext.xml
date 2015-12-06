@@ -29,6 +29,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<bean id="venta.action" class="ar.com.uade.action.VentaAction"
 		scope="prototype">
 		<property name="venta" ref="venta.business" />
+		<property name="cambio" ref="cambio.business" />
 	</bean>
 
 

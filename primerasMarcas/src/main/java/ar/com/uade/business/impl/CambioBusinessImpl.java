@@ -5,6 +5,7 @@ import java.util.List;
 import ar.com.uade.business.CambioBusiness;
 import ar.com.uade.dao.CambioDAO;
 import ar.com.uade.dao.model.Cambio;
+import ar.com.uade.form.CambioForm;
 import ar.com.uade.form.ReporteForm;
 
 public class CambioBusinessImpl implements CambioBusiness {
@@ -23,6 +24,11 @@ public class CambioBusinessImpl implements CambioBusiness {
 	@Override
 	public List<Cambio> reporteCambioAnual(ReporteForm form) {
 		return cambioDAO.reporteCambioAnual(form);
+	}
+
+	@Override
+	public List<CambioForm> cambiosDelDia() {
+		return cambioDAO.cambiosDelDia();
 	}
 
 	public void setCambioDAO(CambioDAO cambioDAO) {

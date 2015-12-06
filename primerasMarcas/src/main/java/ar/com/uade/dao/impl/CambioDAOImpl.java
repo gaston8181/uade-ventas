@@ -6,6 +6,7 @@ import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import ar.com.uade.dao.CambioDAO;
 import ar.com.uade.dao.model.Cambio;
+import ar.com.uade.form.CambioForm;
 import ar.com.uade.form.ReporteForm;
 
 public class CambioDAOImpl extends HibernateDaoSupport implements CambioDAO{
@@ -24,6 +25,12 @@ public class CambioDAOImpl extends HibernateDaoSupport implements CambioDAO{
 
 	@Override
 	public List<Cambio> reporteCambioAnual(ReporteForm form) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<CambioForm> cambiosDelDia() {
 		// TODO Auto-generated method stub
 		return null;
 	}

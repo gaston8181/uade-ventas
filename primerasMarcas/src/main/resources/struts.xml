@@ -134,7 +134,7 @@
 		</action>
 
 		<!-- VENTAS -->
-		<action name="cerrarVenta" class="venta.action">
+		<action name="cerrarVenta" class="venta.action" method="cerrarCaja">
 			<result name="success" type="tiles">cerrarCaja</result>
 		</action>
 		<action name="gestionarCambio" class="venta.action">

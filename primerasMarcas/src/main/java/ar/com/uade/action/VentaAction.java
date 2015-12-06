@@ -1,8 +1,13 @@
 package ar.com.uade.action;
 
-import ar.com.uade.business.VentaBusiness;
+import java.util.List;
 
 import com.opensymphony.xwork2.ActionSupport;
+
+import ar.com.uade.business.CambioBusiness;
+import ar.com.uade.business.VentaBusiness;
+import ar.com.uade.form.CambioForm;
+import ar.com.uade.form.VentaForm;
 
 public class VentaAction extends ActionSupport {
 
@@ -11,6 +16,10 @@ public class VentaAction extends ActionSupport {
 	 */
 	private static final long serialVersionUID = -1881806532133304843L;
 	private VentaBusiness venta;
+	private CambioBusiness cambio;
+
+	private List<VentaForm> ventasDelDia;
+	private List<CambioForm> cambiosDelDia;
 
 	@Override
 	public String execute() throws Exception {
@@ -19,26 +28,44 @@ public class VentaAction extends ActionSupport {
 	}
 
 	public String nuevaVenta() {
-		//TODO Desarrollar NICO
+		// TODO Desarrollar NICO
 		return SUCCESS;
 	}
 
 	public String gestionarCambio() {
-		//TODO Desarrollar NICO
+		// TODO Desarrollar NICO
 		return SUCCESS;
 	}
 
 	public String cerrarCaja() {
-		//TODO Desarrollar GASTON
+		ventasDelDia = venta.ventasDelDia();
+		cambiosDelDia = cambio.cambiosDelDia();
+		
 		return SUCCESS;
-	}
-
-	public VentaBusiness getVenta() {
-		return venta;
 	}
 
 	public void setVenta(VentaBusiness venta) {
 		this.venta = venta;
+	}
+
+	public void setCambio(CambioBusiness cambio) {
+		this.cambio = cambio;
+	}
+
+	public List<VentaForm> getVentasDelDia() {
+		return ventasDelDia;
+	}
+
+	public void setVentasDelDia(List<VentaForm> ventasDelDia) {
+		this.ventasDelDia = ventasDelDia;
+	}
+
+	public List<CambioForm> getCambiosDelDia() {
+		return cambiosDelDia;
+	}
+
+	public void setCambiosDelDia(List<CambioForm> cambiosDelDia) {
+		this.cambiosDelDia = cambiosDelDia;
 	}
 
 }

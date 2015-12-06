@@ -6,6 +6,7 @@ import ar.com.uade.business.VentaBusiness;
 import ar.com.uade.dao.VentaDAO;
 import ar.com.uade.dao.model.Venta;
 import ar.com.uade.form.ReporteForm;
+import ar.com.uade.form.VentaForm;
 
 public class VentaBusinessImpl implements VentaBusiness {
 	private VentaDAO ventaDAO;
@@ -25,7 +26,13 @@ public class VentaBusinessImpl implements VentaBusiness {
 		return ventaDAO.reporteVentaAnual(form);
 	}
 
+	@Override
+	public List<VentaForm> ventasDelDia() {
+		return ventaDAO.ventasDelDia();
+	}
+
 	public void setVentaDAO(VentaDAO ventaDAO) {
 		this.ventaDAO = ventaDAO;
 	}
+
 }
