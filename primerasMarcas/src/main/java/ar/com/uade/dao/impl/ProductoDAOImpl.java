@@ -63,4 +63,12 @@ public class ProductoDAOImpl extends HibernateDaoSupport implements ProductoDAO 
 			criteria.add(Restrictions.eq(campo, valor));
 		}
 	}
+
+	@Override
+	public boolean codigoBarrasExiste(Long id) {
+		DetachedCriteria criteria = DetachedCriteria.forClass(Producto.class);
+		criteria.add(Restrictions.eq(ID, id));
+		List<Producto> existe = (List<Producto>) getHibernateTemplate().findByCriteria(criteria);
+		return existe != null && !existe.isEmpty();
+	}
 }

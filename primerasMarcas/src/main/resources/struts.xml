@@ -26,6 +26,7 @@
 		</action>
 		<action name="altaProducto" class="producto.action" method="altaProducto">
 			<result name="success" type="tiles">altaProducto</result>
+			<result name="input" type="tiles">altaProducto</result>
 		</action>
 		<action name="modificarProducto" class="producto.action"
 			method="modificarProducto">
@@ -75,6 +76,7 @@
 		</action>
 		<action name="altaProveedor" class="proveedor.action" method="altaProveedor">
 			<result name="success" type="tiles">altaProveedor</result>
+			<result name="input" type="tiles">altaProveedor</result>
 		</action>
 		<action name="bajaProveedor" class="proveedor.action" method="bajaProveedor">
 			<result name="success" type="tiles">bajaProveedor</result>
@@ -85,6 +87,7 @@
 		<action name="modificarProveedor" class="proveedor.action"
 			method="modificarProveedor">
 			<result name="success" type="tiles">modificarProveedor</result>
+			<result name="input" type="tiles">cargarProveedor</result>
 		</action>
 
 		<!-- REPORTES -->
@@ -114,6 +117,7 @@
 		</action>
 		<action name="altaVendedor" class="vendedor.action" method="altaVendedor">
 			<result name="success" type="tiles">altaVendedor</result>
+			<result name="input" type="tiles">altaVendedor</result>
 		</action>
 		<action name="homeBajaVendedor" class="vendedor.action" method="cargarListaVendedores">
 			<result name="success" type="tiles">bajaVendedor</result>
@@ -127,10 +131,12 @@
 		</action>
 		<action name="cargarVendedor" class="vendedor.action" method="cargarVendedor">
 			<result name="success" type="tiles">cargarVendedor</result>
+			<result name="input" type="tiles">cargarVendedor</result>
 		</action>
 		<action name="modificarVendedor" class="vendedor.action"
 			method="modificarVendedor">
 			<result name="success" type="tiles">modificarVendedor</result>
+			<result name="input" type="tiles">cargarVendedor</result>
 		</action>
 
 		<!-- VENTAS -->

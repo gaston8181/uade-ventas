@@ -110,6 +110,12 @@ public class ProductoBusinessImpl implements ProductoBusiness {
 		return productosForm;
 	}
 
+
+	@Override
+	public boolean codigoBarrasExiste(ProductoForm form) {
+		return productoDAO.codigoBarrasExiste(form.getId());
+	}
+
 	private ProductoForm crearView(Producto producto) {
 		ProductoForm view = new ProductoForm();
 		view.setDatoAdicional(producto.getDatoAdicional());

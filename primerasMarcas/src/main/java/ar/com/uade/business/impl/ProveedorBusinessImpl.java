@@ -22,7 +22,7 @@ public class ProveedorBusinessImpl implements ProveedorBusiness {
 		}
 		return proveedorForm;
 	}
-	
+
 	@Override
 	public List<ProveedorForm> listarProveedoresActivos() {
 		List<Proveedor> proveedores = proveedorDAO.listarProveedoresActivos();
@@ -71,7 +71,12 @@ public class ProveedorBusinessImpl implements ProveedorBusiness {
 	public ProveedorForm obtenerProveedor(Long id) {
 		Proveedor proveedor = proveedorDAO.loadProveedor(id);
 		return crearView(proveedor);
-		
+
+	}
+
+	@Override
+	public boolean proveedorExiste(ProveedorForm form) {
+		return proveedorDAO.proveedorExiste(form);
 	}
 
 	public ProveedorDAO getProveedorDAO() {

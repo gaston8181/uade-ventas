@@ -7,8 +7,8 @@ public class ProductoForm {
 	private Long idMarca;
 	private Long idColor;
 	private Long idTalle;
-	private BigDecimal precioVenta;
-	private BigDecimal precioCompra;
+	private BigDecimal precioVenta = new BigDecimal(0);
+	private BigDecimal precioCompra = new BigDecimal(0);
 	private Long idProveedor;
 	private String datoAdicional;
 	private int stock;

@@ -12,6 +12,9 @@
 
 				<div class="panel panel-default panel-form">
 					<div class="panel-body">
+					
+						<s:actionmessage cssClass="alert alert-success" />
+						<s:actionerror cssClass="alert alert-danger" />
 						<!-- formulario -->
 						<s:form action="altaProveedor" theme="simple">
 							<div class="row form-group">
@@ -33,7 +36,8 @@
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Telefono</label>
 								<div class="col-sm-4">
-									<s:textfield type="text" cssClass="form-control" cssErrorClass="has-error" name="form.telefono"/>
+									<s:textfield type="text" cssClass="form-control" cssErrorClass="has-error" name="form.telefono"
+									 onkeypress="return isNumberKey(event)"/>
 									<s:fielderror fieldName="form.telefono"
 										cssClass="help-block has-error" />
 								</div>

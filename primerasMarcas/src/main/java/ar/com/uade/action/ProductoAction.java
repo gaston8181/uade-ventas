@@ -32,9 +32,12 @@ public class ProductoAction extends ActionSupport implements Preparable {
 		productosExistentes = producto.listarProductos();
 		return SUCCESS;
 	}
-	
+
 	public String altaProducto() {
 		try {
+			if (!validar()) {
+				return INPUT;
+			}
 			producto.altaProducto(form);
 			addActionMessage("Alta Exitosa!");
 			form = new ProductoForm();
@@ -45,15 +48,24 @@ public class ProductoAction extends ActionSupport implements Preparable {
 	}
 
 	public String modificarProducto() throws Exception {
-		producto.modificarProducto(form);
-		form = new ProductoForm();
+		try {
+			producto.modificarProducto(form);
+			form = new ProductoForm();
+			addActionMessage("modificacion exitosa!");
+		} catch (Exception e) {
+			addActionError("Ocurrio un error inesperado");
+		}
 		return SUCCESS;
 	}
 
 	public String bajaProducto() {
 		try {
-			producto.bajaProducto(form.getId());
-			addActionMessage("Baja Exitosa!");
+			if (!producto.codigoBarrasExiste(form)) {
+				addActionError("Codigo de barras no existe");
+			} else {
+				producto.bajaProducto(form.getId());
+				addActionMessage("Baja Exitosa!");
+			}
 		} catch (Exception e) {
 			addActionError("Ocurrio un error inesperado, intente nuevamente!");
 		}
@@ -84,6 +96,37 @@ public class ProductoAction extends ActionSupport implements Preparable {
 		combos.setTiposProductos(producto.getTiposProd());
 		combos.setMarcas(producto.getMarcas());
 		combos.setTalles(producto.getTalles());
+	}
+
+	private boolean validar() {
+		boolean ok = true;
+		if (form == null) {
+			addActionError("Error inesperado!");
+			ok = false;
+		} else {
+			if (form.getIdColor() == null || form.getIdColor() == 0) {
+				addFieldError("form.idColor", "campo obligatorio");
+				ok = false;
+			}
+			if (form.getIdMarca() == null || form.getIdMarca() == 0) {
+				addFieldError("form.idMarca", "campo obligatorio");
+				ok = false;
+			}
+			if (form.getIdTalle() == null || form.getIdTalle() == 0) {
+				addFieldError("form.idTalle", "campo obligatorio");
+				ok = false;
+			}
+			if (form.getIdTipoProducto() == null || form.getIdTipoProducto() == 0) {
+				addFieldError("form.idTipoProducto", "campo obligatorio");
+				ok = false;
+			}
+			if (producto.codigoBarrasExiste(form)) {
+				addActionError("Producto ya existe!");
+				ok = false;
+			}
+		}
+
+		return ok;
 	}
 
 	public ProductoBusiness getProducto() {

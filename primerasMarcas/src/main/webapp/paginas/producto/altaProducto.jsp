@@ -30,21 +30,26 @@
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Marca</label>
 								<div class="col-sm-4">
-									<s:select id="idMarca" cssClass="form-control"
+									<s:select id="idMarca" cssClass="form-control" cssErrorClass="has-error"
 										list="combos.marcas" listValue="descripcion" listKey="id"
 										name="form.idMarca" onchange="generarCodigo()">
 
 									</s:select>
+									
+									<s:fielderror fieldName="form.idMarca"
+										cssClass="help-block has-error" />
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<label for="inputPassword" class="col-sm-4 control-label">Color</label>
 								<div class="col-sm-4">
-									<s:select id="idColor" cssClass="form-control"
+									<s:select id="idColor" cssClass="form-control" cssErrorClass="has-error"
 										list="combos.colores" name="form.idColor"
 										listValue="descripcion" listKey="id"
 										onchange="generarCodigo()" />
+									<s:fielderror fieldName="form.idColor"
+										cssClass="help-block has-error" />
 								</div>
 							</div>
 
@@ -95,10 +100,12 @@
 								<label for="inputPassword" class="col-sm-4 control-label">Tipo
 									Producto</label>
 								<div class="col-sm-4">
-									<s:select id="idTipoProducto" cssClass="form-control"
+									<s:select id="idTipoProducto" cssClass="form-control" cssErrorClass="has-error"
 										list="combos.tiposProductos" listValue="descripcion"
 										listKey="id" onchange="generarCodigo()"
 										name="form.idTipoProducto" />
+									<s:fielderror fieldName="form.idTipoProducto"
+										cssClass="help-block has-error" />
 								</div>
 							</div>
 
@@ -107,8 +114,10 @@
 								<div class="col-sm-4">
 									<s:select id="idTalle" cssClass="form-control"
 										list="combos.talles" listValue="descripcion"
-										listKey="id" onchange="generarCodigo()"
+										listKey="id" onchange="generarCodigo()" cssErrorClass="has-error"
 										name="form.idTalle" />
+									<s:fielderror fieldName="form.idTalle"
+										cssClass="help-block has-error" />
 								</div>
 							</div>
 

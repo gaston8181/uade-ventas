@@ -25,13 +25,20 @@ public class VendedorAction extends ActionSupport {
 	}
 
 	public String cargarListaVendedores() {
-		vendedoresExistentes = vendedor.listarVendedores();
-		clearErrorsAndMessages();
+		try {
+			vendedoresExistentes = vendedor.listarVendedores();
+			clearErrorsAndMessages();
+		} catch (Exception e) {
+			addActionError("Ocurrio un error inesperado, intente nuevamente!");
+		}
 		return SUCCESS;
 	}
 
 	public String altaVendedor() {
 		try {
+			if (!validar(true)) {
+				return INPUT;
+			}
 			vendedor.altaVendedor(form);
 			addActionMessage("Alta Exitosa!");
 		} catch (Exception e) {
@@ -58,6 +65,9 @@ public class VendedorAction extends ActionSupport {
 
 	public String modificarVendedor() {
 		try {
+			if (!validar(false)) {
+				return INPUT;
+			}
 			vendedor.modificarVendedor(form);
 			vendedoresExistentes = vendedor.listarVendedores();
 			addActionMessage("Modificacion Exitosa!");
@@ -65,6 +75,33 @@ public class VendedorAction extends ActionSupport {
 			addActionError("Ocurrio un error inesperado, intente nuevamente!");
 		}
 		return SUCCESS;
+	}
+
+	private boolean validar(boolean alta) {
+		boolean ok = true;
+		if (this.form == null) {
+			addActionError("Ocurrio un error inesperado, intente nuevamente!");
+			ok = false;
+		}
+		if (this.form.getNombre() == null || this.form.getNombre().isEmpty()) {
+			addFieldError("form.nombre", "Campo Obligatorio");
+			ok = false;
+		}
+		if (this.form.getApellido() == null || this.form.getApellido().isEmpty()) {
+			addFieldError("form.apellido", "Campo Obligatorio");
+			ok = false;
+		}
+
+		if (this.form.getDni() == null || this.form.getDni() == 0) {
+			addFieldError("form.dni", "Campo Obligatorio");
+			ok = false;
+		}
+
+		if (vendedor.vendedorExiste(form)) {
+			addActionError("El vendedor ya existe");
+			ok = false;
+		}
+		return ok;
 	}
 
 	public void setVendedor(VendedorBusiness vendedor) {

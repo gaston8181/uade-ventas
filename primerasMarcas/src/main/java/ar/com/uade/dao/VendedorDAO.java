@@ -3,6 +3,7 @@ package ar.com.uade.dao;
 import java.util.List;
 
 import ar.com.uade.dao.model.Vendedor;
+import ar.com.uade.form.VendedorForm;
 
 public interface VendedorDAO {
 
@@ -15,5 +16,7 @@ public interface VendedorDAO {
 	List<Vendedor> listarVendedores();
 
 	Vendedor loadVendedor(Long legajo);
+
+	boolean vendedorExiste(VendedorForm vendedor);
 
 }

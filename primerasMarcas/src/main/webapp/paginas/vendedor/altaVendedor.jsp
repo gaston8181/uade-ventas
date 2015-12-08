@@ -40,7 +40,7 @@
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">DNI</label>
 								<div class="col-sm-4">
-									<s:textfield type="text" cssClass="form-control"
+									<s:textfield type="text" cssClass="form-control" onkeypress="return isNumberKey(event)"
 										name="form.dni" cssErrorClass="has-error" />
 									<s:fielderror fieldName="form.dni"
 										cssClass="help-block has-error" />
@@ -60,7 +60,7 @@
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Telefono</label>
 								<div class="col-sm-4">
-									<s:textfield type="text" cssClass="form-control"
+									<s:textfield type="text" cssClass="form-control" onkeypress="return isNumberKey(event)"
 										name="form.telefono" cssErrorClass="has-error" />
 									<s:fielderror fieldName="form.telefono"
 										cssClass="help-block has-error" />

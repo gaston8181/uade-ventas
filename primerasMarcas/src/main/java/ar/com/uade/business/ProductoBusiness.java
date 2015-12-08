@@ -34,4 +34,6 @@ public interface ProductoBusiness {
 
 	List<ProductoForm> listarProductos();
 
+	boolean codigoBarrasExiste(ProductoForm form);
+
 }

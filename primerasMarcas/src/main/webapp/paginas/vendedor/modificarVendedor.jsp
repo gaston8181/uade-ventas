@@ -8,7 +8,11 @@
 		<!-- el contenido de las páginas internas va acá -->
 
 		<div class="row">
-			<div class="col-xs-12 col-md-12 col-lg-12"></div>
+			<div class="col-xs-12 col-md-12 col-lg-12">
+			
+						<s:actionmessage cssClass="alert alert-success" />
+						<s:actionerror cssClass="alert alert-danger" />
+			</div>
 		</div>
 
 		<div class="row">

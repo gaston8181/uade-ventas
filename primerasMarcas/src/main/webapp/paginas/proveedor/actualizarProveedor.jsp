@@ -12,8 +12,12 @@
 
 				<div class="panel panel-default panel-form">
 					<div class="panel-body">
+					
+						<s:actionmessage cssClass="alert alert-success" />
+						<s:actionerror cssClass="alert alert-danger" />
 						<!-- formulario -->
 						<s:form action="modificarProveedor" theme="simple">
+							<s:hidden key="form.id"/>
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Nombre</label>
 								<div class="col-sm-4">

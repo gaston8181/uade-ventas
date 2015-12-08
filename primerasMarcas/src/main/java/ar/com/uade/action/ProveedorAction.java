@@ -30,15 +30,27 @@ public class ProveedorAction extends ActionSupport {
 	}
 
 	public String altaProveedor() {
-		proveedor.altaProveedor(form);
+		if (!validar()) {
+			return INPUT;
+		}
+		try {
+			proveedor.altaProveedor(form);
+			addActionMessage("Alta Exitosa!");
+		} catch (Exception e) {
+			addActionError("Ocurrio un error inesperado");
+		}
 		return SUCCESS;
 	}
 
 	public String bajaProveedor() {
-		proveedor.bajaProveedor(form);
-		proveedoresExistentes = proveedor.listarProveedores();
-		addActionMessage("Baja Exitosa!");
-		
+		try {
+			proveedor.bajaProveedor(form);
+			proveedoresExistentes = proveedor.listarProveedores();
+			addActionMessage("Baja Exitosa!");
+		} catch (Exception e) {
+			addActionError("Ocurrio un error inesperado");
+		}
+
 		return SUCCESS;
 	}
 
@@ -48,10 +60,35 @@ public class ProveedorAction extends ActionSupport {
 	}
 
 	public String modificarProveedor() {
-		proveedor.modificarProveedor(form);
-		proveedoresExistentes = proveedor.listarProveedores();
+		if (!validar()) {
+			return INPUT;
+		}
 
+		try {
+			proveedor.modificarProveedor(form);
+			addActionMessage("Modificacion Exitosa!");
+			proveedoresExistentes = proveedor.listarProveedores();
+		} catch (Exception e) {
+			addActionError("Ocurrio un error inesperado");
+		}
 		return SUCCESS;
+	}
+
+	private boolean validar() {
+		boolean ok = true;
+		if (this.form == null) {
+			addActionError("Ocurrio un error inesperado, intente nuevamente!");
+			ok = false;
+		}
+		if (this.form.getNombre() == null || this.form.getNombre().isEmpty()) {
+			addFieldError("form.nombre", "Campo Obligatorio");
+			ok = false;
+		} else if (proveedor.proveedorExiste(form)) {
+			addActionError("El proveedor ya existe");
+			ok = false;
+		}
+
+		return ok;
 	}
 
 	public ProveedorBusiness getProveedor() {

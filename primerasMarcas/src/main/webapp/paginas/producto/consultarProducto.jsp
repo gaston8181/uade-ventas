@@ -62,7 +62,7 @@
 							<div class="row">
 								<label class="col-sm-4 control-label">Codigo</label>
 								<div class="col-sm-8">
-									<s:textfield type="text" cssClass="form-control" name="form.id"
+									<s:textfield type="text" cssClass="form-control" name="form.id" onkeypress="return isNumberKey(event)"
 										cssErrorClass="has-error" />
 								</div>
 							</div>

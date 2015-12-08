@@ -68,6 +68,10 @@ public class VendedorBusinessImpl implements VendedorBusiness {
 		return vf;
 	}
 
+	public boolean vendedorExiste(VendedorForm vendedor) {
+		return vendedorDAO.vendedorExiste(vendedor);
+	}
+	
 	public VendedorDAO getVendedorDAO() {
 		return vendedorDAO;
 	}

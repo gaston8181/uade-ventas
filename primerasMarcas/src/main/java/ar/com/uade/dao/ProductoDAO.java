@@ -19,4 +19,6 @@ public interface ProductoDAO {
 
 	List<Producto> listarProductos(ProductoForm form);
 
+	boolean codigoBarrasExiste(Long id);
+
 }

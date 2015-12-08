@@ -17,4 +17,6 @@ public interface ProveedorBusiness {
 
 	List<ProveedorForm> listarProveedoresActivos();
 
+	boolean proveedorExiste(ProveedorForm form);
+
 }

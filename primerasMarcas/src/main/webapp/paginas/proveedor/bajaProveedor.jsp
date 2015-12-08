@@ -11,6 +11,8 @@
 			<div class="col-xs-12 col-md-12 col-lg-12"></div>
 		</div>
 
+		<s:actionmessage cssClass="alert alert-success" />
+		<s:actionerror cssClass="alert alert-danger" />
 		<div class="row">
 			<div class="col-xs-12 col-md-12 col-lg-12">
 

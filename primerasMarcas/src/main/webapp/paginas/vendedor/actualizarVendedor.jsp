@@ -16,7 +16,7 @@
 						<s:actionerror cssClass="alert alert-danger" />
 						<!-- formulario -->
 						<s:form action="modificarVendedor" theme="simple">
-
+							<s:hidden key="form.legajo"/>
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Nombre</label>
 								<div class="col-sm-4">
@@ -40,8 +40,8 @@
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">DNI</label>
 								<div class="col-sm-4">
-									<s:textfield type="text" cssClass="form-control"
-										name="form.dni" cssErrorClass="has-error" />
+									<s:textfield type="text" cssClass="form-control" onkeypress="return isNumberKey(event)"
+										name="form.dni" cssErrorClass="has-error" readonly="true"/>
 									<s:fielderror fieldName="form.dni"
 										cssClass="help-block has-error" />
 								</div>
@@ -50,7 +50,7 @@
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Fecha Nacimiento</label>
 								<div class="col-sm-4">
-									<s:textfield type="text" cssClass="form-control"
+									<s:textfield type="text" cssClass="form-control"  onkeypress="return isNumberKey(event)" 
 										name="form.fechaNac" cssErrorClass="has-error" />
 									<s:fielderror fieldName="form.fechaNac"
 										cssClass="help-block has-error" />
@@ -60,7 +60,7 @@
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Telefono</label>
 								<div class="col-sm-4">
-									<s:textfield type="text" cssClass="form-control"
+									<s:textfield type="text" cssClass="form-control" onkeypress="return isNumberKey(event)"
 										name="form.telefono" cssErrorClass="has-error" />
 									<s:fielderror fieldName="form.telefono"
 										cssClass="help-block has-error" />
@@ -80,7 +80,7 @@
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Fecha de Ingreso</label>
 								<div class="col-sm-4">
-									<s:textfield type="text" cssClass="form-control"
+									<s:textfield type="text" cssClass="form-control"  onkeypress="return isNumberKey(event)"
 										name="form.fechaIngreso" cssErrorClass="has-error" />
 									<s:fielderror fieldName="form.fechaIngreso"
 										cssClass="help-block has-error" />

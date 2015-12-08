@@ -18,7 +18,7 @@
 							<div class="row form-group">
 								<label class="col-sm-3 control-label">Codigo Barras</label>
 								<div class="col-sm-4">
-									<s:textfield type="text" cssClass="form-control" name="form.id"
+									<s:textfield type="text" cssClass="form-control" name="form.id" onkeypress="return isNumberKey(event)"
 										cssErrorClass="has-error" />
 
 								</div>

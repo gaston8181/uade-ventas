@@ -14,4 +14,6 @@ public interface VendedorBusiness {
 	List<VendedorForm> listarVendedores();
 
 	VendedorForm obtenerVendedor(Long legajo);
+
+	boolean vendedorExiste(VendedorForm form);
 }

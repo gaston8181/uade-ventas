@@ -3,6 +3,7 @@ package ar.com.uade.dao;
 import java.util.List;
 
 import ar.com.uade.dao.model.Proveedor;
+import ar.com.uade.form.ProveedorForm;
 
 public interface ProveedorDAO {
 
@@ -17,5 +18,7 @@ public interface ProveedorDAO {
 	Proveedor loadProveedor(Long id);
 
 	List<Proveedor> listarProveedoresActivos();
+
+	boolean proveedorExiste(ProveedorForm form);
 
 }

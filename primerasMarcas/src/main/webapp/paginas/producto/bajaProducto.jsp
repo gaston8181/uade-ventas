@@ -12,12 +12,15 @@
 
 				<div class="panel panel-default panel-form">
 					<div class="panel-body">
+						
+						<s:actionmessage cssClass="alert alert-success" />
+						<s:actionerror cssClass="alert alert-danger" />
 						<!-- formulario -->
 						<s:form action="bajaProducto" theme="simple">
 							<div class="row form-group">
 								<label class="col-sm-4 control-label">Codigo Producto</label>
 								<div class="col-sm-4">
-									<s:textfield type="text" cssClass="form-control" name="form.id"
+									<s:textfield type="text" cssClass="form-control" name="form.id" onkeypress="return isNumberKey(event)"
 										cssErrorClass="has-error" />
 								</div>
 							</div>
